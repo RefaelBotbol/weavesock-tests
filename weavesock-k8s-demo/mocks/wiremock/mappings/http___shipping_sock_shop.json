@@ -1,0 +1,38 @@
+{
+ "mappings": [
+  {
+   "id": "b88ea9d0-d15c-4a3b-bc1e-a2573a110ac3",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/shipping"
+   },
+   "response": {
+    "body": "{\n \"id\": \"{{random.uuid4}}\",\n \"name\": \"57a98d98e4b00679b4a830b2\"\n}",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 201,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "146c8dec-deab-4283-8ee5-a1108826f9ca",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/shipping"
+   },
+   "response": {
+    "body": "{\n \"id\": \"{{request.body}}\",\n \"name\": \"{{request.body}}\"\n}",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 201,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}

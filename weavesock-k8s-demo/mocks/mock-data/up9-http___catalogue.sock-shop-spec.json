@@ -1,0 +1,412 @@
+{
+ "info": {
+  "title": "http://catalogue.sock-shop",
+  "version": "0.0"
+ },
+ "openapi": "3.0.2",
+ "paths": {
+  "/catalogue": {
+   "get": {
+    "operationId": "531eb494-2c6e-4c3a-afdd-cb429b9d594b",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "size",
+      "required": false,
+      "schema": {
+       "enum": [
+        "5",
+        "6",
+        "3"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "page",
+      "required": false,
+      "schema": {
+       "enum": [
+        "1"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "tags",
+      "required": false,
+      "schema": {
+       "enum": [
+        "formal",
+        "",
+        "sport",
+        "blue",
+        "magic"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "sort",
+      "required": false,
+      "schema": {
+       "enum": [
+        "id"
+       ],
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": [
+         {
+          "count": 1,
+          "description": "Socks fit for a Messiah. You too can experience walking in water with these special edition beauties. Each hole is lovingly proggled to leave smooth edges. The only sock approved by a higher power.",
+          "id": "03fef6ac-1896-4ce8-bd69-b798f85c6e0b",
+          "imageUrl": [
+           "/catalogue/images/holy_1.jpeg",
+           "/catalogue/images/holy_2.jpeg"
+          ],
+          "name": "Holy",
+          "price": 99.99,
+          "tag": [
+           "action",
+           "magic"
+          ]
+         },
+         {
+          "count": 438,
+          "description": "proident occaecat irure et excepteur labore minim nisi amet irure",
+          "id": "3395a43e-2d88-40de-b95f-e00e1502085b",
+          "imageUrl": [
+           "/catalogue/images/colourful_socks.jpg",
+           "/catalogue/images/colourful_socks.jpg"
+          ],
+          "name": "Colourful",
+          "price": 18,
+          "tag": [
+           "brown",
+           "blue"
+          ]
+         },
+         {
+          "count": 820,
+          "description": "Ready for action. Engineers: be ready to smash that next bug! Be ready, with these super-action-sport-masterpieces. This particular engineer was chased away from the office with a stick.",
+          "id": "510a0d7e-8e83-4193-b483-e27e09ddc34d",
+          "imageUrl": [
+           "/catalogue/images/puma_1.jpeg",
+           "/catalogue/images/puma_2.jpeg"
+          ],
+          "name": "SuperSport XL",
+          "price": 15,
+          "tag": [
+           "sport",
+           "formal",
+           "black"
+          ]
+         },
+         {
+          "count": 738,
+          "description": "A mature sock, crossed, with an air of nonchalance.",
+          "id": "808a2de1-1aaa-4c25-a9b9-6612e8f29a38",
+          "imageUrl": [
+           "/catalogue/images/cross_1.jpeg",
+           "/catalogue/images/cross_2.jpeg"
+          ],
+          "name": "Crossed",
+          "price": 17.32,
+          "tag": [
+           "blue",
+           "action",
+           "red",
+           "formal"
+          ]
+         },
+         {
+          "count": 808,
+          "description": "enim officia aliqua excepteur esse deserunt quis aliquip nostrud anim",
+          "id": "819e1fbf-8b7e-4f6d-811f-693534916a8b",
+          "imageUrl": [
+           "/catalogue/images/WAT.jpg",
+           "/catalogue/images/WAT2.jpg"
+          ],
+          "name": "Figueroa",
+          "price": 14,
+          "tag": [
+           "green",
+           "formal",
+           "blue"
+          ]
+         }
+        ],
+        "schema": {
+         "anyOf": [
+          {
+           "items": {
+            "properties": {
+             "count": {
+              "type": "integer"
+             },
+             "description": {
+              "type": "string"
+             },
+             "id": {
+              "type": "string"
+             },
+             "imageUrl": {
+              "items": {
+               "type": "string"
+              },
+              "type": "array"
+             },
+             "name": {
+              "type": "string"
+             },
+             "price": {
+              "type": "number"
+             },
+             "tag": {
+              "items": {
+               "type": "string"
+              },
+              "type": "array"
+             }
+            },
+            "required": [
+             "count",
+             "description",
+             "id",
+             "imageUrl",
+             "name",
+             "price",
+             "tag"
+            ],
+            "type": "object"
+           },
+           "type": "array"
+          },
+          {}
+         ]
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 9543 requests",
+    "tags": [
+     "catalogue"
+    ]
+   },
+   "parameters": []
+  },
+  "/catalogue/size": {
+   "get": {
+    "operationId": "5836bd91-9c59-4534-bebc-d6dc738627f5",
+    "parameters": [
+     {
+      "description": "Origin: GET http://catalogue.sock-shop/tags &rarr; json: $.tags[*]",
+      "in": "query",
+      "name": "tags",
+      "required": true,
+      "schema": {
+       "enum": [
+        "large",
+        "",
+        "sport",
+        "brown"
+       ],
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "err": null,
+         "size": 3
+        },
+        "schema": {
+         "properties": {
+          "err": {},
+          "size": {
+           "type": "integer"
+          }
+         },
+         "required": [
+          "err",
+          "size"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1177 requests",
+    "tags": [
+     "catalogue"
+    ]
+   },
+   "parameters": []
+  },
+  "/catalogue/{id}": {
+   "get": {
+    "operationId": "0c105b7a-a83b-485c-802d-31aabf35ac98",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "count": 820,
+         "description": "Ready for action. Engineers: be ready to smash that next bug! Be ready, with these super-action-sport-masterpieces. This particular engineer was chased away from the office with a stick.",
+         "id": "510a0d7e-8e83-4193-b483-e27e09ddc34d",
+         "imageUrl": [
+          "/catalogue/images/puma_1.jpeg",
+          "/catalogue/images/puma_2.jpeg"
+         ],
+         "name": "SuperSport XL",
+         "price": 15,
+         "tag": [
+          "sport",
+          "black",
+          "formal"
+         ]
+        },
+        "schema": {
+         "properties": {
+          "count": {
+           "type": "integer"
+          },
+          "description": {
+           "type": "string"
+          },
+          "id": {
+           "type": "string"
+          },
+          "imageUrl": {
+           "items": {
+            "type": "string"
+           },
+           "type": "array"
+          },
+          "name": {
+           "type": "string"
+          },
+          "price": {
+           "type": "number"
+          },
+          "tag": {
+           "items": {
+            "type": "string"
+           },
+           "type": "array"
+          }
+         },
+         "required": [
+          "count",
+          "description",
+          "id",
+          "imageUrl",
+          "name",
+          "price",
+          "tag"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 5554 requests",
+    "tags": [
+     "catalogue"
+    ]
+   },
+   "parameters": [
+    {
+     "description": "Origin: GET http://catalogue.sock-shop/catalogue &rarr; json: $[*].id",
+     "in": "path",
+     "name": "id",
+     "required": true,
+     "schema": {
+      "enum": [
+       "03fef6ac-1896-4ce8-bd69-b798f85c6e0b",
+       "3395a43e-2d88-40de-b95f-e00e1502085b",
+       "510a0d7e-8e83-4193-b483-e27e09ddc34d",
+       "808a2de1-1aaa-4c25-a9b9-6612e8f29a38",
+       "zzz4f044-b040-410d-8ead-4de0446aec7e"
+      ],
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  },
+  "/tags": {
+   "get": {
+    "operationId": "308750f7-067c-4def-9b08-ebb077008398",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "err": null,
+         "tags": [
+          "brown",
+          "geek",
+          "formal",
+          "blue",
+          "skin",
+          "red",
+          "action",
+          "sport",
+          "black",
+          "magic",
+          "green"
+         ]
+        },
+        "schema": {
+         "properties": {
+          "err": {},
+          "tags": {
+           "items": {
+            "type": "string"
+           },
+           "type": "array"
+          }
+         },
+         "required": [
+          "err",
+          "tags"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1178 requests"
+   },
+   "parameters": []
+  }
+ },
+ "tags": [
+  {
+   "name": "catalogue"
+  }
+ ]
+}

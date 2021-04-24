@@ -1,0 +1,33 @@
+{
+  "id" : "5ffe06ab5aaaff0006f6bf48",
+  "customerId" : "57a98d98e4b00679b4a830b5",
+  "customer" : {
+    "id" : null,
+    "firstName" : "User1",
+    "lastName" : "Name1",
+    "username" : "user1",
+    "addresses" : [ ],
+    "cards" : [ ]
+  },
+  "address" : {
+    "id" : null,
+    "number" : "4",
+    "street" : "Maes-Y-Deri",
+    "city" : "Aberdare",
+    "postcode" : "CF44 6TF",
+    "country" : "United Kingdom"
+  },
+  "card" : {
+    "id" : null,
+    "longNum" : "0908415193175205",
+    "expires" : "08/19",
+    "ccv" : "280"
+  },
+  "items" : [ ],
+  "shipment" : {
+    "id" : "25bcb642-8a20-4f0f-b98f-232000e9368a",
+    "name" : "57a98d98e4b00679b4a830b5"
+  },
+  "date" : "2021-01-12T20:29:31.630+0000",
+  "total" : 4.99
+}

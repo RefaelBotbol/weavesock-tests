@@ -1,0 +1,13 @@
+{
+ "parameters": [
+  {
+   "name": "urlmaskfilter",
+   "uuid": "c26917c8-20c3-4373-b848-e7f64426cc3d"
+  }
+ ],
+ "rows": [
+  {
+   "urlmaskfilter": "<script>foo</script>"
+  }
+ ]
+}

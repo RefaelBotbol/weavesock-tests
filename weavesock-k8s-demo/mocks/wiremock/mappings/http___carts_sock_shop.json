@@ -1,0 +1,147 @@
+{
+ "mappings": [
+  {
+   "id": "c3fb984f-8e49-475f-bf59-1d4fb5da9ba9",
+   "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/carts/[^/]+"
+   },
+   "response": {
+    "body": "",
+    "headers": {},
+    "status": 202,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "dbdd1088-7ce3-4950-8b8a-0e5effb748de",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/carts/[^/]+/items"
+   },
+   "response": {
+    "body": "{\"id\":\"5f61349862cc9b0006f35e6d\",\"itemId\":\"03fef6ac-1896-4ce8-bd69-b798f85c6e0b\",\"quantity\":1,\"unitPrice\":99.99}",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 201,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "650c912a-4261-4f53-8594-636d829842c3",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/carts/[^/]+/merge"
+   },
+   "response": {
+    "body": "",
+    "headers": {},
+    "status": 202,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "5d4dc647-aca5-4cb0-88c6-b02c01f7b1ca",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/carts/[^/]+/items"
+   },
+   "response": {
+    "body": "[]",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "a94d4b8b-d2fe-4abd-85ac-fe48f319abfd",
+   "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/carts/[^/]+/items/[^/]+"
+   },
+   "response": {
+    "body": "",
+    "headers": {},
+    "status": 202,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "6b86b873-7048-4dd5-b473-5d15cf90aa93",
+   "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/carts/[^/]+"
+   },
+   "response": {
+    "body": "",
+    "headers": {},
+    "status": 202,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "10bf3516-7bdc-4a60-af60-c73dc342832a",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/carts/[^/]+/items"
+   },
+   "response": {
+    "body": "{\n \"id\": \"5ffc0cb465eecd00089845cf\",\n \"itemId\": \"{{request.body}}\",\n \"quantity\": 1,\n \"unitPrice\": 99.99\n}",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 201,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "6e08b279-baff-45a9-9149-9c3c33fcf247",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/carts/[^/]+/merge"
+   },
+   "response": {
+    "body": "",
+    "headers": {},
+    "status": 202,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "f95ab603-9b7a-4ef3-b094-b374988d42e3",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/carts/[^/]+/items"
+   },
+   "response": {
+    "body": "[]",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}

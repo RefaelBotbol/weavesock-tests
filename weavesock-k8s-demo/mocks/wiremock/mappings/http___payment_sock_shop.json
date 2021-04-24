@@ -1,0 +1,38 @@
+{
+ "mappings": [
+  {
+   "id": "41ea5c5b-1e34-4bdb-bbbf-174bfb925fba",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/paymentAuth"
+   },
+   "response": {
+    "body": "{\"authorised\":true,\"message\":\"Payment authorised\"}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "74c11c2a-4fe2-49b7-80f0-b0c25be4a7a1",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/paymentAuth"
+   },
+   "response": {
+    "body": "{\"authorised\":true,\"message\":\"Payment authorised\"}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}

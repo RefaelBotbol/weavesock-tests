@@ -1,0 +1,5 @@
+[
+ {
+  "urlmaskfilter": "<script>foo</script>"
+ }
+]

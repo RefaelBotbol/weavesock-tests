@@ -1,0 +1,42 @@
+{
+ "customerId": "604126b8b33e3d000142c081",
+ "customer": {
+  "firstName": "refael",
+  "lastName": "last",
+  "username": "refael",
+  "addresses": [],
+  "cards": []
+ },
+ "address": {
+  "number": "1234",
+  "street": "nowhere",
+  "city": "elsewhere",
+  "postcode": "12345",
+  "country": "best"
+ },
+ "card": {
+  "longNum": "411111111111111",
+  "expires": "12/24",
+  "ccv": "123"
+ },
+ "items": [
+  {
+   "itemId": "3395a43e-2d88-40de-b95f-e00e1502085b",
+   "quantity": 2,
+   "unitPrice": 18.0
+  }
+ ],
+ "shipment": {
+  "name": "604126b8b33e3d000142c081"
+ },
+ "date": "2021-03-04T18:29:25.504+0000",
+ "total": 40.989998,
+ "_links": {
+  "self": {
+   "href": "http://orders/orders/604127050c2b3f00064b3e61"
+  },
+  "order": {
+   "href": "http://orders/orders/604127050c2b3f00064b3e61"
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "TARGET_CARTS_SOCK_SHOP": "http://localhost:8001",
+ "TARGET_CATALOGUE_SOCK_SHOP": "http://localhost:8002",
+ "TARGET_FRONT_END_SOCK_SHOP": "http://localhost:8003",
+ "TARGET_ORDERS_SOCK_SHOP": "http://localhost:8004",
+ "TARGET_PAYMENT_SOCK_SHOP": "http://localhost:8005",
+ "TARGET_SHIPPING_SOCK_SHOP": "http://localhost:8006",
+ "TARGET_USER_SOCK_SHOP": "http://localhost:8007"
+}

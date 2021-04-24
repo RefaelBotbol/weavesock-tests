@@ -1,0 +1,13 @@
+{
+ "parameters": [
+  {
+   "name": "__",
+   "uuid": "6a5ce5cd-1f8b-41dc-aca4-32b9e81cf1e2"
+  }
+ ],
+ "rows": [
+  {
+   "__": "die(@md5(Apri1))"
+  }
+ ]
+}

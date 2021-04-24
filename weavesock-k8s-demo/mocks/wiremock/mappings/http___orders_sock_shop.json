@@ -1,0 +1,123 @@
+{
+ "mappings": [
+  {
+   "id": "b156b0b2-6ee1-41a0-96b1-afa747be7b13",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/orders"
+   },
+   "response": {
+    "bodyFileName": "resp_10.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 201,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "668a41bc-6057-41fc-aef2-991311a47870",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/orders/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_92.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "1994bf0b-86b9-4eca-a5bf-5aba6c6b583e",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/orders/search/customerId"
+   },
+   "response": {
+    "body": "",
+    "headers": {
+     "Content-Type": "application/hal+json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "2ba3d74c-4600-4d6e-ac7a-45d2289e3423",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/orders/search/customerId"
+   },
+   "response": {
+    "bodyFileName": "resp_94.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "d1d71d1f-74a7-480d-bd98-4c392a3c477a",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/orders"
+   },
+   "response": {
+    "bodyFileName": "resp_155.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 201,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "bafa27ce-8e3c-41d6-9ba9-56c438321bb3",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/orders/search/customerId"
+   },
+   "response": {
+    "bodyFileName": "resp_156.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "587959c9-7f0e-4f9a-8f34-edc92288d03f",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/orders/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_199.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "parameters": [
+  {
+   "name": "size",
+   "uuid": "a08133a8-cb84-48fa-ae4d-8497e32b6d7a"
+  },
+  {
+   "name": "tags",
+   "uuid": "cd3f144d-cad8-403c-8b6d-1afb6ccc250b"
+  }
+ ],
+ "rows": [
+  {
+   "size": "5",
+   "tags": "formal"
+  },
+  {
+   "size": "5",
+   "tags": ""
+  },
+  {
+   "size": "5",
+   "tags": "sport"
+  },
+  {
+   "size": "5",
+   "tags": "blue"
+  },
+  {
+   "size": "5",
+   "tags": "magic"
+  },
+  {
+   "size": "6",
+   "tags": "brown"
+  },
+  {
+   "size": "3",
+   "tags": "large"
+  }
+ ]
+}

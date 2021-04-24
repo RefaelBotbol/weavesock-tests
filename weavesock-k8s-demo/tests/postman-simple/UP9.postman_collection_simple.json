@@ -1,0 +1,2526 @@
+{
+    "info": {
+        "id": "9d6db0ef-8e61-4773-bfc5-4dc50cb731a2",
+        "name": "Simple refael - weavesock-k8s-demo/all rev 159 (by UP9.com)",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "id": "94d1fdac-b72d-4b5e-8a64-6b79b5967670",
+            "name": "carts.sock-shop",
+            "item": [
+                {
+                    "id": "51aa3a56-c51a-45e4-adb6-75871cbd041b",
+                    "name": "carts",
+                    "item": [
+                        {
+                            "id": "e82485f6-8b1e-443c-aef6-d85291b4b2ad",
+                            "name": "/carts/{{customerId}}",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{carts_sock_shop}}/carts/{{customerId}}",
+                                    "protocol": "",
+                                    "host": "{{carts_sock_shop}}",
+                                    "path": [
+                                        "carts",
+                                        "{{customerId}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "c1a9c776-47db-4e84-b53c-625bb5cebcae",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e949ece9-bb34-4504-8334-2a601d83e7b6",
+                            "name": "/carts/{{customerId}}/items",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{carts_sock_shop}}/carts/{{customerId}}/items",
+                                    "protocol": "",
+                                    "host": "{{carts_sock_shop}}",
+                                    "path": [
+                                        "carts",
+                                        "{{customerId}}",
+                                        "items"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "1565c543-5129-46ee-821c-5f0e0ac6370f",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "a5196f31-a6f2-4e33-ae05-fd3434f9bec6",
+                            "name": "/carts/{{customerId}}/items",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "content-type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{carts_sock_shop}}/carts/{{customerId}}/items",
+                                    "protocol": "",
+                                    "host": "{{carts_sock_shop}}",
+                                    "path": [
+                                        "carts",
+                                        "{{customerId}}",
+                                        "items"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"itemId\": \"{{itemId}}\",\n    \"unitPrice\": {{unitPrice}}\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "2b224acd-ea58-4f2d-858c-0e4b05e6c483",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");",
+                                            "pm.variables.set(\"itemId\", \"03fef6ac-1896-4ce8-bd69-b798f85c6e0b\");",
+                                            "pm.variables.set(\"unitPrice\", 15);"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "7a22753b-d200-4527-bea4-adae55e5fd55",
+                            "name": "/carts/{{customerId}}/items/{{itemId}}",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{carts_sock_shop}}/carts/{{customerId}}/items/{{itemId}}",
+                                    "protocol": "",
+                                    "host": "{{carts_sock_shop}}",
+                                    "path": [
+                                        "carts",
+                                        "{{customerId}}",
+                                        "items",
+                                        "{{itemId}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "f8aa682a-850c-4b54-9bcd-4e78226ec1aa",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");",
+                                            "pm.variables.set(\"itemId\", \"03fef6ac-1896-4ce8-bd69-b798f85c6e0b\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "edf61ce8-82c2-4e87-aa2e-e838c2294c30",
+                            "name": "/carts/{{customerId}}/merge",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{carts_sock_shop}}/carts/{{customerId}}/merge",
+                                    "protocol": "",
+                                    "host": "{{carts_sock_shop}}",
+                                    "path": [
+                                        "carts",
+                                        "{{customerId}}",
+                                        "merge"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "sessionId",
+                                            "value": "{{sessionId}}"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "01bad0a1-4d76-4e24-9d53-c350ee20c4b3",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");",
+                                            "pm.variables.set(\"sessionId\", \"Omc8ctf1YcSGyzOPKmB55xQ2HQxCLJDs\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "168736b9-3bcb-4d5c-be5a-7998df81f4ae",
+                        "exec": [],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "id": "b0bbaf2e-db44-496c-9b93-fb67671f7c3e",
+            "name": "catalogue.sock-shop",
+            "item": [
+                {
+                    "id": "2eb0f065-1e88-4fa4-a591-0c03098290f4",
+                    "name": "catalogue",
+                    "item": [
+                        {
+                            "id": "c2f29651-9253-4f34-adaa-1412cfc72a47",
+                            "name": "/catalogue",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{catalogue_sock_shop}}/catalogue",
+                                    "protocol": "",
+                                    "host": "{{catalogue_sock_shop}}",
+                                    "path": [
+                                        "catalogue"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "page",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "size",
+                                            "value": "{{size}}"
+                                        },
+                                        {
+                                            "key": "sort",
+                                            "value": "id"
+                                        },
+                                        {
+                                            "key": "tags",
+                                            "value": "{{tags}}"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "3ed1212c-d282-4a88-9b30-a54282f674a9",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"size\", \"5\");",
+                                            "pm.variables.set(\"tags\", \"formal\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1c176558-17ac-4303-8faa-c6ca53731a28",
+                            "name": "/catalogue/size",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{catalogue_sock_shop}}/catalogue/size",
+                                    "protocol": "",
+                                    "host": "{{catalogue_sock_shop}}",
+                                    "path": [
+                                        "catalogue",
+                                        "size"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "tags",
+                                            "value": "{{tags}}"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "3bd15d89-dc32-4dc1-a9a2-8bedfa5460a6",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"tags\", \"brown\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9c40bd18-fc5e-4eb2-8110-37e53a304589",
+                            "name": "/catalogue/{{id}}",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{catalogue_sock_shop}}/catalogue/{{id}}",
+                                    "protocol": "",
+                                    "host": "{{catalogue_sock_shop}}",
+                                    "path": [
+                                        "catalogue",
+                                        "{{id}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "4b90f609-f81c-4e4e-b752-47928508b694",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"id\", \"510a0d7e-8e83-4193-b483-e27e09ddc34d\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                },
+                {
+                    "id": "2656f018-8447-4ced-a945-91211176afcc",
+                    "name": "/tags",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{catalogue_sock_shop}}/tags",
+                            "protocol": "",
+                            "host": "{{catalogue_sock_shop}}",
+                            "path": [
+                                "tags"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "582e9831-b6b0-4b50-8fa8-62a513b8d8d6",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "aac73e05-6a34-4cf0-95fd-e935cc0ac17c",
+                        "exec": [],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "id": "4089a86b-6224-4911-bbbc-a059bbd4af1f",
+            "name": "front-end.sock-shop",
+            "item": [
+                {
+                    "id": "837d3453-9898-472b-869d-5e2cb3c49430",
+                    "name": "/",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "content-type",
+                                "value": "application/x-www-form-urlencoded",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [],
+                            "query": [
+                                {
+                                    "key": "\"</script>",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "\"><script>alert('struts_sa_surl_xss.nasl-1603621900')</script>",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "\"><script>alert('struts_sa_surl_xss.nasl-1605657683')</script>",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "\"><script>alert('struts_sa_surl_xss.nasl-1605658393')</script>",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "('\\u0023_memberAccess[\\'allowStaticMethodAccess\\']')(meh)",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "(aaa)(('\\u0023context[\\'xwork.MethodAccessor.denyMethodExecution\\']\\u003d\\u0023foo')(\\u0023foo\\u003dnew java.lang.Boolean(\"false\")))",
+                                    "value": ""
+                                },
+                                {
+                                    "key": "(asdf)(('\\u0023thread.sleep(5000)')(\\u0023thread\\u003d@java.lang.Thread@currentThread()))",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "<meta http-equiv",
+                                    "value": "{{_meta_http_equiv}}"
+                                },
+                                {
+                                    "key": "<script>document.cookie",
+                                    "value": "{{_script_document_cookie}}"
+                                },
+                                {
+                                    "key": "XDEBUG_SESSION_START",
+                                    "value": "phpstorm"
+                                },
+                                {
+                                    "key": "a",
+                                    "value": "fetch"
+                                },
+                                {
+                                    "key": "class.classLoader.URLs[0]",
+                                    "value": "{{class_classLoader_URLs_0_}}"
+                                },
+                                {
+                                    "key": "content",
+                                    "value": "{{content}}"
+                                },
+                                {
+                                    "key": "debug",
+                                    "value": "command"
+                                },
+                                {
+                                    "key": "expression",
+                                    "value": "{{expression}}"
+                                },
+                                {
+                                    "key": "ho {COMPLETE_VERSION}",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "b062a7a4-beed-4e2d-9101-a17084aa0437",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"_meta_http_equiv\", \"Set-Cookie content=\\\"testcgtp=579\\\">\");",
+                                    "pm.variables.set(\"_script_document_cookie\", \"\\\"testcgtp=579\");",
+                                    "pm.variables.set(\"class_classLoader_URLs_0_\", \"struts_2_3_16_1_classloader_manipulation-1603621910\");",
+                                    "pm.variables.set(\"content\", \"<php>die(@md5(HelloThinkCMF))</php>\");",
+                                    "pm.variables.set(\"expression\", \"#_memberAccess[\\\"allowStaticMethodAccess\\\"]=true,@java.lang.Thread@sleep(5000)\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "6addaf8a-1d6f-4f13-9133-35ad60809e9f",
+                    "name": "/Licenses/{{licenseId}}",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "content-type",
+                                "value": "application/x-www-form-urlencoded",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "chk",
+                                    "value": "Test",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/Licenses/{{licenseId}}",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "Licenses",
+                                "{{licenseId}}"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "27fbb728-f439-4546-94de-0d7d98ea879c",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"licenseId\", \"jQuery FileSearch (MIT).php\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "517da9fe-f476-4213-8ab2-24bc2d10b91b",
+                    "name": "/SiteScope",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/SiteScope",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "SiteScope"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "4ad8cf11-dbb9-4e56-8db4-d7686ca63e9c",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "ca42a07f-adf4-49c1-8894-a624c3213bf4",
+                    "name": "/address",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-requested-with",
+                                "value": "XMLHttpRequest",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/address",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "address"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "b55ccd6f-9b5a-486f-b891-e590fee9cd13",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "e65e6693-49b9-484e-a168-f57fb62f7349",
+                    "name": "/addresses",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "content-type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "x-requested-with",
+                                "value": "XMLHttpRequest",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/addresses",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "addresses"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"city\": \"elsewhere\",\n    \"country\": \"best\",\n    \"number\": \"{{number}}\",\n    \"postcode\": \"{{postcode}}\",\n    \"street\": \"nowhere\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "32075d8c-809e-48a3-8ca4-f7ad4f54fb2f",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"number\", \"1234\");",
+                                    "pm.variables.set(\"postcode\", \"12345\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "d670b72f-1eb7-44b8-8527-ab81bedfae60",
+                    "name": "/basket.html",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/basket.html",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "basket.html"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "42ffb6b7-1438-4e00-a773-d572b74f8b09",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "913648c5-8245-46e2-95bb-9b5149cd0aa7",
+                    "name": "/c",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/c",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "c"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "2e735891-db32-457a-bbc1-becccca43471",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "9a7d405e-241d-4905-8648-e8ba4264baa0",
+                    "name": "/card",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-requested-with",
+                                "value": "XMLHttpRequest",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/card",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "card"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "cd72a7a1-f184-4be7-9ef7-fffd0d8d32be",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "5d2b472f-9a54-4306-bfb1-6da21a42c4cf",
+                    "name": "/cards",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "content-type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "x-requested-with",
+                                "value": "XMLHttpRequest",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/cards",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "cards"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"ccv\": \"{{ccv}}\",\n    \"expires\": \"{{expires}}\",\n    \"longNum\": \"{{longNum}}\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "73a0e997-3aeb-444d-852d-6a36d081fa18",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"ccv\", \"123\");",
+                                    "pm.variables.set(\"expires\", \"12/24\");",
+                                    "pm.variables.set(\"longNum\", \"411111111111111\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c327217f-ca60-4a14-9726-f4d6724b10a1",
+                    "name": "cart",
+                    "item": [
+                        {
+                            "id": "a1bdeb8e-0279-4141-ac60-cc9b814a5afc",
+                            "name": "/cart",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/cart",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "cart"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "2978d331-ae0c-4a16-9d9f-ae9f969f7fc0",
+                                        "exec": [],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "65fc3b55-74da-4cbc-8282-73aba3743960",
+                            "name": "/cart",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/cart",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "cart"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "f3b2054a-03ae-457f-93f7-1114f6b589fa",
+                                        "exec": [],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0d28d024-1a9a-49b5-9881-554571e1c556",
+                            "name": "/cart",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "content-type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/cart",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "cart"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"id\": \"{{id}}\",\n    \"quantity\": 1\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "72cbd37d-9451-4051-9335-57556f29f18f",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"id\", \"d3588630-ad8e-49df-bbd7-3167f7efb246\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "d5255e52-4425-4d0b-9409-e550434373fd",
+                            "name": "/cart/{{itemId}}",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/cart/{{itemId}}",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "cart",
+                                        "{{itemId}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "42b1893a-0d69-42b9-b515-98c540e4fee2",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"itemId\", \"03fef6ac-1896-4ce8-bd69-b798f85c6e0b\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                },
+                {
+                    "id": "09941c57-1dd8-4e91-a1e6-e2852ca3b448",
+                    "name": "catalogue",
+                    "item": [
+                        {
+                            "id": "9ad6c3a7-b667-4a46-8eb4-8bf81ad96dd2",
+                            "name": "/catalogue",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/catalogue",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "catalogue"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "page",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "size",
+                                            "value": "{{size}}"
+                                        },
+                                        {
+                                            "key": "sort",
+                                            "value": "id"
+                                        },
+                                        {
+                                            "key": "tags",
+                                            "value": "{{tags}}"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "1d316d0f-c1e7-4fc6-a340-bc10a4841bf7",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"size\", \"5\");",
+                                            "pm.variables.set(\"tags\", \"\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4553b997-6439-48be-825d-faa4308ba10b",
+                            "name": "/catalogue/size",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/catalogue/size",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "catalogue",
+                                        "size"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "tags",
+                                            "value": ""
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "545e2837-ffe5-4f0d-8dc9-3e2cc4e168df",
+                                        "exec": [],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5f9147bd-8a33-4767-82b6-0bcce12ba0a8",
+                            "name": "/catalogue/{{id}}",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/catalogue/{{id}}",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "catalogue",
+                                        "{{id}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "644fddd7-60c3-4b88-ae0a-a6a3d9c6a32d",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"id\", \"510a0d7e-8e83-4193-b483-e27e09ddc34d\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                },
+                {
+                    "id": "1f22cfee-b8bc-4ea9-8bc8-fefdf0328d3c",
+                    "name": "/category.html",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/category.html",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "category.html"
+                            ],
+                            "query": [
+                                {
+                                    "key": "page",
+                                    "value": "2"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "8b1db432-acd8-440c-a51a-753cad57730f",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "9475e4c7-a702-4a3b-8ef3-8b2df330fe55",
+                    "name": "/customer-order.html",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/customer-order.html",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "customer-order.html"
+                            ],
+                            "query": [
+                                {
+                                    "key": "order",
+                                    "value": "{{order}}"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "ce51fb31-2c06-4e4c-91ac-6e0b42b4c3a0",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"order\", \"/orders/604127050c2b3f00064b3e61\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "2d4c6636-cde4-4800-b3bf-12657b643848",
+                    "name": "/customer-orders.html",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/customer-orders.html",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "customer-orders.html"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "a88945c4-c6f8-47dd-ae49-f3476c30057a",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "ff8e9cd1-2139-4aa1-b7c7-63935124bf97",
+                    "name": "customers",
+                    "item": [
+                        {
+                            "id": "cd329b1f-3a11-4d8b-b93d-3ead87410c95",
+                            "name": "/customers/wcbVLjJnpzpezACrWupvwuuQUEpXSBhZ",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/customers/wcbVLjJnpzpezACrWupvwuuQUEpXSBhZ",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "customers",
+                                        "wcbVLjJnpzpezACrWupvwuuQUEpXSBhZ"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "87608d89-c205-4fba-879f-e1be4a294f81",
+                                        "exec": [],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "18d17288-79ca-4cd1-9fb1-64f7f9acf62a",
+                            "name": "/customers/{{customerId}}",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/customers/{{customerId}}",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "customers",
+                                        "{{customerId}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "4b323987-3936-4772-b9dc-f8b455c12d6c",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"customerId\", \"jaQaDHeJNGvE7rpMkHelnZPQm2xIyi53\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                },
+                {
+                    "id": "e706db0a-9144-4230-bd9c-0862f033b1cb",
+                    "name": "/detail.html",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/detail.html",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "detail.html"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "{{id}}"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "26f48952-bd27-4870-a3af-5cd746d52fc4",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"id\", \"3395a43e-2d88-40de-b95f-e00e1502085b\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "d4cdecce-985d-41e2-8f6b-0091d302f526",
+                    "name": "/footer.html",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-requested-with",
+                                "value": "XMLHttpRequest",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/footer.html",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "footer.html"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "afd844a9-e5fe-4abc-b4ca-0d4e64326aee",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "bb135cc4-319b-4e3c-b8a2-d05542040ad1",
+                    "name": "/index.html",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/index.html",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "index.html"
+                            ],
+                            "query": [
+                                {
+                                    "key": "findcli",
+                                    "value": "{{findcli}}"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "9a544291-76a4-4aa6-89bd-8c3cc005a030",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"findcli\", \"-1\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "f96a38d7-fc42-4164-a799-f3a889833fb1",
+                    "name": "/lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "content-type",
+                                "value": "application/x-www-form-urlencoded",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "<?",
+                                    "value": "{{__}}",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "?>",
+                                    "value": "",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "lib",
+                                "phpunit",
+                                "phpunit",
+                                "src",
+                                "Util",
+                                "PHP",
+                                "eval-stdin.php"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "fcaa7a7a-5076-4259-b7e6-c1a02881beff",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"__\", \"die(@md5(Apri1))\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "7667454a-e8f6-4b1c-849f-3f94d2154c2e",
+                    "name": "/login",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-requested-with",
+                                "value": "XMLHttpRequest",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/login",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "e35dd461-b1fa-41a7-8f91-e24707862ab8",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "7dbc450c-2788-436b-8537-85185e647d42",
+                    "name": "orders",
+                    "item": [
+                        {
+                            "id": "bf2a83ea-6714-4a66-8ebf-9ac9d714f577",
+                            "name": "/orders",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/orders",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "orders"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "d91337d5-3522-4cf8-9167-18ff2639d4ae",
+                                        "exec": [],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b070faae-30cd-4cf3-9b8c-42a9421cad30",
+                            "name": "/orders",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/orders",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "orders"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "161efe28-266b-4ca4-a3e2-7cb266170af7",
+                                        "exec": [],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "981452c3-f179-48b9-9b0a-3f78b17c4955",
+                            "name": "/orders/{{id}}",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{front_end_sock_shop}}/orders/{{id}}",
+                                    "protocol": "",
+                                    "host": "{{front_end_sock_shop}}",
+                                    "path": [
+                                        "orders",
+                                        "{{id}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "aa6df627-e944-4b6c-bb70-cfe5a0ecef63",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"id\", \"5f89e78f51a135000666702c\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                },
+                {
+                    "id": "f0eeb600-f5ea-41c4-8aef-8afe3956225b",
+                    "name": "/plus/qiang.php",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "content-type",
+                                "value": "application/x-www-form-urlencoded",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "blbl",
+                                    "value": "{{blbl}}",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/plus/qiang.php",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "plus",
+                                "qiang.php"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "a431cfc4-92aa-4160-8fcb-97d3a4202a13",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"blbl\", \"die(@md5(S3pt3mb3r))\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "2d8ba9f0-90ba-4ead-9f2b-593e0212896b",
+                    "name": "/por/login_psw.csp",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/por/login_psw.csp",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "por",
+                                "login_psw.csp"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "8ebdc297-1a8b-4e81-bbfe-bd6b346d578b",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "f695c781-adaa-4ff3-87d6-24d431b776e4",
+                    "name": "/register",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "content-type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "x-requested-with",
+                                "value": "XMLHttpRequest",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/register",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "register"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"{{email}}\",\n    \"firstName\": \"{{firstName}}\",\n    \"lastName\": \"{{lastName}}\",\n    \"password\": \"{{password}}\",\n    \"username\": \"{{username}}\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "1fef4de8-72c9-40cc-8f79-601283dc99b0",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"email\", \"refael@up9.com\");",
+                                    "pm.variables.set(\"firstName\", \"qwerasdf\");",
+                                    "pm.variables.set(\"lastName\", \"adsfzxcv\");",
+                                    "pm.variables.set(\"password\", \"qwerasdfzcxv\");",
+                                    "pm.variables.set(\"username\", \"refael2\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "e617de13-280a-4d7a-9374-0e0820e6d7cc",
+                    "name": "/tags",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-requested-with",
+                                "value": "XMLHttpRequest",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/tags",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "tags"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "49947fd1-789c-4eb8-86a7-c50738a5c2ba",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "06a0ddcc-c1a7-4fe4-b5c0-6b6d2998d9f6",
+                    "name": "/topbar.html",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-requested-with",
+                                "value": "XMLHttpRequest",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{front_end_sock_shop}}/topbar.html",
+                            "protocol": "",
+                            "host": "{{front_end_sock_shop}}",
+                            "path": [
+                                "topbar.html"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "c86b076b-e222-44eb-8a89-67b7260a91ba",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "0968894a-ddc5-419c-89b7-3d9ca8df2025",
+                        "exec": [],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "id": "1fd19ea4-5380-46ed-8238-1a272a9a6a49",
+            "name": "orders.sock-shop",
+            "item": [
+                {
+                    "id": "847e6665-d20c-4195-805c-60f273302dba",
+                    "name": "orders",
+                    "item": [
+                        {
+                            "id": "4413c974-a1a5-4d2b-828e-d06e9cb82f9c",
+                            "name": "/orders",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "content-type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{orders_sock_shop}}/orders",
+                                    "protocol": "",
+                                    "host": "{{orders_sock_shop}}",
+                                    "path": [
+                                        "orders"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"address\": \"{{address}}\",\n    \"card\": \"{{card}}\",\n    \"customer\": \"{{customer}}\",\n    \"items\": \"{{items}}\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "f1921902-4ea0-453b-814e-7941d5ec7f80",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"address\", \"http://user/addresses/57a98d98e4b00679b4a830b0\");",
+                                            "pm.variables.set(\"card\", \"http://user/cards/57a98d98e4b00679b4a830b1\");",
+                                            "pm.variables.set(\"customer\", \"http://user/customers/57a98d98e4b00679b4a830b2\");",
+                                            "pm.variables.set(\"items\", \"http://carts/carts/57a98d98e4b00679b4a830b2/items\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "545091f4-eff7-497e-92dd-0d5945dd1deb",
+                            "name": "/orders/search/customerId",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{orders_sock_shop}}/orders/search/customerId",
+                                    "protocol": "",
+                                    "host": "{{orders_sock_shop}}",
+                                    "path": [
+                                        "orders",
+                                        "search",
+                                        "customerId"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "custId",
+                                            "value": "{{custId}}"
+                                        },
+                                        {
+                                            "key": "sort",
+                                            "value": "date"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "b3a13341-a3e4-43f0-a976-8c872e424374",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"custId\", \"604126b8b33e3d000142c081\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "554ba2c0-85f2-4467-bc8e-d8a52549aed0",
+                            "name": "/orders/{{id}}",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{orders_sock_shop}}/orders/{{id}}",
+                                    "protocol": "",
+                                    "host": "{{orders_sock_shop}}",
+                                    "path": [
+                                        "orders",
+                                        "{{id}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "4595ec95-c0c5-4109-9d98-cda9d14f0d3b",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"id\", \"5f6133edc5f29f000664b180\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "e241b67c-7416-4719-ac97-cfd251836d4f",
+                        "exec": [],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "id": "f40ee7ab-102d-4c62-9e02-007435c7c025",
+            "name": "payment.sock-shop",
+            "item": [
+                {
+                    "id": "a12d7a85-d03f-492e-892e-de2ebdde315c",
+                    "name": "/paymentAuth",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "content-type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{payment_sock_shop}}/paymentAuth",
+                            "protocol": "",
+                            "host": "{{payment_sock_shop}}",
+                            "path": [
+                                "paymentAuth"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"address\": {\n        \"city\": \"{{city}}\",\n        \"country\": \"{{country}}\",\n        \"id\": null,\n        \"number\": \"{{number}}\",\n        \"postcode\": \"{{postcode}}\",\n        \"street\": \"{{street}}\"\n    },\n    \"amount\": {{amount}},\n    \"card\": {\n        \"ccv\": \"{{ccv}}\",\n        \"expires\": \"{{expires}}\",\n        \"id\": null,\n        \"longNum\": \"{{longNum}}\"\n    },\n    \"customer\": {\n        \"addresses\": [],\n        \"cards\": [],\n        \"firstName\": \"{{firstName}}\",\n        \"id\": null,\n        \"lastName\": \"{{lastName}}\",\n        \"username\": \"{{username}}\"\n    }\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "fc7a7ca6-cdd4-4b47-a89d-4234ca7b7965",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"amount\", 4.99);",
+                                    "pm.variables.set(\"ccv\", \"958\");",
+                                    "pm.variables.set(\"city\", \"Aberdare\");",
+                                    "pm.variables.set(\"country\", \"United Kingdom\");",
+                                    "pm.variables.set(\"expires\", \"08/19\");",
+                                    "pm.variables.set(\"firstName\", \"User\");",
+                                    "pm.variables.set(\"lastName\", \"Name\");",
+                                    "pm.variables.set(\"longNum\", \"5544154011345918\");",
+                                    "pm.variables.set(\"number\", \"246\");",
+                                    "pm.variables.set(\"postcode\", \"G67 3DL\");",
+                                    "pm.variables.set(\"street\", \"Whitelees Road\");",
+                                    "pm.variables.set(\"username\", \"user\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "bb21a404-59a8-4ea4-80ba-18d56061b8ff",
+                        "exec": [],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "id": "fc7b4fad-e15f-4791-8681-c6788cce1f1b",
+            "name": "shipping.sock-shop",
+            "item": [
+                {
+                    "id": "ece97bb5-668b-49fa-9f44-4fc36babafd8",
+                    "name": "/shipping",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "content-type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{shipping_sock_shop}}/shipping",
+                            "protocol": "",
+                            "host": "{{shipping_sock_shop}}",
+                            "path": [
+                                "shipping"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"id\": \"{{id}}\",\n    \"name\": \"{{name}}\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "ac7232cc-5ceb-4ed2-b14a-c4bbd6632b2c",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"id\", \"73486b55-d856-4a12-8019-bad7afc4b29e\");",
+                                    "pm.variables.set(\"name\", \"57a98d98e4b00679b4a830b2\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "10b5402a-0566-484a-bfe9-676c059d9298",
+                        "exec": [],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "id": "aa908f1a-ac9a-4337-8e3c-ea2e0fcc0046",
+            "name": "user.sock-shop",
+            "item": [
+                {
+                    "id": "79cea787-9bd6-4c35-b870-85c135816e4d",
+                    "name": "addresses",
+                    "item": [
+                        {
+                            "id": "a4047efa-ff11-40df-9d07-b0cc69e254fd",
+                            "name": "/addresses",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "content-type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{user_sock_shop}}/addresses",
+                                    "protocol": "",
+                                    "host": "{{user_sock_shop}}",
+                                    "path": [
+                                        "addresses"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"city\": \"elsewhere\",\n    \"country\": \"best\",\n    \"number\": \"{{number}}\",\n    \"postcode\": \"{{postcode}}\",\n    \"street\": \"nowhere\",\n    \"userID\": \"{{userID}}\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "6e2f6e5c-87e4-4f05-8c13-8bdd049b8d0f",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"number\", \"1234\");",
+                                            "pm.variables.set(\"postcode\", \"12345\");",
+                                            "pm.variables.set(\"userID\", \"604126b8b33e3d000142c081\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6f50a650-b0cd-4471-8e2d-ea8f9a4f2309",
+                            "name": "/addresses/{{id}}",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "accept",
+                                        "value": "application/hal+json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{user_sock_shop}}/addresses/{{id}}",
+                                    "protocol": "",
+                                    "host": "{{user_sock_shop}}",
+                                    "path": [
+                                        "addresses",
+                                        "{{id}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "4d21c098-1292-4823-aec9-9df868290cdc",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"id\", \"57a98d98e4b00679b4a830b0\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                },
+                {
+                    "id": "f2b1ae42-4112-473c-b87b-6e16d47144e6",
+                    "name": "cards",
+                    "item": [
+                        {
+                            "id": "f64e00f5-85bc-454c-8696-ead5e1cd2ce0",
+                            "name": "/cards",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "content-type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{user_sock_shop}}/cards",
+                                    "protocol": "",
+                                    "host": "{{user_sock_shop}}",
+                                    "path": [
+                                        "cards"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"ccv\": \"{{ccv}}\",\n    \"expires\": \"{{expires}}\",\n    \"longNum\": \"{{longNum}}\",\n    \"userID\": \"{{userID}}\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "6a66519c-ca2c-4259-b3d5-67602e267509",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"ccv\", \"123\");",
+                                            "pm.variables.set(\"expires\", \"12/24\");",
+                                            "pm.variables.set(\"longNum\", \"411111111111111\");",
+                                            "pm.variables.set(\"userID\", \"604126b8b33e3d000142c081\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6e264e0d-714f-459a-86ef-cec1d1cdb782",
+                            "name": "/cards/{{id}}",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "accept",
+                                        "value": "application/hal+json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{user_sock_shop}}/cards/{{id}}",
+                                    "protocol": "",
+                                    "host": "{{user_sock_shop}}",
+                                    "path": [
+                                        "cards",
+                                        "{{id}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "021426c5-d48a-4c5c-92c2-0c6fe695be24",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"id\", \"57a98d98e4b00679b4a830b1\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                },
+                {
+                    "id": "c5b94d8a-ad4d-4a89-8b83-a37217982196",
+                    "name": "customers",
+                    "item": [
+                        {
+                            "id": "8e09b2e9-56de-4c73-a47d-003e5ad399d2",
+                            "name": "/customers/{{customerId}}",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "accept",
+                                        "value": "application/hal+json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{user_sock_shop}}/customers/{{customerId}}",
+                                    "protocol": "",
+                                    "host": "{{user_sock_shop}}",
+                                    "path": [
+                                        "customers",
+                                        "{{customerId}}"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "6895b2b2-baaa-4f60-82c5-343444a2d549",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"customerId\", \"57a98d98e4b00679b4a830b2\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e8e5ebb9-b17e-47cf-bc48-2c9e15aa1bb6",
+                            "name": "/customers/{{customerId}}/addresses",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{user_sock_shop}}/customers/{{customerId}}/addresses",
+                                    "protocol": "",
+                                    "host": "{{user_sock_shop}}",
+                                    "path": [
+                                        "customers",
+                                        "{{customerId}}",
+                                        "addresses"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "b1b3ad7b-ef39-41eb-a376-9f60d0c4539f",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"customerId\", \"57a98d98e4b00679b4a830b2\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "7bf97616-b89c-4b43-9d0f-2e8e87f44ecd",
+                            "name": "/customers/{{customerId}}/cards",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{user_sock_shop}}/customers/{{customerId}}/cards",
+                                    "protocol": "",
+                                    "host": "{{user_sock_shop}}",
+                                    "path": [
+                                        "customers",
+                                        "{{customerId}}",
+                                        "cards"
+                                    ]
+                                }
+                            },
+                            "response": [],
+                            "event": [
+                                {
+                                    "listen": "prerequest",
+                                    "script": {
+                                        "id": "a896e89e-1915-480a-8a4a-41707c4704e5",
+                                        "exec": [
+                                            "// Some of the environment variables might be set in the parent folders.",
+                                            "pm.variables.set(\"customerId\", \"57a98d98e4b00679b4a830b2\");"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "event": [],
+                    "protocolProfileBehavior": {}
+                },
+                {
+                    "id": "cc378ccf-60dd-485a-87db-51eb6834c390",
+                    "name": "/login",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{user_sock_shop}}/login",
+                            "protocol": "",
+                            "host": "{{user_sock_shop}}",
+                            "path": [
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "19e75db3-0b21-485b-9b55-ab934cfaabf8",
+                                "exec": [],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "ef12fecc-4846-4db5-8773-4a802ef695b1",
+                    "name": "/register",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "content-type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{user_sock_shop}}/register",
+                            "protocol": "",
+                            "host": "{{user_sock_shop}}",
+                            "path": [
+                                "register"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"{{email}}\",\n    \"firstName\": \"{{firstName}}\",\n    \"lastName\": \"{{lastName}}\",\n    \"password\": \"{{password}}\",\n    \"username\": \"{{username}}\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "b37d3d78-fabd-4f47-b07c-89f0b7816879",
+                                "exec": [
+                                    "// Some of the environment variables might be set in the parent folders.",
+                                    "pm.variables.set(\"email\", \"refael@up9.com\");",
+                                    "pm.variables.set(\"firstName\", \"qwerasdf\");",
+                                    "pm.variables.set(\"lastName\", \"adsfzxcv\");",
+                                    "pm.variables.set(\"password\", \"qwerasdfzcxv\");",
+                                    "pm.variables.set(\"username\", \"refael2\");"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "1f8bdd14-2e57-4192-99a1-e7e1951ee3ad",
+                        "exec": [],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {}
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "id": "02b9098a-ff89-4194-9413-a5d236bd3913",
+            "key": "carts_sock_shop",
+            "value": "http://carts.sock-shop"
+        },
+        {
+            "id": "f72d8b24-c7e8-4327-a5e7-ff1e945c99c4",
+            "key": "catalogue_sock_shop",
+            "value": "http://catalogue.sock-shop"
+        },
+        {
+            "id": "f5e2ce04-b301-4f88-93dd-025ce5a23f0d",
+            "key": "front_end_sock_shop",
+            "value": "http://front-end.sock-shop"
+        },
+        {
+            "id": "d8c3d813-db46-4be7-af6a-50c0ed10a152",
+            "key": "orders_sock_shop",
+            "value": "http://orders.sock-shop"
+        },
+        {
+            "id": "d24d73d4-20b9-4fc3-bfdd-90c676a9a8df",
+            "key": "payment_sock_shop",
+            "value": "http://payment.sock-shop"
+        },
+        {
+            "id": "57f7808e-8045-4311-af58-054fef4ab9f9",
+            "key": "shipping_sock_shop",
+            "value": "http://shipping.sock-shop"
+        },
+        {
+            "id": "b8d16039-8d12-4920-90f8-51dae0944838",
+            "key": "user_sock_shop",
+            "value": "http://user.sock-shop"
+        }
+    ],
+    "protocolProfileBehavior": {}
+}

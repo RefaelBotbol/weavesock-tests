@@ -1,0 +1,259 @@
+{
+ "mappings": [
+  {
+   "id": "7c2fc207-b651-4fd2-a739-6390f140b6a8",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_3.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "db608b69-a96a-4c53-82d9-d780bfbdb9f0",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/[^/]+/addresses"
+   },
+   "response": {
+    "bodyFileName": "resp_4.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "c23ae1fa-ed32-417b-8aa2-16fb38b62d79",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/[^/]+/cards"
+   },
+   "response": {
+    "body": "{\"_embedded\":{\"card\":[{\"longNum\":\"5544154011345918\",\"expires\":\"08/19\",\"ccv\":\"958\",\"id\":\"57a98d98e4b00679b4a830b1\",\"_links\":{\"card\":{\"href\":\"http://user/cards/57a98d98e4b00679b4a830b1\"},\"self\":{\"href\":\"http://user/cards/57a98d98e4b00679b4a830b1\"}}}]}}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "69ed378f-c542-40b5-adc8-085d4c22ebfe",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/login"
+   },
+   "response": {
+    "bodyFileName": "resp_6.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "f1fab749-fa11-4312-a95a-f6e5176aa5de",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/addresses/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_23.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "a0528b19-12c0-42bd-b6b1-541f742c2982",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/cards/[^/]+"
+   },
+   "response": {
+    "body": "{\"longNum\":\"5544154011345918\",\"expires\":\"08/19\",\"ccv\":\"958\",\"id\":\"57a98d98e4b00679b4a830b1\",\"_links\":{\"card\":{\"href\":\"http://user/cards/57a98d98e4b00679b4a830b1\"},\"self\":{\"href\":\"http://user/cards/57a98d98e4b00679b4a830b1\"}}}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "e523f639-2e94-4548-a61c-ca3888db1615",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_127.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "8a792b43-1c95-4dc6-837f-713844d88506",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/[^/]+/addresses"
+   },
+   "response": {
+    "bodyFileName": "resp_128.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "fa0ea389-dbd2-4b3a-804a-3c8cc2247914",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/[^/]+/cards"
+   },
+   "response": {
+    "body": "{\"_embedded\":{\"card\":[{\"longNum\":\"5544154011345918\",\"expires\":\"08/19\",\"ccv\":\"958\",\"id\":\"57a98d98e4b00679b4a830b1\",\"_links\":{\"card\":{\"href\":\"http://user/cards/57a98d98e4b00679b4a830b1\"},\"self\":{\"href\":\"http://user/cards/57a98d98e4b00679b4a830b1\"}}}]}}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "f46fd8e4-f459-4ae3-a4e0-98bad35ea2cd",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/login"
+   },
+   "response": {
+    "bodyFileName": "resp_130.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "3b394c46-02ef-4523-aed8-096e50030a63",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/addresses/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_131.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "9f66a8b4-da21-4312-907f-6257f4b569ea",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/cards/[^/]+"
+   },
+   "response": {
+    "body": "{\n \"longNum\": \"5544154011345918\",\n \"expires\": \"08/19\",\n \"ccv\": \"958\",\n \"id\": \"{{request.pathSegments.[2]}}\",\n \"_links\": {\n  \"card\": {\n   \"href\": \"http://user/cards/57a98d98e4b00679b4a830b1\"\n  },\n  \"self\": {\n   \"href\": \"http://user/cards/57a98d98e4b00679b4a830b1\"\n  }\n }\n}",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "ee2a7566-68f5-473a-86e1-710d4d470546",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/addresses"
+   },
+   "response": {
+    "body": "{\"id\":\"604126f1b33e3d000142c082\"}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "0cc5cdea-71d8-4ff5-940f-cf4c37b048ed",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/cards"
+   },
+   "response": {
+    "body": "{\"id\":\"60412702b33e3d000142c083\"}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "462d10fa-119b-41c1-af12-9e2a86d40647",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/register"
+   },
+   "response": {
+    "body": "{\"id\":\"604126b8b33e3d000142c081\"}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}

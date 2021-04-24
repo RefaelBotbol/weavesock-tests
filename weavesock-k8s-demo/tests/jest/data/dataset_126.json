@@ -1,0 +1,13 @@
+{
+ "parameters": [
+  {
+   "name": "licenseId",
+   "uuid": "5eadbad2-f8e7-498a-a219-7ac186426d39"
+  }
+ ],
+ "rows": [
+  {
+   "licenseId": "jQuery FileSearch (MIT).php"
+  }
+ ]
+}
