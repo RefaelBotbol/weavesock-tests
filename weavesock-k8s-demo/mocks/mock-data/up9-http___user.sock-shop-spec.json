@@ -1037,10 +1037,10 @@
  },
  "tags": [
   {
-   "name": "addresses"
+   "name": "cards"
   },
   {
-   "name": "cards"
+   "name": "addresses"
   },
   {
    "name": "customers"

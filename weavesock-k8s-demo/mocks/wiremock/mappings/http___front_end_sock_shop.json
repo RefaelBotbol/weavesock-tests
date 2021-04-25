@@ -1258,13 +1258,30 @@
    }
   },
   {
-   "id": "f61cab01-ed94-4d8b-96a8-abe9bb152c1b",
+   "id": "d4ccfb21-e999-4e0a-ae82-cb919117fa42",
    "request": {
     "method": "GET",
     "urlPathPattern": "/"
    },
    "response": {
     "bodyFileName": "resp_204.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "5a96ae07-f9ef-42a8-8dce-b212033a95a3",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_205.html",
     "headers": {
      "Content-Type": "text/html"
     },
