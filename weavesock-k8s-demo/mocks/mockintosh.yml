@@ -677,6 +677,17 @@ services:
         Content-Type: text/html
       body: '@mock-data/resp_206.html'
       useTemplating: false
+  - path: /{{param}}/../index.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_209.html'
+      useTemplating: false
+  - path: /index.html
+    response:
+      headers:
+        Content-Type: text/html
+    method: head
 - name: http://orders.sock-shop
   port: 8004
   ssl: false

@@ -289,6 +289,25 @@ describe.each(dataset("data/dataset_151.json"))("test_151_get_param", (param) =>
     });
 });
 
+describe.each(dataset("data/dataset_209.json"))("test_209_get_param____index_html", (param) => {
+    it("test_209_get_param____index_html", () => {
+        clearSession();
+
+        // GET http://front-end.sock-shop/{param}/../index.html (endp 209)
+        const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+        return front_end_sock_shop.fetch("/" + param + "/../index.html")
+        .then((response) => {
+            expect(response.status).toEqual(200);
+            return response.text();
+        })
+        .then((text) => {
+            expect(CSSselect("div#hot div.box div.container div h2", text)).toContain("Hot this week");
+        })
+        .then((data) => {
+        });
+    });
+});
+
 describe.each(dataset("data/dataset_126.json"))("test_126_post_Licenses_licenseId", (licenseId) => {
     it("test_126_post_Licenses_licenseId", () => {
         clearSession();
@@ -1389,6 +1408,24 @@ describe.each(dataset("data/dataset_184.json"))("test_184_get_index_html", (find
         })
         .then((data) => {
         });
+    });
+});
+
+it("test_211_head_index_html", () => {
+    clearSession();
+
+    // HEAD http://front-end.sock-shop/index.html (endp 211)
+    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+    return front_end_sock_shop.fetch("/index.html", {
+        method: "HEAD"
+    })
+    .then((response) => {
+        expect(response.status).toEqual(200);
+        return response.text();
+    })
+    .then((text) => {
+    })
+    .then((data) => {
     });
 });
 

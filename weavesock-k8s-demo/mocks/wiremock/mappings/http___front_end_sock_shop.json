@@ -1292,13 +1292,47 @@
    }
   },
   {
-   "id": "9f820360-31f1-4694-b760-0f1b2b7212d9",
+   "id": "ef7a30f7-7bd7-4f66-89c5-e9ea3a6dd0cb",
    "request": {
     "method": "GET",
     "urlPathPattern": "/"
    },
    "response": {
     "bodyFileName": "resp_206.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "6bb74f2c-b70f-4ee0-a119-d240aee53663",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/[^/]+/\\.\\./index\\.html"
+   },
+   "response": {
+    "bodyFileName": "resp_209.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "fd234c25-f5d7-48c3-96a4-40810768730e",
+   "request": {
+    "method": "HEAD",
+    "urlPathPattern": "/index\\.html"
+   },
+   "response": {
+    "body": "",
     "headers": {
      "Content-Type": "text/html"
     },

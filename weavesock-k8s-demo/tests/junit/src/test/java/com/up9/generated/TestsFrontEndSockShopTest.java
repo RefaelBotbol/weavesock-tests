@@ -251,6 +251,20 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
+    @JsonFileSource(resources = "/dataset_209.json")
+    public void testGetParamIndexHtml209(final JsonObject json) throws MalformedURLException, IOException
+    {
+        final String param = json.getString("param");
+
+        // GET http://front-end.sock-shop/{param}/../index.html (endp 209)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        final Response response = frontEndSockShop.get(request, "/" + param + "/../index.html");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
+    @ParameterizedTest
     @JsonFileSource(resources = "/dataset_126.json")
     public void testPostLicensesLicenseid126(final JsonObject json) throws MalformedURLException, IOException
     {
@@ -1021,6 +1035,16 @@ public class TestsFrontEndSockShopTest
         final Response response = frontEndSockShop.get(request, "/index.html");
         assertStatusCode(response.code(), 200);
         assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
+    @Test
+    public void testHeadIndexHtml211() throws MalformedURLException, IOException
+    {
+        // HEAD http://front-end.sock-shop/index.html (endp 211)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        final Response response = frontEndSockShop.head(request, "/index.html");
+        assertStatusCode(response.code(), 200);
     }
 
     @ParameterizedTest

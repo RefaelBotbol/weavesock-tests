@@ -389,6 +389,17 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         resp = front_end_sock_shop.get(f'/{param}', headers=dict([('x-requested-with', 'XMLHttpRequest')]))
         resp.assert_status_code(200)
 
+    @json_dataset('data/dataset_209.json')
+    @clear_session({'spanId': 209})
+    def test_209_get_param____index_html(self, data_row):
+        param, = data_row
+
+        # GET http://front-end.sock-shop/{param}/../index.html (endp 209)
+        front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
+        resp = front_end_sock_shop.get(f'/{param}/../index.html')
+        resp.assert_status_code(200)
+        resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
+
     @json_dataset('data/dataset_126.json')
     @clear_session({'spanId': 126})
     def test_126_post_Licenses_licenseId(self, data_row):
@@ -845,6 +856,13 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         resp = front_end_sock_shop.get('/index.html' + qstr)
         resp.assert_status_code(200)
         resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
+
+    @clear_session({'spanId': 211})
+    def test_211_head_index_html(self):
+        # HEAD http://front-end.sock-shop/index.html (endp 211)
+        front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
+        resp = front_end_sock_shop.head('/index.html')
+        resp.assert_status_code(200)
 
     @json_dataset('data/dataset_95.json')
     @clear_session({'spanId': 95})
