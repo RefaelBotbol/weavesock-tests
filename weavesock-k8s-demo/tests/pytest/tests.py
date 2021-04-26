@@ -368,6 +368,14 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         resp.assert_status_code(200)
         resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
 
+    @clear_session({'spanId': 214})
+    def test_214_get_(self):
+        # GET http://front-end.sock-shop/ (endp 214)
+        front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
+        resp = front_end_sock_shop.get('/')
+        resp.assert_status_code(200)
+        resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
+
     @json_dataset('data/dataset_55.json')
     @clear_session({'spanId': 55})
     def test_055_get_param(self, data_row):
@@ -389,12 +397,12 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         resp = front_end_sock_shop.get(f'/{param}', headers=dict([('x-requested-with', 'XMLHttpRequest')]))
         resp.assert_status_code(200)
 
-    @json_dataset('data/dataset_209.json')
-    @clear_session({'spanId': 209})
-    def test_209_get_param____index_html(self, data_row):
+    @json_dataset('data/dataset_208.json')
+    @clear_session({'spanId': 208})
+    def test_208_get_param____index_html(self, data_row):
         param, = data_row
 
-        # GET http://front-end.sock-shop/{param}/../index.html (endp 209)
+        # GET http://front-end.sock-shop/{param}/../index.html (endp 208)
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
         resp = front_end_sock_shop.get(f'/{param}/../index.html')
         resp.assert_status_code(200)
@@ -852,14 +860,14 @@ class Tests_front_end_sock_shop(unittest.TestCase):
 
         # GET http://front-end.sock-shop/index.html (endp 184)
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
-        qstr = '?' + urlencode([('findcli', findcli)])
+        qstr = '?' + urlencode([('findcli', findcli), ('test', '')])
         resp = front_end_sock_shop.get('/index.html' + qstr)
         resp.assert_status_code(200)
         resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
 
-    @clear_session({'spanId': 211})
-    def test_211_head_index_html(self):
-        # HEAD http://front-end.sock-shop/index.html (endp 211)
+    @clear_session({'spanId': 210})
+    def test_210_head_index_html(self):
+        # HEAD http://front-end.sock-shop/index.html (endp 210)
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
         resp = front_end_sock_shop.head('/index.html')
         resp.assert_status_code(200)

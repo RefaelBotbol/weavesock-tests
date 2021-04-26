@@ -431,7 +431,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1618923 requests"
+    "summary": "Seen 1618944 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -2110,6 +2110,17 @@
        ],
        "type": "string"
       }
+     },
+     {
+      "in": "query",
+      "name": "test",
+      "required": false,
+      "schema": {
+       "enum": [
+        ""
+       ],
+       "type": "string"
+      }
      }
     ],
     "responses": {
@@ -2122,13 +2133,13 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 260 requests",
+    "summary": "Seen 264 requests",
     "tags": [
      "index.html"
     ]
    },
    "head": {
-    "operationId": "fd234c25-f5d7-48c3-96a4-40810768730e",
+    "operationId": "bdef365d-2829-4f74-995b-61216a7265b6",
     "parameters": [],
     "responses": {
      "200": {
@@ -2140,7 +2151,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1 requests",
+    "summary": "Seen 2 requests",
     "tags": [
      "index.html"
     ]
@@ -3211,7 +3222,7 @@
   },
   "/{param}/../index.html": {
    "get": {
-    "operationId": "6bb74f2c-b70f-4ee0-a119-d240aee53663",
+    "operationId": "129cb6aa-174e-4f71-8459-656e25b85bf5",
     "parameters": [],
     "responses": {
      "200": {
@@ -3250,13 +3261,13 @@
    "name": "index.html"
   },
   {
+   "name": "catalogue"
+  },
+  {
    "name": "cart"
   },
   {
    "name": "customers"
-  },
-  {
-   "name": "catalogue"
   }
  ]
 }

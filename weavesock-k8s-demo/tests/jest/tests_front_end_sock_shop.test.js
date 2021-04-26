@@ -244,6 +244,27 @@ it("test_206_get_", () => {
     });
 });
 
+it("test_214_get_", () => {
+    clearSession();
+
+    // GET http://front-end.sock-shop/ (endp 214)
+    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+    return front_end_sock_shop.fetch("/", {
+        headers: {
+            "content-type": "application/xml"
+        }
+    })
+    .then((response) => {
+        expect(response.status).toEqual(200);
+        return response.text();
+    })
+    .then((text) => {
+        expect(CSSselect("div#hot div.box div.container div h2", text)).toContain("Hot this week");
+    })
+    .then((data) => {
+    });
+});
+
 describe.each(dataset("data/dataset_55.json"))("test_055_get_param", (param) => {
     it("test_055_get_param", () => {
         clearSession();
@@ -289,11 +310,11 @@ describe.each(dataset("data/dataset_151.json"))("test_151_get_param", (param) =>
     });
 });
 
-describe.each(dataset("data/dataset_209.json"))("test_209_get_param____index_html", (param) => {
-    it("test_209_get_param____index_html", () => {
+describe.each(dataset("data/dataset_208.json"))("test_208_get_param____index_html", (param) => {
+    it("test_208_get_param____index_html", () => {
         clearSession();
 
-        // GET http://front-end.sock-shop/{param}/../index.html (endp 209)
+        // GET http://front-end.sock-shop/{param}/../index.html (endp 208)
         const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
         return front_end_sock_shop.fetch("/" + param + "/../index.html")
         .then((response) => {
@@ -1398,7 +1419,7 @@ describe.each(dataset("data/dataset_184.json"))("test_184_get_index_html", (find
 
         // GET http://front-end.sock-shop/index.html (endp 184)
         const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
-        return front_end_sock_shop.fetch("/index.html" + urlencode([["findcli", findcli]]))
+        return front_end_sock_shop.fetch("/index.html" + urlencode([["findcli", findcli], ["test", ""]]))
         .then((response) => {
             expect(response.status).toEqual(200);
             return response.text();
@@ -1411,10 +1432,10 @@ describe.each(dataset("data/dataset_184.json"))("test_184_get_index_html", (find
     });
 });
 
-it("test_211_head_index_html", () => {
+it("test_210_head_index_html", () => {
     clearSession();
 
-    // HEAD http://front-end.sock-shop/index.html (endp 211)
+    // HEAD http://front-end.sock-shop/index.html (endp 210)
     const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
     return front_end_sock_shop.fetch("/index.html", {
         method: "HEAD"

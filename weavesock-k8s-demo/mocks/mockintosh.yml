@@ -681,13 +681,19 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_209.html'
+      body: '@mock-data/resp_208.html'
       useTemplating: false
   - path: /index.html
     response:
       headers:
         Content-Type: text/html
     method: head
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_214.html'
+      useTemplating: false
 - name: http://orders.sock-shop
   port: 8004
   ssl: false
