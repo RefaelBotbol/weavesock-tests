@@ -203,6 +203,20 @@ public class TestsFrontEndSockShopTest
         assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
     }
 
+    @Test
+    public void testGet206() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/ (endp 206)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("content-type", "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('frVV3EZN'");
+        }});
+        final Response response = frontEndSockShop.get(request, "/");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
     @ParameterizedTest
     @JsonFileSource(resources = "/dataset_55.json")
     public void testGetParam055(final JsonObject json) throws MalformedURLException, IOException
