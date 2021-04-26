@@ -692,8 +692,12 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_214.html'
+      body: '@mock-data/resp_213.html'
       useTemplating: false
+  - path: /metrics
+    response:
+      headers:
+        Content-Type: text/plain
 - name: http://orders.sock-shop
   port: 8004
   ssl: false

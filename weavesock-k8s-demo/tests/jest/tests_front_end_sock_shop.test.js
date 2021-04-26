@@ -64,7 +64,7 @@ describe.each(dataset("data/dataset_133.json"))("test_133_get_", (content, s, va
 
         // GET http://front-end.sock-shop/ (endp 133)
         const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
-        return front_end_sock_shop.fetch("/" + urlencode([["XDEBUG_SESSION_START", "phpstorm"], ["a", "fetch"], ["content", content], ["function", "call_user_func_array"], ["s", s], ["vars[0]", vars_0_]]))
+        return front_end_sock_shop.fetch("/" + urlencode([["XDEBUG_SESSION_START", "phpstorm"], ["a", "fetch"], ["content", content], ["data", "1"], ["filter", "phpinfo"], ["function", "call_user_func_array"], ["s", s], ["vars[0]", vars_0_]]))
         .then((response) => {
             expect(response.status).toEqual(200);
             return response.text();
@@ -244,10 +244,10 @@ it("test_206_get_", () => {
     });
 });
 
-it("test_214_get_", () => {
+it("test_213_get_", () => {
     clearSession();
 
-    // GET http://front-end.sock-shop/ (endp 214)
+    // GET http://front-end.sock-shop/ (endp 213)
     const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
     return front_end_sock_shop.fetch("/", {
         headers: {
@@ -1517,6 +1517,22 @@ it("test_150_get_login", () => {
     })
     .then((text) => {
         expect(CSSselect("p", text)).toContain("Cookie is set");
+    })
+    .then((data) => {
+    });
+});
+
+it("test_215_get_metrics", () => {
+    clearSession();
+
+    // GET http://front-end.sock-shop/metrics (endp 215)
+    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+    return front_end_sock_shop.fetch("/metrics")
+    .then((response) => {
+        expect(response.status).toEqual(200);
+        return response.text();
+    })
+    .then((text) => {
     })
     .then((data) => {
     });

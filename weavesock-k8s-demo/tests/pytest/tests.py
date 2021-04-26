@@ -296,7 +296,7 @@ class Tests_front_end_sock_shop(unittest.TestCase):
 
         # GET http://front-end.sock-shop/ (endp 133)
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
-        qstr = '?' + urlencode([('XDEBUG_SESSION_START', 'phpstorm'), ('a', 'fetch'), ('content', content), ('function', 'call_user_func_array'), ('s', s), ('vars[0]', vars_0_)])
+        qstr = '?' + urlencode([('XDEBUG_SESSION_START', 'phpstorm'), ('a', 'fetch'), ('content', content), ('data', '1'), ('filter', 'phpinfo'), ('function', 'call_user_func_array'), ('s', s), ('vars[0]', vars_0_)])
         resp = front_end_sock_shop.get('/' + qstr)
         resp.assert_status_code(200)
         resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
@@ -368,9 +368,9 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         resp.assert_status_code(200)
         resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
 
-    @clear_session({'spanId': 214})
-    def test_214_get_(self):
-        # GET http://front-end.sock-shop/ (endp 214)
+    @clear_session({'spanId': 213})
+    def test_213_get_(self):
+        # GET http://front-end.sock-shop/ (endp 213)
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
         resp = front_end_sock_shop.get('/')
         resp.assert_status_code(200)
@@ -900,6 +900,13 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         resp = front_end_sock_shop.get('/login', headers=dict([('x-requested-with', 'XMLHttpRequest')]))
         resp.assert_status_code(200)
         resp.assert_cssselect('p', expected_value='Cookie is set')
+
+    @clear_session({'spanId': 215})
+    def test_215_get_metrics(self):
+        # GET http://front-end.sock-shop/metrics (endp 215)
+        front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
+        resp = front_end_sock_shop.get('/metrics')
+        resp.assert_status_code(200)
 
     @clear_session({'spanId': 22})
     def test_022_post_orders(self):

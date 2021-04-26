@@ -1309,7 +1309,7 @@
    }
   },
   {
-   "id": "129cb6aa-174e-4f71-8459-656e25b85bf5",
+   "id": "796c6b78-8caa-4176-b18e-5fb5adf25d88",
    "request": {
     "method": "GET",
     "urlPathPattern": "/[^/]+/\\.\\./index\\.html"
@@ -1326,7 +1326,7 @@
    }
   },
   {
-   "id": "bdef365d-2829-4f74-995b-61216a7265b6",
+   "id": "35a73788-1db8-43fb-8b09-ef4fc3fa898d",
    "request": {
     "method": "HEAD",
     "urlPathPattern": "/index\\.html"
@@ -1343,15 +1343,31 @@
    }
   },
   {
-   "id": "9378cf7f-18f6-4ee5-a47a-54158abeeb88",
+   "id": "858f5e30-4da4-4a0e-b167-98cf2a26e1ab",
    "request": {
     "method": "GET",
     "urlPathPattern": "/"
    },
    "response": {
-    "bodyFileName": "resp_214.html",
+    "bodyFileName": "resp_213.html",
     "headers": {
      "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "6b353a57-d795-424a-ad3f-e35c176c96f1",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/metrics"
+   },
+   "response": {
+    "headers": {
+     "Content-Type": "text/plain"
     },
     "status": 200,
     "transformers": [

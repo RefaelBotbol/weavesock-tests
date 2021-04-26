@@ -93,6 +93,8 @@ public class TestsFrontEndSockShopTest
             put("XDEBUG_SESSION_START", "phpstorm");
             put("a", "fetch");
             put("content", content);
+            put("data", "1");
+            put("filter", "phpinfo");
             put("function", "call_user_func_array");
             put("s", s);
             put("vars[0]", vars_0_);
@@ -218,9 +220,9 @@ public class TestsFrontEndSockShopTest
     }
 
     @Test
-    public void testGet214() throws MalformedURLException, IOException
+    public void testGet213() throws MalformedURLException, IOException
     {
-        // GET http://front-end.sock-shop/ (endp 214)
+        // GET http://front-end.sock-shop/ (endp 213)
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
         final HttpRequest request = new HttpRequest();
         request.setHeaders(new Hashtable<String, Object>() {{
@@ -1115,6 +1117,16 @@ public class TestsFrontEndSockShopTest
         final Response response = frontEndSockShop.get(request, "/login");
         assertStatusCode(response.code(), 200);
         assertCSSselect("p", "Cookie is set", response.body().string());
+    }
+
+    @Test
+    public void testGetMetrics215() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/metrics (endp 215)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        final Response response = frontEndSockShop.get(request, "/metrics");
+        assertStatusCode(response.code(), 200);
     }
 
     @Test
