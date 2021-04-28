@@ -1,20 +1,20 @@
 {
     "info": {
-        "id": "c397525a-08bf-4abc-bdb6-ab6bd5ba2161",
-        "name": "Simple refael - weavesock-k8s-demo/all rev 167 (by UP9.com)",
+        "id": "4e5cec5f-891f-4b5c-bd1d-6062f175eb2b",
+        "name": "Simple refael - weavesock-k8s-demo/all rev 168 (by UP9.com)",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [
         {
-            "id": "f13380a7-ae6d-4b25-a590-968454717194",
+            "id": "1d0d65e0-d023-48cb-a218-82e6daa663a6",
             "name": "carts.sock-shop",
             "item": [
                 {
-                    "id": "8d5ed706-8aea-4849-a61f-c21f1a09d5a1",
+                    "id": "937915f4-34e6-42d3-902c-305cc34b7f0a",
                     "name": "carts",
                     "item": [
                         {
-                            "id": "4a99f7fb-9fa3-4b51-a91e-1c3336aeb504",
+                            "id": "459b2d25-dda5-4d4e-bf70-dd67c1b5953d",
                             "name": "/carts/{{customerId}}",
                             "request": {
                                 "method": "DELETE",
@@ -34,7 +34,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "10ed926e-b151-4b60-bd73-ea98f0696974",
+                                        "id": "3a478864-ec67-4acb-b428-5c4c3d757ba5",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");"
@@ -45,7 +45,7 @@
                             ]
                         },
                         {
-                            "id": "70f9e8fa-2ad7-4de3-8898-c37046b42029",
+                            "id": "0de825aa-0a8f-4846-9a04-56483afd2994",
                             "name": "/carts/{{customerId}}/items",
                             "request": {
                                 "method": "GET",
@@ -72,7 +72,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "ed2c473b-045c-43dd-b89d-e3e2ba42ba02",
+                                        "id": "8949d39c-63b0-485f-9374-c86fce4fc395",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");"
@@ -83,7 +83,7 @@
                             ]
                         },
                         {
-                            "id": "8a24232f-2e30-4194-8d05-f2e44f2d459e",
+                            "id": "8b9977d3-9ba2-41f8-b6d9-b7e3a5a70400",
                             "name": "/carts/{{customerId}}/items",
                             "request": {
                                 "method": "POST",
@@ -124,7 +124,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "9341977f-e8af-4953-8e02-e0f2b8cd44ec",
+                                        "id": "bf414444-cab3-42ee-901d-468a3731fd3d",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");",
@@ -137,41 +137,7 @@
                             ]
                         },
                         {
-                            "id": "c9efea70-03d5-40ec-9de0-c8f04e634703",
-                            "name": "/carts/{{customerId}}/items/{{itemId}}",
-                            "request": {
-                                "method": "DELETE",
-                                "header": [],
-                                "url": {
-                                    "raw": "{{carts_sock_shop}}/carts/{{customerId}}/items/{{itemId}}",
-                                    "protocol": "",
-                                    "host": "{{carts_sock_shop}}",
-                                    "path": [
-                                        "carts",
-                                        "{{customerId}}",
-                                        "items",
-                                        "{{itemId}}"
-                                    ]
-                                }
-                            },
-                            "response": [],
-                            "event": [
-                                {
-                                    "listen": "prerequest",
-                                    "script": {
-                                        "id": "0b37ea91-caa0-4335-814d-88ddecf022d7",
-                                        "exec": [
-                                            "// Some of the environment variables might be set in the parent folders.",
-                                            "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");",
-                                            "pm.variables.set(\"itemId\", \"03fef6ac-1896-4ce8-bd69-b798f85c6e0b\");"
-                                        ],
-                                        "type": "text/javascript"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "id": "5c049a3a-e08a-493b-9381-e64643642af3",
+                            "id": "86b427cc-e321-4058-ab58-b62c971283df",
                             "name": "/carts/{{customerId}}/merge",
                             "request": {
                                 "method": "GET",
@@ -198,7 +164,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "311a9f51-54e8-4397-8b74-a847a3e4dbd9",
+                                        "id": "eb283595-a216-45e2-a73e-866b71a3e2a2",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"customerId\", \"itS4u3yIizD4Yz207OsS8PBBNFlz9Q7T\");",
@@ -218,7 +184,7 @@
                 {
                     "listen": "prerequest",
                     "script": {
-                        "id": "09e2084f-3b95-4333-a9db-d7f7eef3d051",
+                        "id": "3d533b59-1d51-44e0-b87d-a2b2c1f6abd7",
                         "exec": [],
                         "type": "text/javascript"
                     }
@@ -227,15 +193,15 @@
             "protocolProfileBehavior": {}
         },
         {
-            "id": "861ccd30-a16a-48da-9933-5a12695a1c44",
+            "id": "b2bb4c94-be87-4fa0-910c-7a67beb85e59",
             "name": "catalogue.sock-shop",
             "item": [
                 {
-                    "id": "6047ae99-7f58-4a34-a092-79dd42996be1",
+                    "id": "018ba4a2-9e22-4581-bf45-7a026b4682c3",
                     "name": "catalogue",
                     "item": [
                         {
-                            "id": "96a3abe0-c2bb-4947-9277-ebaef3036f5e",
+                            "id": "ea57aa25-0afe-4c4d-8c5c-0a430890e4a9",
                             "name": "/catalogue",
                             "request": {
                                 "method": "GET",
@@ -272,7 +238,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "be6491ae-9acf-4767-86ef-93b95931bd16",
+                                        "id": "ebdd7249-8cd2-4893-896c-b85c90f4b699",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"size\", \"5\");",
@@ -284,7 +250,7 @@
                             ]
                         },
                         {
-                            "id": "c3d74dc5-5869-4d6e-bfe0-8de66696adc6",
+                            "id": "182a24f9-bf9d-4189-8ef5-c55b3d413940",
                             "name": "/catalogue/size",
                             "request": {
                                 "method": "GET",
@@ -310,7 +276,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "a558d7dc-6000-4658-aef6-405336b1fa95",
+                                        "id": "5acc1a9d-7189-414f-bbd4-a2f7b42a15f7",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"tags\", \"brown\");"
@@ -321,7 +287,7 @@
                             ]
                         },
                         {
-                            "id": "aa7f3143-18c6-4138-b1ff-02bdf25320df",
+                            "id": "4920ee0f-8710-4f60-a8ba-9a8dc7b13fc9",
                             "name": "/catalogue/{{id}}",
                             "request": {
                                 "method": "GET",
@@ -341,7 +307,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "257b5329-fde7-4692-bc08-e1222db2e8aa",
+                                        "id": "e7e9385e-d0f2-45c3-8de8-e6f03fd1522a",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"id\", \"510a0d7e-8e83-4193-b483-e27e09ddc34d\");"
@@ -356,7 +322,7 @@
                     "protocolProfileBehavior": {}
                 },
                 {
-                    "id": "3c0adee2-7230-47f6-af6c-139f3b7f2d96",
+                    "id": "c26ecec0-93c5-4dfe-9fa2-4d9fe7da0a9f",
                     "name": "/tags",
                     "request": {
                         "method": "GET",
@@ -375,7 +341,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "03c52511-1ac7-441f-aa4c-232129c420ec",
+                                "id": "88aaf262-5801-4840-9c83-d6e33328cb9b",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -387,7 +353,7 @@
                 {
                     "listen": "prerequest",
                     "script": {
-                        "id": "1e4302d7-d747-46c3-b0bc-2fc76f8337f7",
+                        "id": "aefc705d-5eec-4a39-ab7f-9b834e659a44",
                         "exec": [],
                         "type": "text/javascript"
                     }
@@ -396,11 +362,11 @@
             "protocolProfileBehavior": {}
         },
         {
-            "id": "b86ea726-4100-4728-95ec-61f99b509cad",
+            "id": "6d265dbe-7708-4a76-94bb-23f73d8f25f0",
             "name": "front-end.sock-shop",
             "item": [
                 {
-                    "id": "15f6fb2c-b168-4466-a4f8-265daaccaf2b",
+                    "id": "9b1d8226-e125-40e8-a1cd-e9c624939e4e",
                     "name": "/",
                     "request": {
                         "method": "GET",
@@ -489,7 +455,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "d8e901ce-4528-4d96-9ff3-d72266d2a530",
+                                "id": "93dfd3ce-cc7f-4adf-80ac-de8d7123ddf2",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"_meta_http_equiv\", \"Set-Cookie content=\\\"testcgtp=579\\\">\");",
@@ -504,7 +470,7 @@
                     ]
                 },
                 {
-                    "id": "d1a7fd8e-b853-4ecb-957e-b7e19fb7bb60",
+                    "id": "4ba971ba-ec61-4076-ad43-f7bc5138bf86",
                     "name": "/{{param}}/../index.html",
                     "request": {
                         "method": "GET",
@@ -525,7 +491,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "a707de61-7fd9-4b1d-b2b2-a20b540f64c7",
+                                "id": "4fde8be0-5874-42d6-bf04-97c1c53d0f4a",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"param\", \"navbar.html\");"
@@ -536,7 +502,7 @@
                     ]
                 },
                 {
-                    "id": "d1ec85e1-2a97-48ee-bd11-ea8b7aac2705",
+                    "id": "37020b5e-0875-4988-a18a-895bbe871594",
                     "name": "/Licenses/{{licenseId}}",
                     "request": {
                         "method": "POST",
@@ -572,7 +538,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "d111b929-ce10-46d1-912b-6214f4e496c0",
+                                "id": "6174f585-bd96-4c90-b339-c081cc8f3ee9",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"licenseId\", \"jQuery FileSearch (MIT).php\");"
@@ -583,7 +549,7 @@
                     ]
                 },
                 {
-                    "id": "db512ff8-3444-46e6-b7d6-4e5c69933efe",
+                    "id": "6c337709-8a19-4a68-97b7-68d22871cbdf",
                     "name": "/SiteScope",
                     "request": {
                         "method": "GET",
@@ -602,7 +568,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "d9cff599-8a9c-49d1-9e21-f8ab9a02ffc7",
+                                "id": "0622273d-c4c7-4455-8554-83463bcbe4b3",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -610,7 +576,7 @@
                     ]
                 },
                 {
-                    "id": "e2d46986-a4e1-4f20-8510-addcdd194b9f",
+                    "id": "af4e7d08-e7e8-41e9-98c1-25fa683fdae9",
                     "name": "/address",
                     "request": {
                         "method": "GET",
@@ -635,7 +601,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "431c50c7-0040-4803-a318-723d0c79d5bf",
+                                "id": "afdee46d-15e8-4f2d-9d41-acb04b2c75a8",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -643,7 +609,7 @@
                     ]
                 },
                 {
-                    "id": "7e114c8c-d3e6-4d70-bb51-c178f547ec73",
+                    "id": "37726b9f-2922-4fe9-a043-1466d4461408",
                     "name": "/addresses",
                     "request": {
                         "method": "POST",
@@ -682,7 +648,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "dea4efa0-fcd4-43f7-bd26-42a4b361d7ef",
+                                "id": "9469fb14-5729-412a-b3d6-d4821a804377",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"number\", \"1234\");",
@@ -694,7 +660,7 @@
                     ]
                 },
                 {
-                    "id": "2e5d6162-a4e6-476a-89eb-7a1e78554de9",
+                    "id": "a7c1ca41-2eb8-44a7-accb-a9c983936d1e",
                     "name": "/basket.html",
                     "request": {
                         "method": "GET",
@@ -713,7 +679,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "34472ff7-5e73-4d72-9a33-ecf78466063d",
+                                "id": "ad7405b2-7da2-42f7-880c-1f522d480c5e",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -721,7 +687,7 @@
                     ]
                 },
                 {
-                    "id": "2ff26f02-23db-4f37-b472-45cfd008ae9a",
+                    "id": "7fa199b0-ea47-46ae-a49f-4ac6b4c4f1b1",
                     "name": "/c",
                     "request": {
                         "method": "GET",
@@ -740,7 +706,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "8fb55813-214b-43c9-9e0c-a70fc16637df",
+                                "id": "e11cbc93-c6db-4c05-9316-9e1657b87137",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -748,7 +714,7 @@
                     ]
                 },
                 {
-                    "id": "9fda4ec7-5539-464b-98fb-df2bbad15f9f",
+                    "id": "bd04602e-47a0-4b38-8a2b-79871531940a",
                     "name": "/card",
                     "request": {
                         "method": "GET",
@@ -773,7 +739,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "979a8794-ad52-4fac-8311-16629fa1c555",
+                                "id": "4405bee1-2e79-484a-b47a-efd6c9577f63",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -781,7 +747,7 @@
                     ]
                 },
                 {
-                    "id": "72fced91-b78b-4b91-b7d7-d8e603b2ffc7",
+                    "id": "ef44ce97-35ff-4df9-8876-6632914f0aed",
                     "name": "/cards",
                     "request": {
                         "method": "POST",
@@ -820,7 +786,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "e3380b39-d3d3-4055-9ce4-7aee8c5e86fd",
+                                "id": "bac7cc42-c1c4-4a3d-90ed-8a41186e9614",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"ccv\", \"123\");",
@@ -833,15 +799,26 @@
                     ]
                 },
                 {
-                    "id": "57b1f7a7-d5c9-4a1f-9361-b623fa5bacbe",
+                    "id": "96817714-9160-4838-bdb1-aed2af8be07f",
                     "name": "cart",
                     "item": [
                         {
-                            "id": "53c24cae-2e6c-4adf-bf9e-c18356212eef",
+                            "id": "76b2934e-5d88-41a0-8205-812974670923",
                             "name": "/cart",
                             "request": {
                                 "method": "DELETE",
-                                "header": [],
+                                "header": [
+                                    {
+                                        "key": "content-type",
+                                        "value": "application/x-www-form-urlencoded",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "x-requested-with",
+                                        "value": "XMLHttpRequest",
+                                        "type": "text"
+                                    }
+                                ],
                                 "url": {
                                     "raw": "{{front_end_sock_shop}}/cart",
                                     "protocol": "",
@@ -856,7 +833,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "d31779a3-2177-4e42-b115-1826c55ec987",
+                                        "id": "d7eb419e-25b0-42a0-b620-ea93e07a8c25",
                                         "exec": [],
                                         "type": "text/javascript"
                                     }
@@ -864,7 +841,7 @@
                             ]
                         },
                         {
-                            "id": "46b5f16b-708e-4c07-859d-c3905dbb853e",
+                            "id": "5b008cd5-ddcd-4b3c-97fa-349cec924454",
                             "name": "/cart",
                             "request": {
                                 "method": "GET",
@@ -889,7 +866,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "9be90520-8bda-40ae-ad57-565450947fe3",
+                                        "id": "409ad3d5-b0b7-4d8e-af4f-c38437610081",
                                         "exec": [],
                                         "type": "text/javascript"
                                     }
@@ -897,7 +874,7 @@
                             ]
                         },
                         {
-                            "id": "9900e0ca-7a44-4188-aa22-bc6667306885",
+                            "id": "95d86789-4d96-4763-b554-6ef1dc6449f4",
                             "name": "/cart",
                             "request": {
                                 "method": "POST",
@@ -936,47 +913,10 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "a2401ec8-13b6-4028-97eb-58f590e102db",
+                                        "id": "c8717c13-68b2-413a-beca-96749e0c9516",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"id\", \"d3588630-ad8e-49df-bbd7-3167f7efb246\");"
-                                        ],
-                                        "type": "text/javascript"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "id": "08cf3735-377d-4c18-ab3b-11edde899700",
-                            "name": "/cart/{{itemId}}",
-                            "request": {
-                                "method": "DELETE",
-                                "header": [
-                                    {
-                                        "key": "x-requested-with",
-                                        "value": "XMLHttpRequest",
-                                        "type": "text"
-                                    }
-                                ],
-                                "url": {
-                                    "raw": "{{front_end_sock_shop}}/cart/{{itemId}}",
-                                    "protocol": "",
-                                    "host": "{{front_end_sock_shop}}",
-                                    "path": [
-                                        "cart",
-                                        "{{itemId}}"
-                                    ]
-                                }
-                            },
-                            "response": [],
-                            "event": [
-                                {
-                                    "listen": "prerequest",
-                                    "script": {
-                                        "id": "eaeebc11-7d29-43de-95f9-9aa148e7d77d",
-                                        "exec": [
-                                            "// Some of the environment variables might be set in the parent folders.",
-                                            "pm.variables.set(\"itemId\", \"03fef6ac-1896-4ce8-bd69-b798f85c6e0b\");"
                                         ],
                                         "type": "text/javascript"
                                     }
@@ -988,11 +928,11 @@
                     "protocolProfileBehavior": {}
                 },
                 {
-                    "id": "6a14acf2-2cc0-4cf9-acca-15409235ce80",
+                    "id": "b7225b2f-29cd-4a9b-9a99-176cc8ea4603",
                     "name": "catalogue",
                     "item": [
                         {
-                            "id": "29020378-517b-4dcd-94ac-e43db2ba95e8",
+                            "id": "2d8f2650-9a29-4ef0-a6ce-67b0793bfa98",
                             "name": "/catalogue",
                             "request": {
                                 "method": "GET",
@@ -1035,7 +975,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "e5a74b29-d432-47c7-847e-bf045bbe27e3",
+                                        "id": "cb7582f0-5fb8-4aaa-801f-cfeba1f64ff3",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"size\", \"5\");",
@@ -1047,7 +987,7 @@
                             ]
                         },
                         {
-                            "id": "1e18fe0f-17a2-4295-bde5-01752b19e871",
+                            "id": "8584ca23-7427-415e-922b-bc9ebf1713bc",
                             "name": "/catalogue/size",
                             "request": {
                                 "method": "GET",
@@ -1079,7 +1019,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "ddad4f9d-bc01-41b0-adff-b1e08f770214",
+                                        "id": "8c94e9d5-10a5-422b-abee-662c641f1c4b",
                                         "exec": [],
                                         "type": "text/javascript"
                                     }
@@ -1087,7 +1027,7 @@
                             ]
                         },
                         {
-                            "id": "be60253a-11fc-4de1-b393-605bbe914325",
+                            "id": "a913f11a-f237-46a2-9d17-5ea7eda14ef1",
                             "name": "/catalogue/{{id}}",
                             "request": {
                                 "method": "GET",
@@ -1113,7 +1053,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "7ddfa3c4-8ca6-4ca5-a167-1514b0774ed7",
+                                        "id": "4273e7a4-794b-4081-8cbf-13cf8ceb5ec9",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"id\", \"3395a43e-2d88-40de-b95f-e00e1502085b\");"
@@ -1128,7 +1068,7 @@
                     "protocolProfileBehavior": {}
                 },
                 {
-                    "id": "0a8de033-3c7f-41a1-8495-89caf838ccb4",
+                    "id": "a4211685-e2bd-48f1-83b7-c81713490cb3",
                     "name": "/category.html",
                     "request": {
                         "method": "GET",
@@ -1153,7 +1093,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "23c3423f-a4fe-4449-93ca-020c0d6e3c6c",
+                                "id": "27099f03-9bb0-4efc-9347-7edd4ed5d42d",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -1161,7 +1101,7 @@
                     ]
                 },
                 {
-                    "id": "59d9179d-385f-41ad-9f64-25256677ef71",
+                    "id": "40f1764d-5c25-48c1-b5fb-41e7cab030b9",
                     "name": "/customer-order.html",
                     "request": {
                         "method": "GET",
@@ -1186,7 +1126,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "4f87d952-fd76-419b-8feb-3afa0ede3a43",
+                                "id": "4a3ae1cb-d278-4278-8654-afff52f06209",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"order\", \"/orders/6089d0a5ab06aa00062ffcbb\");"
@@ -1197,7 +1137,7 @@
                     ]
                 },
                 {
-                    "id": "be854e27-a82c-4632-b4db-9bcb859e386c",
+                    "id": "38f03470-ca4e-4fcc-96e5-a6b26f23b69c",
                     "name": "/customer-orders.html",
                     "request": {
                         "method": "GET",
@@ -1216,7 +1156,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "f0277e91-c2f5-4259-9c7e-8319c90931ec",
+                                "id": "3ab46d78-c271-4b95-979c-c6df636f7cf5",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -1224,11 +1164,11 @@
                     ]
                 },
                 {
-                    "id": "fd2ed772-8803-429a-aaaf-edeaff782d6b",
+                    "id": "a3570d9b-4865-4de4-8fed-30cfa98c814d",
                     "name": "customers",
                     "item": [
                         {
-                            "id": "49d8c18c-968c-47f2-9c2b-7ee7892af93d",
+                            "id": "be3f4687-36ab-44de-baea-f404d82a1556",
                             "name": "/customers/wcbVLjJnpzpezACrWupvwuuQUEpXSBhZ",
                             "request": {
                                 "method": "GET",
@@ -1254,7 +1194,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "fc01f0dc-9dec-431d-ae6b-f007e7ad01ef",
+                                        "id": "ec31481c-313d-4602-b188-48894bc48060",
                                         "exec": [],
                                         "type": "text/javascript"
                                     }
@@ -1262,7 +1202,7 @@
                             ]
                         },
                         {
-                            "id": "f2c9e840-759b-40d4-af81-543ed97a40fa",
+                            "id": "e46151d8-1bf9-4f45-83f1-5db997449a3f",
                             "name": "/customers/{{customerId}}",
                             "request": {
                                 "method": "GET",
@@ -1288,7 +1228,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "fc3eb3f5-b7cd-4913-aab9-df2b47664456",
+                                        "id": "d2468d68-4aaf-471c-be61-90e7fefc56e6",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"customerId\", \"jaQaDHeJNGvE7rpMkHelnZPQm2xIyi53\");"
@@ -1303,7 +1243,7 @@
                     "protocolProfileBehavior": {}
                 },
                 {
-                    "id": "4e142433-8ad3-4788-8b90-9e63878e1ee4",
+                    "id": "9de06581-8e48-46cd-9443-f616ccad3af5",
                     "name": "/detail.html",
                     "request": {
                         "method": "GET",
@@ -1328,7 +1268,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "6ab80e22-cde9-42c6-9906-978a94b95a2b",
+                                "id": "95f8a8e4-20a2-4c5f-866d-a562a32b589d",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"id\", \"3395a43e-2d88-40de-b95f-e00e1502085b\");"
@@ -1339,7 +1279,7 @@
                     ]
                 },
                 {
-                    "id": "fc75a053-6d74-4fc2-8747-e454d49a37b4",
+                    "id": "696aed8d-2f06-46a3-8852-a96224f5bca8",
                     "name": "/footer.html",
                     "request": {
                         "method": "GET",
@@ -1364,7 +1304,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "0cb6236d-7843-4a1a-b74b-8cec1317c1bf",
+                                "id": "67cc28cf-fff3-429b-b7b3-511569e397e5",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -1372,11 +1312,11 @@
                     ]
                 },
                 {
-                    "id": "a14afd7a-0e05-434e-a336-e4b9b3309f77",
+                    "id": "6830ec81-25b0-4a09-98b0-2716367715af",
                     "name": "index.html",
                     "item": [
                         {
-                            "id": "b2751908-8f35-465b-b9bf-ab2eba3ec684",
+                            "id": "0dfe8248-726a-4b1b-a155-8c5de267e334",
                             "name": "/index.html",
                             "request": {
                                 "method": "GET",
@@ -1401,7 +1341,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "6e662d10-6b5c-4271-bdeb-7854b2826cfc",
+                                        "id": "c7cf0765-76ce-44ed-92e7-877cffdc6fae",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"urlmaskfilter\", \"<script>foo</script>\");"
@@ -1412,7 +1352,7 @@
                             ]
                         },
                         {
-                            "id": "24d7f267-4301-4032-bc2b-1c77169754f0",
+                            "id": "3a8d2bf8-13b1-433b-928c-f223b1853449",
                             "name": "/index.html",
                             "request": {
                                 "method": "HEAD",
@@ -1431,7 +1371,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "ea572cb1-71ce-4477-a77d-ea98859cbbcb",
+                                        "id": "4ea0e12c-696b-42fe-86fd-6ddeffcd2284",
                                         "exec": [],
                                         "type": "text/javascript"
                                     }
@@ -1443,7 +1383,7 @@
                     "protocolProfileBehavior": {}
                 },
                 {
-                    "id": "71b12c75-d95e-470f-976d-eda4d4291fbb",
+                    "id": "bad7f132-581f-4e69-be86-61864bb34a5c",
                     "name": "/lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
                     "request": {
                         "method": "POST",
@@ -1489,7 +1429,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "6aad2591-6d86-47b0-b6a8-5a1d720dcd88",
+                                "id": "7b8f8323-5a1b-4c1a-bdef-bc5ee75ac2fa",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"__\", \"die(@md5(Apri1))\");"
@@ -1500,7 +1440,7 @@
                     ]
                 },
                 {
-                    "id": "95032067-131f-45cf-8771-2fd78d2805e2",
+                    "id": "c6a1a45d-5157-424b-88c4-be356741c99b",
                     "name": "/login",
                     "request": {
                         "method": "GET",
@@ -1525,7 +1465,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "b55962f9-eed5-4caf-966d-17e2e39b8f77",
+                                "id": "8f7d53ec-294f-4e69-928c-cc8b47601b1a",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -1533,7 +1473,7 @@
                     ]
                 },
                 {
-                    "id": "754ea839-6615-40ca-8f5f-1b07469701fa",
+                    "id": "b27b0f06-f87e-4e5d-8752-ecb107cabc3c",
                     "name": "/metrics",
                     "request": {
                         "method": "GET",
@@ -1552,7 +1492,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "86d9238f-a493-4c98-a376-a276cb1f2887",
+                                "id": "d4a22b52-7019-46a0-8f69-baacf9c9b6e9",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -1560,11 +1500,11 @@
                     ]
                 },
                 {
-                    "id": "5616f8b4-0d6a-4224-9c17-a38b27169f5b",
+                    "id": "0d347f7c-a6ee-4b92-8590-89fe21bfcd31",
                     "name": "orders",
                     "item": [
                         {
-                            "id": "68481f8d-e5c0-4b20-a755-c1adcfead3b1",
+                            "id": "be50252c-4854-4a16-923f-511c1e954d62",
                             "name": "/orders",
                             "request": {
                                 "method": "GET",
@@ -1589,7 +1529,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "cf8e0bc6-e67e-4347-97ec-c1f78ffdf377",
+                                        "id": "22dae96e-b4fa-4be8-80f3-1acf6cb96452",
                                         "exec": [],
                                         "type": "text/javascript"
                                     }
@@ -1597,7 +1537,7 @@
                             ]
                         },
                         {
-                            "id": "d542c95b-9289-4e05-89a2-d84757eca94a",
+                            "id": "ac13afea-72be-42cf-b283-95eead32edf2",
                             "name": "/orders",
                             "request": {
                                 "method": "POST",
@@ -1622,7 +1562,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "3444818e-37d8-47df-b556-d964d8c82c98",
+                                        "id": "1e38ce96-f6dd-43c7-bba4-6ecb44e9602b",
                                         "exec": [],
                                         "type": "text/javascript"
                                     }
@@ -1630,7 +1570,7 @@
                             ]
                         },
                         {
-                            "id": "281c87cf-bc4f-4b48-9980-9894dd8d0ade",
+                            "id": "5f2e775c-22db-472f-9c5c-f187046e2234",
                             "name": "/orders/{{id}}",
                             "request": {
                                 "method": "GET",
@@ -1656,7 +1596,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "c5da436b-7bef-46a9-afee-53c65c8b32bc",
+                                        "id": "0f29b5b9-d435-43d2-a4db-759c68e4202b",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"id\", \"5f89e78f51a135000666702c\");"
@@ -1671,7 +1611,7 @@
                     "protocolProfileBehavior": {}
                 },
                 {
-                    "id": "de5f02c8-7ed1-45bf-b66e-44117fb48419",
+                    "id": "0c3a480d-b20e-469d-8b6b-e39088c922e8",
                     "name": "/plus/qiang.php",
                     "request": {
                         "method": "POST",
@@ -1707,7 +1647,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "4ee9f6b6-62a2-4507-a891-785b73db2e17",
+                                "id": "271afbc7-39a4-46c9-b402-24074a3d2bce",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"blbl\", \"die(@md5(S3pt3mb3r))\");"
@@ -1718,7 +1658,7 @@
                     ]
                 },
                 {
-                    "id": "d2acac5b-8d31-44b1-8a0e-4dd32d4fdc98",
+                    "id": "25bc617a-8051-4f81-b8cd-ab1811e44741",
                     "name": "/por/login_psw.csp",
                     "request": {
                         "method": "GET",
@@ -1738,7 +1678,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "acbca38f-7c2b-4904-af01-a978dbf1e195",
+                                "id": "ccd35720-1959-47c3-822c-40bf8da27a6d",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -1746,7 +1686,7 @@
                     ]
                 },
                 {
-                    "id": "3d8dd734-f5fc-41ae-ada9-c4c4fb5eec38",
+                    "id": "a20482fa-9915-4b5e-bdf8-7ad1ac969285",
                     "name": "/register",
                     "request": {
                         "method": "POST",
@@ -1785,7 +1725,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "9d6f9032-118a-4f0e-a7a1-d10846355743",
+                                "id": "3947a939-57f0-42ad-b03c-a202b2ca3591",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"email\", \"thiggins@anisolution.com\");",
@@ -1800,7 +1740,7 @@
                     ]
                 },
                 {
-                    "id": "9ac3b2d0-15f4-4b5e-a53f-ba21f9c042dc",
+                    "id": "392d2c1d-2894-4c8d-b30b-5530bf95c191",
                     "name": "/tags",
                     "request": {
                         "method": "GET",
@@ -1825,7 +1765,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "9712741b-6655-428a-a355-a3e573565fd9",
+                                "id": "603e3b3f-a088-4942-95ab-0c5e9f5c66b8",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -1833,7 +1773,7 @@
                     ]
                 },
                 {
-                    "id": "1349e0bc-1551-4262-9b14-c909e679df09",
+                    "id": "50062214-5246-4bc5-afa6-9c82e421855d",
                     "name": "/topbar.html",
                     "request": {
                         "method": "GET",
@@ -1858,7 +1798,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "d841e4cd-e49a-4659-abee-1489dedb0b53",
+                                "id": "5e2b6ef3-1280-4739-83cf-9b357af123e2",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -1870,7 +1810,7 @@
                 {
                     "listen": "prerequest",
                     "script": {
-                        "id": "19fc084a-a2b3-4a1e-93bb-7161e22f31d9",
+                        "id": "5f560e42-0dd7-49d1-965d-5b8ff474d29a",
                         "exec": [],
                         "type": "text/javascript"
                     }
@@ -1879,15 +1819,15 @@
             "protocolProfileBehavior": {}
         },
         {
-            "id": "c7b46d5c-9580-463c-be73-2a5bda049022",
+            "id": "fd30b2a8-84d9-4e41-8d47-7d04acc7b471",
             "name": "orders.sock-shop",
             "item": [
                 {
-                    "id": "bea5c373-00dd-48b6-9a98-f7091cccc513",
+                    "id": "cb27ea9c-67f2-4154-a87b-1203346413e3",
                     "name": "orders",
                     "item": [
                         {
-                            "id": "2b385da6-1b84-451e-81d0-b9ffe356f426",
+                            "id": "33e57f04-6fb3-41e8-b97e-4a96bc6b9d6f",
                             "name": "/orders",
                             "request": {
                                 "method": "POST",
@@ -1926,7 +1866,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "976eafae-f7a0-4507-81b4-4c0fcb8badc5",
+                                        "id": "e0434a75-6e00-407d-a78f-b910d976312e",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"address\", \"http://user/addresses/57a98d98e4b00679b4a830b0\");",
@@ -1940,7 +1880,7 @@
                             ]
                         },
                         {
-                            "id": "ce6fca66-b0ae-483a-93ae-50973ff93f76",
+                            "id": "fd8a1d5a-a9b2-4124-bcf8-f4d3f1cb1c37",
                             "name": "/orders/search/customerId",
                             "request": {
                                 "method": "GET",
@@ -1971,7 +1911,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "f425a70b-dec1-49a5-a2ee-461e143f0ba8",
+                                        "id": "1a5d5413-e6e1-4879-9fdf-dae668789f77",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"custId\", \"604126b8b33e3d000142c081\");"
@@ -1982,7 +1922,7 @@
                             ]
                         },
                         {
-                            "id": "fba2ee2e-b352-4216-91a6-67c18fc10e13",
+                            "id": "a8960b13-1803-4f3c-8f29-c6aff464d047",
                             "name": "/orders/{{id}}",
                             "request": {
                                 "method": "GET",
@@ -2002,7 +1942,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "21126f2c-2010-43f9-85fc-b095cbb91980",
+                                        "id": "95d76ef2-93c1-4351-8c4f-60286e00f5fb",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"id\", \"5f6133edc5f29f000664b180\");"
@@ -2021,7 +1961,7 @@
                 {
                     "listen": "prerequest",
                     "script": {
-                        "id": "7f76cd6a-6948-4a71-b936-990f088be86b",
+                        "id": "24471b3b-68f1-4d58-a4ed-2739cace44ae",
                         "exec": [],
                         "type": "text/javascript"
                     }
@@ -2030,11 +1970,11 @@
             "protocolProfileBehavior": {}
         },
         {
-            "id": "34f784a6-5970-42ee-91b7-3d3e7c7909c6",
+            "id": "d9fa2a3e-c21e-44d6-80f9-48cb443752f7",
             "name": "payment.sock-shop",
             "item": [
                 {
-                    "id": "8c46fbcd-785e-4a55-a387-4ce8da872dc8",
+                    "id": "b1eb7311-1069-4eb6-96e8-0863216d3e3b",
                     "name": "/paymentAuth",
                     "request": {
                         "method": "POST",
@@ -2073,7 +2013,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "cedf904a-a28e-4d6c-9004-4c7141df28a0",
+                                "id": "2e700d12-4fa2-48a5-9890-11b4fe23e64f",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"amount\", 4.99);",
@@ -2099,7 +2039,7 @@
                 {
                     "listen": "prerequest",
                     "script": {
-                        "id": "6bb99ca5-448b-4f88-bf35-ad6051efb1dc",
+                        "id": "f168d283-1316-4082-99e3-2892bd5e71bc",
                         "exec": [],
                         "type": "text/javascript"
                     }
@@ -2108,11 +2048,11 @@
             "protocolProfileBehavior": {}
         },
         {
-            "id": "1267ab4e-d7e6-4ebd-812d-8a1e5fee28b0",
+            "id": "6cffd30d-b5d0-46eb-9761-ce4457d4c8bd",
             "name": "shipping.sock-shop",
             "item": [
                 {
-                    "id": "854f4e58-9054-42f1-9fbd-1fd44476a3ad",
+                    "id": "8178c600-4d8a-4455-bd7c-cb8ab8f6e327",
                     "name": "/shipping",
                     "request": {
                         "method": "POST",
@@ -2151,7 +2091,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "bb55c9c5-d1d7-4cc2-a706-889f814c94ad",
+                                "id": "44e9fd6f-1f48-4260-8a97-24caa77caba1",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"id\", \"73486b55-d856-4a12-8019-bad7afc4b29e\");",
@@ -2167,7 +2107,7 @@
                 {
                     "listen": "prerequest",
                     "script": {
-                        "id": "ebaa2c68-1ceb-483e-b8e2-f7efc9f710be",
+                        "id": "35d91029-6095-4a93-8e10-604e605de623",
                         "exec": [],
                         "type": "text/javascript"
                     }
@@ -2176,15 +2116,15 @@
             "protocolProfileBehavior": {}
         },
         {
-            "id": "0e3cfa46-fe4c-44cf-8fa1-86b7454f6168",
+            "id": "ca08ee33-8694-45e0-ba50-13b82e443645",
             "name": "user.sock-shop",
             "item": [
                 {
-                    "id": "10978f70-c1e4-4d23-9ffe-a3f8972c5754",
+                    "id": "3cd8c14d-968f-4781-8e97-f54225dce5ad",
                     "name": "addresses",
                     "item": [
                         {
-                            "id": "3962d841-1055-48b4-932a-a08bbadc4c92",
+                            "id": "9fa88c84-ee41-4597-9b87-d80ea9b14ea2",
                             "name": "/addresses",
                             "request": {
                                 "method": "POST",
@@ -2223,7 +2163,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "1f55319c-926f-4389-9d8f-a9f8b9f0b890",
+                                        "id": "b1b5e194-58d5-48e0-972a-994570efd137",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"city\", \"Nashville\");",
@@ -2239,7 +2179,7 @@
                             ]
                         },
                         {
-                            "id": "5d613b0c-b844-4816-b28a-b1714ad1212d",
+                            "id": "9bc1cf1f-6c14-45dc-bb7c-332749ca5bc0",
                             "name": "/addresses/{{id}}",
                             "request": {
                                 "method": "GET",
@@ -2265,7 +2205,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "b8a8663c-4f52-45d8-932f-6f519da6af5d",
+                                        "id": "7733e65d-a5f6-46b0-a564-587db97d04ca",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"id\", \"57a98d98e4b00679b4a830b0\");"
@@ -2280,11 +2220,11 @@
                     "protocolProfileBehavior": {}
                 },
                 {
-                    "id": "4ac7ced3-2fad-4776-a50c-f3ad5df7d1dc",
+                    "id": "1e52f250-d8aa-4065-bd50-46e53c04f9e2",
                     "name": "cards",
                     "item": [
                         {
-                            "id": "f97ecd87-9a75-4b28-a974-d369a109b2ea",
+                            "id": "842075e4-9a84-4f4e-b867-81eb151b2155",
                             "name": "/cards",
                             "request": {
                                 "method": "POST",
@@ -2323,7 +2263,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "9dc374ba-fccd-4601-b6d4-1def83a4598a",
+                                        "id": "207dcfac-5d18-4d58-8357-f49f33bcb42c",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"ccv\", \"123\");",
@@ -2337,7 +2277,7 @@
                             ]
                         },
                         {
-                            "id": "20991c76-c374-47e6-9dd1-481830c93528",
+                            "id": "06f7f069-9b53-48bd-b086-59abe4e8deb6",
                             "name": "/cards/{{id}}",
                             "request": {
                                 "method": "GET",
@@ -2363,7 +2303,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "7239381d-99b3-48e3-bde3-ec745aafcb83",
+                                        "id": "8a64002c-bfe6-4f5c-bcba-a0a859d110e0",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"id\", \"57a98d98e4b00679b4a830b1\");"
@@ -2378,11 +2318,11 @@
                     "protocolProfileBehavior": {}
                 },
                 {
-                    "id": "21a04740-02d5-4915-a78a-a69663805a77",
+                    "id": "4e0abca5-9e76-415b-8fc9-466fca3dc772",
                     "name": "customers",
                     "item": [
                         {
-                            "id": "633bb595-4832-4df5-ac19-fbb813325605",
+                            "id": "c5eeb0f1-9670-43ff-a598-2e8d5a32bcf8",
                             "name": "/customers/{{customerId}}",
                             "request": {
                                 "method": "GET",
@@ -2408,7 +2348,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "a21bd1df-0ed8-4bc6-a6a7-584d9cba8a03",
+                                        "id": "be6612d1-8e11-48f1-84ba-3ad6a1fc0e3d",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"customerId\", \"57a98d98e4b00679b4a830b2\");"
@@ -2419,7 +2359,7 @@
                             ]
                         },
                         {
-                            "id": "b7c05f99-d462-49af-86c6-87e13d13bed9",
+                            "id": "ae5a9354-dcc1-4ba0-95fc-a065655f3611",
                             "name": "/customers/{{customerId}}/addresses",
                             "request": {
                                 "method": "GET",
@@ -2440,7 +2380,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "a3358219-30e1-43ab-9999-b16e572aa41c",
+                                        "id": "67211ef2-4c6a-4128-a777-7bd505e9c40d",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"customerId\", \"57a98d98e4b00679b4a830b2\");"
@@ -2451,7 +2391,7 @@
                             ]
                         },
                         {
-                            "id": "70e3e166-fe39-4ff7-83f8-a64aa058fe81",
+                            "id": "5ac89b6e-7554-4810-a052-2235e5d8c175",
                             "name": "/customers/{{customerId}}/cards",
                             "request": {
                                 "method": "GET",
@@ -2472,7 +2412,7 @@
                                 {
                                     "listen": "prerequest",
                                     "script": {
-                                        "id": "2ab09aae-55d8-4023-a4ae-a0efe3525724",
+                                        "id": "4fa734cc-355a-4793-9e1d-3ac78885bfeb",
                                         "exec": [
                                             "// Some of the environment variables might be set in the parent folders.",
                                             "pm.variables.set(\"customerId\", \"57a98d98e4b00679b4a830b2\");"
@@ -2487,7 +2427,7 @@
                     "protocolProfileBehavior": {}
                 },
                 {
-                    "id": "af46edb9-2107-4901-b4a7-fa9dc5f43296",
+                    "id": "64eba27f-5630-44c4-ae60-805ba061e592",
                     "name": "/login",
                     "request": {
                         "method": "GET",
@@ -2506,7 +2446,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "6d0febcf-d338-4c75-b19e-206839ed1d66",
+                                "id": "ec7b6742-fda9-4087-88b8-46b39d29b947",
                                 "exec": [],
                                 "type": "text/javascript"
                             }
@@ -2514,7 +2454,7 @@
                     ]
                 },
                 {
-                    "id": "db56c602-e362-41b7-a618-d89525deb1b6",
+                    "id": "ca2ea727-92e6-4621-b25e-d4bb84643f18",
                     "name": "/register",
                     "request": {
                         "method": "POST",
@@ -2553,7 +2493,7 @@
                         {
                             "listen": "prerequest",
                             "script": {
-                                "id": "fa01fd64-3a07-4aa7-9098-f9a16568c8d0",
+                                "id": "ec8d73b9-9af7-4169-8b68-c918bb94e90f",
                                 "exec": [
                                     "// Some of the environment variables might be set in the parent folders.",
                                     "pm.variables.set(\"email\", \"thiggins@anisolution.com\");",
@@ -2572,7 +2512,7 @@
                 {
                     "listen": "prerequest",
                     "script": {
-                        "id": "da1b19ea-cd88-4e99-aebf-19a5f2cef2a0",
+                        "id": "545f3051-df25-4d54-8c25-bda9f92c6564",
                         "exec": [],
                         "type": "text/javascript"
                     }
@@ -2584,37 +2524,37 @@
     "event": [],
     "variable": [
         {
-            "id": "9632a076-2caf-4497-88ae-188914dfab57",
+            "id": "36fe9bea-0e2a-4fbf-8227-4bcedd42711c",
             "key": "carts_sock_shop",
             "value": "http://carts.sock-shop"
         },
         {
-            "id": "68186a2c-a44e-4eb3-982b-59fd1a33f14a",
+            "id": "3c60a6b6-babb-4081-a797-eabb2d8164b5",
             "key": "catalogue_sock_shop",
             "value": "http://catalogue.sock-shop"
         },
         {
-            "id": "fcaf8574-9c14-43dd-9703-ad43f028129d",
+            "id": "0cfced08-abd1-4909-9227-8ef653990db6",
             "key": "front_end_sock_shop",
             "value": "http://front-end.sock-shop"
         },
         {
-            "id": "5425b34c-c61e-4701-87e7-2ebad241fb3b",
+            "id": "6b1e5ee5-5412-4fc9-9c2a-f7b8337a1a21",
             "key": "orders_sock_shop",
             "value": "http://orders.sock-shop"
         },
         {
-            "id": "a3000e3b-0bfc-47c7-9b5d-1b1855b011cc",
+            "id": "6b035da7-38b0-412c-b8cc-106eef43dffc",
             "key": "payment_sock_shop",
             "value": "http://payment.sock-shop"
         },
         {
-            "id": "913ff767-cafe-420a-90ac-475c51c7b382",
+            "id": "ab9aac97-905e-4d34-ae30-f91542085b80",
             "key": "shipping_sock_shop",
             "value": "http://shipping.sock-shop"
         },
         {
-            "id": "965d66ca-d973-4c3d-a615-bb26757f0655",
+            "id": "31a38d96-ffe2-4697-82d9-42c31273c0cd",
             "key": "user_sock_shop",
             "value": "http://user.sock-shop"
         }

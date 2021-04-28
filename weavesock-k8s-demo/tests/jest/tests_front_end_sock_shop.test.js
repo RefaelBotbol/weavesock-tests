@@ -581,24 +581,6 @@ describe.each(dataset("data/dataset_172.json"))("test_172_post_cards", (ccv, exp
     });
 });
 
-it("test_015_delete_cart", () => {
-    clearSession();
-
-    // DELETE http://front-end.sock-shop/cart (endp 15)
-    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
-    return front_end_sock_shop.fetch("/cart", {
-        method: "DELETE"
-    })
-    .then((response) => {
-        expect(response.status).toEqual(202);
-        return response.text();
-    })
-    .then((text) => {
-    })
-    .then((data) => {
-    });
-});
-
 it("test_016_post_cart", () => {
     clearSession();
 
@@ -714,6 +696,26 @@ it("test_039_delete_cart", () => {
     });
 });
 
+it("test_047_get_cart", () => {
+    clearSession();
+
+    // GET http://front-end.sock-shop/cart (endp 47)
+    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+    return front_end_sock_shop.fetch("/cart", {
+        headers: {
+            "x-requested-with": "XMLHttpRequest"
+        }
+    })
+    .then((response) => {
+        expect(response.status).toEqual(200);
+        return response.text();
+    })
+    .then((text) => {
+    })
+    .then((data) => {
+    });
+});
+
 it("test_063_get_cart", () => {
     clearSession();
 
@@ -820,47 +822,6 @@ it("test_286_delete_cart", () => {
     .then((text) => {
     })
     .then((data) => {
-    });
-});
-
-it("test_073_delete_cart_itemId", () => {
-    clearSession();
-
-    // GET http://front-end.sock-shop/cart (endp 47)
-    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
-    return front_end_sock_shop.fetch("/cart", {
-        headers: {
-            "x-requested-with": "XMLHttpRequest"
-        }
-    })
-    .then((response) => {
-        expect(response.status).toEqual(200);
-        return response.text();
-    })
-    .then((text) => {
-        return JSON.parse(text);
-    })
-    .then((data) => {
-        const itemId = JSONPath({
-            path: "$[*].itemId",
-            json: data
-        })[0];
-
-        // DELETE http://front-end.sock-shop/cart/{itemId} (endp 73)
-        return front_end_sock_shop.fetch("/cart/" + itemId, {
-            method: "DELETE",
-            headers: {
-                "x-requested-with": "XMLHttpRequest"
-            }
-        })
-        .then((response) => {
-            expect(response.status).toEqual(202);
-            return response.text();
-        })
-        .then((text) => {
-        })
-        .then((data) => {
-        });
     });
 });
 

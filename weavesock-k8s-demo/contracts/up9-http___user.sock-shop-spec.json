@@ -1039,13 +1039,13 @@
  },
  "tags": [
   {
+   "name": "customers"
+  },
+  {
    "name": "addresses"
   },
   {
    "name": "cards"
-  },
-  {
-   "name": "customers"
   }
  ]
 }

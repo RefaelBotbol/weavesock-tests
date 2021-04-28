@@ -453,16 +453,6 @@ public class TestsFrontEndSockShopTest
     }
 
     @Test
-    public void testDeleteCart015() throws MalformedURLException, IOException
-    {
-        // DELETE http://front-end.sock-shop/cart (endp 15)
-        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
-        final HttpRequest request = new HttpRequest();
-        final Response response = frontEndSockShop.delete(request, "/cart");
-        assertStatusCode(response.code(), 202);
-    }
-
-    @Test
     public void testPostCart016() throws MalformedURLException, IOException
     {
         // POST http://front-end.sock-shop/orders (endp 21)
@@ -536,6 +526,19 @@ public class TestsFrontEndSockShopTest
     }
 
     @Test
+    public void testGetCart047() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/cart (endp 47)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("x-requested-with", "XMLHttpRequest");
+        }});
+        final Response response = frontEndSockShop.get(request, "/cart");
+        assertStatusCode(response.code(), 200);
+    }
+
+    @Test
     public void testGetCart063() throws MalformedURLException, IOException
     {
         // GET http://front-end.sock-shop/cart (endp 63)
@@ -600,28 +603,6 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.delete(request, "/cart");
         assertStatusCode(response.code(), 202);
-    }
-
-    @Test
-    public void testDeleteCartItemid073() throws MalformedURLException, IOException
-    {
-        // GET http://front-end.sock-shop/cart (endp 47)
-        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
-        final HttpRequest request = new HttpRequest();
-        request.setHeaders(new Hashtable<String, Object>() {{
-            put("x-requested-with", "XMLHttpRequest");
-        }});
-        final Response response = frontEndSockShop.get(request, "/cart");
-        assertStatusCode(response.code(), 200);
-        final String itemId = JSONPath("$[*].itemId", response.body().string());
-
-        // DELETE http://front-end.sock-shop/cart/{itemId} (endp 73)
-        final HttpRequest request2 = new HttpRequest();
-        request2.setHeaders(new Hashtable<String, Object>() {{
-            put("x-requested-with", "XMLHttpRequest");
-        }});
-        final Response response2 = frontEndSockShop.delete(request2, "/cart/" + itemId);
-        assertStatusCode(response2.code(), 202);
     }
 
     @Test
