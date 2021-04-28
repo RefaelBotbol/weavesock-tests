@@ -335,7 +335,6 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.get(request, "/address");
         assertStatusCode(response.code(), 200);
-        assertJSONPath("$.city", "elsewhere", response.body().string());
     }
 
     @ParameterizedTest
@@ -551,7 +550,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @Test
-    public void testGetCart146() throws MalformedURLException, IOException
+    public void testPostCart174() throws MalformedURLException, IOException
     {
         // GET http://front-end.sock-shop/cart (endp 146)
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
@@ -561,31 +560,7 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.get(request, "/cart");
         assertStatusCode(response.code(), 200);
-    }
-
-    @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_174.json")
-    public void testPostCart174(final JsonObject json) throws MalformedURLException, IOException
-    {
-        final String page = json.getString("page");
-        final String size = json.getString("size");
-        final String tags = json.getString("tags");
-
-        // GET http://front-end.sock-shop/catalogue (endp 147)
-        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
-        final HttpRequest request = new HttpRequest();
-        request.setQueryString(new Hashtable<String, Object>() {{
-            put("page", page);
-            put("size", size);
-            put("sort", "id");
-            put("tags", tags);
-        }});
-        request.setHeaders(new Hashtable<String, Object>() {{
-            put("x-requested-with", "XMLHttpRequest");
-        }});
-        final Response response = frontEndSockShop.get(request, "/catalogue");
-        assertStatusCode(response.code(), 200);
-        final String id = JSONPath("$[*].id", response.body().string());
+        final String id = JSONPath("$[*].itemId", response.body().string());
 
         // POST http://front-end.sock-shop/cart (endp 174)
         final HttpRequest request2 = new HttpRequest();
@@ -607,6 +582,20 @@ public class TestsFrontEndSockShopTest
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
         final HttpRequest request = new HttpRequest();
         request.setHeaders(new Hashtable<String, Object>() {{
+            put("x-requested-with", "XMLHttpRequest");
+        }});
+        final Response response = frontEndSockShop.delete(request, "/cart");
+        assertStatusCode(response.code(), 202);
+    }
+
+    @Test
+    public void testDeleteCart286() throws MalformedURLException, IOException
+    {
+        // DELETE http://front-end.sock-shop/cart (endp 286)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("content-type", "application/x-www-form-urlencoded");
             put("x-requested-with", "XMLHttpRequest");
         }});
         final Response response = frontEndSockShop.delete(request, "/cart");

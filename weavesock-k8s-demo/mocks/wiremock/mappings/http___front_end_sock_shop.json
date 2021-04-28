@@ -928,7 +928,7 @@
     "urlPathPattern": "/address"
    },
    "response": {
-    "bodyFileName": "resp_168.json",
+    "body": "{\"status_code\":500}",
     "headers": {
      "Content-Type": "application/json"
     },
@@ -979,7 +979,7 @@
     "urlPathPattern": "/card"
    },
    "response": {
-    "body": "{\"number\":\"1111\"}",
+    "body": "{\"status_code\":500}",
     "headers": {
      "Content-Type": "application/json"
     },
@@ -1370,6 +1370,21 @@
      "Content-Type": "text/plain"
     },
     "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "c0fea275-939c-4f4a-a142-7f9da23575f1",
+   "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/cart"
+   },
+   "response": {
+    "body": "",
+    "headers": {},
+    "status": 202,
     "transformers": [
      "response-template"
     ]

@@ -17,6 +17,11 @@
   {
    "page": "1",
    "size": "5",
+   "tags": "sport"
+  },
+  {
+   "page": "2",
+   "size": "3",
    "tags": "brown"
   },
   {
@@ -27,7 +32,7 @@
   {
    "page": "2",
    "size": "6",
-   "tags": ""
+   "tags": "blue"
   }
  ]
 }

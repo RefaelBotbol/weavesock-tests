@@ -199,7 +199,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 9546 requests",
+    "summary": "Seen 10324 requests",
     "tags": [
      "catalogue"
     ]
@@ -268,19 +268,18 @@
       "content": {
        "application/json": {
         "example": {
-         "count": 820,
-         "description": "Ready for action. Engineers: be ready to smash that next bug! Be ready, with these super-action-sport-masterpieces. This particular engineer was chased away from the office with a stick.",
-         "id": "510a0d7e-8e83-4193-b483-e27e09ddc34d",
+         "count": 438,
+         "description": "proident occaecat irure et excepteur labore minim nisi amet irure",
+         "id": "3395a43e-2d88-40de-b95f-e00e1502085b",
          "imageUrl": [
-          "/catalogue/images/puma_1.jpeg",
-          "/catalogue/images/puma_2.jpeg"
+          "/catalogue/images/colourful_socks.jpg",
+          "/catalogue/images/colourful_socks.jpg"
          ],
-         "name": "SuperSport XL",
-         "price": 15,
+         "name": "Colourful",
+         "price": 18,
          "tag": [
-          "sport",
-          "black",
-          "formal"
+          "brown",
+          "blue"
          ]
         },
         "schema": {
@@ -329,7 +328,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 5554 requests",
+    "summary": "Seen 7356 requests",
     "tags": [
      "catalogue"
     ]

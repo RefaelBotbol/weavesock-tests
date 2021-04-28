@@ -1,6 +1,14 @@
 {
  "parameters": [
   {
+   "name": "city",
+   "uuid": "0b7ac3f7-f44e-42ca-b210-6b314801a285"
+  },
+  {
+   "name": "country",
+   "uuid": "37888f41-010b-4561-a883-84c41b58717a"
+  },
+  {
    "name": "number",
    "uuid": "4b2f1349-acd8-48e9-a0a5-ec63779ddc30"
   },
@@ -9,15 +17,30 @@
    "uuid": "5f1f3643-5771-4e78-8c1e-e7dbb426eba7"
   },
   {
+   "name": "street",
+   "uuid": "33ed05d7-77cd-467c-a677-3e128e4a9b2b"
+  },
+  {
    "name": "userID",
    "uuid": "166d3c7c-49cf-48f4-ba3e-1e2a9b5667b8"
   }
  ],
  "rows": [
   {
+   "city": "Nashville",
+   "country": "USA",
    "number": "1234",
    "postcode": "12345",
+   "street": "Downtown",
    "userID": "604126b8b33e3d000142c081"
+  },
+  {
+   "city": "elsewhere",
+   "country": "best",
+   "number": "503",
+   "postcode": "30011",
+   "street": "nowhere",
+   "userID": "6089dd4bc7749a000103f3fb"
   }
  ]
 }

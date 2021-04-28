@@ -219,7 +219,6 @@ public class TestsOrdersSockShopTest
         }});
         final Response response6 = ordersSockShop.get(request6, "/orders/search/customerId");
         assertStatusCode(response6.code(), 200);
-        assertJSONPath("$._embedded.customerOrders[*].address.city", "elsewhere", response6.body().string());
     }
 }
 

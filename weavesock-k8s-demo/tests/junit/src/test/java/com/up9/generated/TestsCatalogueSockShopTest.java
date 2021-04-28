@@ -19,6 +19,27 @@ import static com.up9.up9lib.Common.*;
 public class TestsCatalogueSockShopTest
 {
     @ParameterizedTest
+    @JsonFileSource(resources = "/dataset_137.json")
+    public void testGetCatalogue137(final JsonObject json) throws MalformedURLException, IOException
+    {
+        final String page = json.getString("page");
+        final String size = json.getString("size");
+        final String tags = json.getString("tags");
+
+        // GET http://catalogue.sock-shop/catalogue (endp 137)
+        final HttpTarget catalogueSockShop = getHttpClient("http://catalogue.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setQueryString(new Hashtable<String, Object>() {{
+            put("page", page);
+            put("size", size);
+            put("sort", "id");
+            put("tags", tags);
+        }});
+        final Response response = catalogueSockShop.get(request, "/catalogue");
+        assertStatusCode(response.code(), 200);
+    }
+
+    @ParameterizedTest
     @JsonFileSource(resources = "/dataset_2.json")
     public void testGetCatalogueId002(final JsonObject json) throws MalformedURLException, IOException
     {
