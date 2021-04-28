@@ -23,11 +23,8 @@ public class TestsUserSockShopTest
     @JsonFileSource(resources = "/dataset_191.json")
     public void testPostAddresses191(final JsonObject json) throws MalformedURLException, IOException
     {
-        final String city = json.getString("city");
-        final String country = json.getString("country");
         final String number = json.getString("number");
         final String postcode = json.getString("postcode");
-        final String street = json.getString("street");
         final String userID = json.getString("userID");
 
         // POST http://user.sock-shop/addresses (endp 191)
@@ -38,11 +35,8 @@ public class TestsUserSockShopTest
             put("content-type", "application/json");
         }});
         request.setJsonBody("payload_for_endp_191.json", new Hashtable<String, Object>() {{
-            put("$.city", city);
-            put("$.country", country);
             put("$.number", number);
             put("$.postcode", postcode);
-            put("$.street", street);
             put("$.userID", userID);
         }});
         final Response response = userSockShop.post(request, "/addresses");

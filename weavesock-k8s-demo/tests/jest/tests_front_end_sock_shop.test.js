@@ -412,8 +412,13 @@ it("test_168_get_address", () => {
         return response.text();
     })
     .then((text) => {
+        return JSON.parse(text);
     })
     .then((data) => {
+        expect(JSONPath({
+            path: "$.city",
+            json: data
+        })).toContain("elsewhere");
     });
 });
 
@@ -735,7 +740,7 @@ it("test_063_get_cart", () => {
     });
 });
 
-it("test_174_post_cart", () => {
+it("test_146_get_cart", () => {
     clearSession();
 
     // GET http://front-end.sock-shop/cart (endp 146)
@@ -750,32 +755,54 @@ it("test_174_post_cart", () => {
         return response.text();
     })
     .then((text) => {
-        return JSON.parse(text);
     })
     .then((data) => {
-        const id = JSONPath({
-            path: "$[*].itemId",
-            json: data
-        })[0];
+    });
+});
 
-        // POST http://front-end.sock-shop/cart (endp 174)
-        return front_end_sock_shop.fetch("/cart", {
-            method: "POST",
+describe.each(dataset("data/dataset_174.json"))("test_174_post_cart", (page, size, tags) => {
+    it("test_174_post_cart", () => {
+        clearSession();
+
+        // GET http://front-end.sock-shop/catalogue (endp 147)
+        const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+        return front_end_sock_shop.fetch("/catalogue" + urlencode([["page", page], ["size", size], ["sort", "id"], ["tags", tags]]), {
             headers: {
-                "content-type": "application/json",
                 "x-requested-with": "XMLHttpRequest"
-            },
-            body: JSONBuild("data/payload_for_endp_174.json", {
-                "$.id": id
-            })
+            }
         })
         .then((response) => {
-            expect(response.status).toEqual(201);
+            expect(response.status).toEqual(200);
             return response.text();
         })
         .then((text) => {
+            return JSON.parse(text);
         })
         .then((data) => {
+            const id = JSONPath({
+                path: "$[*].id",
+                json: data
+            })[0];
+
+            // POST http://front-end.sock-shop/cart (endp 174)
+            return front_end_sock_shop.fetch("/cart", {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json",
+                    "x-requested-with": "XMLHttpRequest"
+                },
+                body: JSONBuild("data/payload_for_endp_174.json", {
+                    "$.id": id
+                })
+            })
+            .then((response) => {
+                expect(response.status).toEqual(201);
+                return response.text();
+            })
+            .then((text) => {
+            })
+            .then((data) => {
+            });
         });
     });
 });
@@ -788,28 +815,6 @@ it("test_175_delete_cart", () => {
     return front_end_sock_shop.fetch("/cart", {
         method: "DELETE",
         headers: {
-            "x-requested-with": "XMLHttpRequest"
-        }
-    })
-    .then((response) => {
-        expect(response.status).toEqual(202);
-        return response.text();
-    })
-    .then((text) => {
-    })
-    .then((data) => {
-    });
-});
-
-it("test_237_delete_cart", () => {
-    clearSession();
-
-    // DELETE http://front-end.sock-shop/cart (endp 237)
-    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
-    return front_end_sock_shop.fetch("/cart", {
-        method: "DELETE",
-        headers: {
-            "content-type": "application/x-www-form-urlencoded",
             "x-requested-with": "XMLHttpRequest"
         }
     })

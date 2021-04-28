@@ -15,14 +15,9 @@
  ],
  "rows": [
   {
-   "page": "2",
-   "size": "5",
-   "tags": "brown"
-  },
-  {
-   "page": "2",
-   "size": "5",
-   "tags": "sport"
+   "page": "1",
+   "size": "3",
+   "tags": "formal"
   },
   {
    "page": "2",
@@ -32,17 +27,17 @@
   {
    "page": "2",
    "size": "5",
-   "tags": "large"
+   "tags": "brown"
   },
   {
-   "page": "1",
-   "size": "3",
-   "tags": "blue"
+   "page": "2",
+   "size": "5",
+   "tags": "large"
   },
   {
    "page": "2",
    "size": "6",
-   "tags": "formal"
+   "tags": "sport"
   }
  ]
 }

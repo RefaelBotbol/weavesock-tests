@@ -138,6 +138,9 @@ public class TestsCartsSockShopTest
         final String card = json.getString("card");
         final String customer = json.getString("customer");
         final String items = json.getString("items");
+        final String page = json.getString("page");
+        final String size = json.getString("size");
+        final String tags = json.getString("tags");
 
         // POST http://orders.sock-shop/orders (endp 10)
         final HttpTarget ordersSockShop = getHttpClient("http://orders.sock-shop", new Authentication());
@@ -166,20 +169,32 @@ public class TestsCartsSockShopTest
         final Response response2 = cartsSockShop.get(request2, "/carts/" + customerId + "/items");
         assertStatusCode(response2.code(), 200);
         final String itemId = JSONPath("$[*].itemId", response2.body().string());
-        final String unitPrice = JSONPath("$[*].unitPrice", response2.body().string());
+
+        // GET http://catalogue.sock-shop/catalogue (endp 137)
+        final HttpTarget catalogueSockShop = getHttpClient("http://catalogue.sock-shop", new Authentication());
+        final HttpRequest request3 = new HttpRequest();
+        request3.setQueryString(new Hashtable<String, Object>() {{
+            put("page", page);
+            put("size", size);
+            put("sort", "id");
+            put("tags", tags);
+        }});
+        final Response response3 = catalogueSockShop.get(request3, "/catalogue");
+        assertStatusCode(response3.code(), 200);
+        final String unitPrice = JSONPath("$[*].price", response3.body().string());
 
         // POST http://carts.sock-shop/carts/{customerId}/items (endp 140)
-        final HttpRequest request3 = new HttpRequest();
-        request3.setHeaders(new Hashtable<String, Object>() {{
+        final HttpRequest request4 = new HttpRequest();
+        request4.setHeaders(new Hashtable<String, Object>() {{
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request3.setJsonBody("payload_for_endp_140.json", new Hashtable<String, Object>() {{
+        request4.setJsonBody("payload_for_endp_140.json", new Hashtable<String, Object>() {{
             put("$.itemId", itemId);
             put("$.unitPrice", unitPrice);
         }});
-        final Response response3 = cartsSockShop.post(request3, "/carts/" + customerId + "/items");
-        assertStatusCode(response3.code(), 201);
+        final Response response4 = cartsSockShop.post(request4, "/carts/" + customerId + "/items");
+        assertStatusCode(response4.code(), 201);
     }
 
     @ParameterizedTest

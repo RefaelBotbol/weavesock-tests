@@ -176,7 +176,7 @@ describe.each(dataset("data/dataset_8.json"))("test_008_post_carts_customerId_it
     });
 });
 
-describe.each(dataset("data/dataset_140.json"))("test_140_post_carts_customerId_items", (address, card, customer, items) => {
+describe.each(dataset("data/dataset_140.json"))("test_140_post_carts_customerId_items", (address, card, customer, items, page, size, tags) => {
     it("test_140_post_carts_customerId_items", () => {
         clearSession();
 
@@ -231,30 +231,43 @@ describe.each(dataset("data/dataset_140.json"))("test_140_post_carts_customerId_
                     path: "$[*].itemId",
                     json: data
                 })[0];
-                const unitPrice = JSONPath({
-                    path: "$[*].unitPrice",
-                    json: data
-                })[0];
 
-                // POST http://carts.sock-shop/carts/{customerId}/items (endp 140)
-                return carts_sock_shop.fetch("/carts/" + customerId + "/items", {
-                    method: "POST",
-                    headers: {
-                        "accept": "application/json",
-                        "content-type": "application/json"
-                    },
-                    body: JSONBuild("data/payload_for_endp_140.json", {
-                        "$.itemId": itemId,
-                        "$.unitPrice": unitPrice
-                    })
-                })
+                // GET http://catalogue.sock-shop/catalogue (endp 137)
+                const catalogue_sock_shop = getHttpClient("http://catalogue.sock-shop", authenticate);
+                return catalogue_sock_shop.fetch("/catalogue" + urlencode([["page", page], ["size", size], ["sort", "id"], ["tags", tags]]))
                 .then((response) => {
-                    expect(response.status).toEqual(201);
+                    expect(response.status).toEqual(200);
                     return response.text();
                 })
                 .then((text) => {
+                    return JSON.parse(text);
                 })
                 .then((data) => {
+                    const unitPrice = JSONPath({
+                        path: "$[*].price",
+                        json: data
+                    })[0];
+
+                    // POST http://carts.sock-shop/carts/{customerId}/items (endp 140)
+                    return carts_sock_shop.fetch("/carts/" + customerId + "/items", {
+                        method: "POST",
+                        headers: {
+                            "accept": "application/json",
+                            "content-type": "application/json"
+                        },
+                        body: JSONBuild("data/payload_for_endp_140.json", {
+                            "$.itemId": itemId,
+                            "$.unitPrice": unitPrice
+                        })
+                    })
+                    .then((response) => {
+                        expect(response.status).toEqual(201);
+                        return response.text();
+                    })
+                    .then((text) => {
+                    })
+                    .then((data) => {
+                    });
                 });
             });
         });

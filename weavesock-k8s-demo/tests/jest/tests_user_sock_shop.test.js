@@ -1,7 +1,7 @@
 const authenticate = require("./authentication");
 const {JSONBuild, JSONPath, clearSession, dataset, getHttpClient} = require("./up9lib");
 
-describe.each(dataset("data/dataset_191.json"))("test_191_post_addresses", (city, country, number, postcode, street, userID) => {
+describe.each(dataset("data/dataset_191.json"))("test_191_post_addresses", (number, postcode, userID) => {
     it("test_191_post_addresses", () => {
         clearSession();
 
@@ -14,11 +14,8 @@ describe.each(dataset("data/dataset_191.json"))("test_191_post_addresses", (city
                 "content-type": "application/json"
             },
             body: JSONBuild("data/payload_for_endp_191.json", {
-                "$.city": city,
-                "$.country": country,
                 "$.number": number,
                 "$.postcode": postcode,
-                "$.street": street,
                 "$.userID": userID
             })
         })

@@ -321,8 +321,13 @@ describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_cust
                                 return response.text();
                             })
                             .then((text) => {
+                                return JSON.parse(text);
                             })
                             .then((data) => {
+                                expect(JSONPath({
+                                    path: "$._embedded.customerOrders[*].address.city",
+                                    json: data
+                                })).toContain("elsewhere");
                             });
                         });
                     });
