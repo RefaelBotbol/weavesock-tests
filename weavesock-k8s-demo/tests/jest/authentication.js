@@ -1,5 +1,6 @@
 function authenticate(targetKey, opts) {
     if (opts.configUrl === "http://carts.sock-shop") {
+    } else if (opts.configUrl === "http://catalogue-mockintosh-management.sock-shop") {
     } else if (opts.configUrl === "http://catalogue.sock-shop") {
     } else if (opts.configUrl === "http://front-end.sock-shop") {
     } else if (opts.configUrl === "http://orders.sock-shop") {

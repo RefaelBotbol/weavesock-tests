@@ -10,6 +10,9 @@ public class Authentication implements AuthenticationInterface
         if (httpTarget.baseURL == "http://carts.sock-shop")
         {
         }
+        else if (httpTarget.baseURL == "http://catalogue-mockintosh-management.sock-shop")
+        {
+        }
         else if (httpTarget.baseURL == "http://catalogue.sock-shop")
         {
         }

@@ -1,0 +1,21 @@
+{
+ "mappings": [
+  {
+   "id": "e33db374-3398-44b6-a304-2e8da7afd50d",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/catalogue"
+   },
+   "response": {
+    "bodyFileName": "resp_287.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}
