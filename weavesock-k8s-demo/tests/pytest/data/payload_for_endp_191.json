@@ -1,8 +1,8 @@
 {
- "city": "elsewhere",
- "country": "best",
+ "city": "{{city}}",
+ "country": "{{country}}",
  "number": "{{number}}",
  "postcode": "{{postcode}}",
- "street": "nowhere",
+ "street": "{{street}}",
  "userID": "{{userID}}"
 }

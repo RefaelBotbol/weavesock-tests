@@ -23,6 +23,13 @@
  ],
  "rows": [
   {
+   "email": "thiggins@anisolution.com",
+   "firstName": "Tim",
+   "lastName": "Higgins",
+   "password": "LetMeIn",
+   "username": "thig"
+  },
+  {
    "email": "refael@up9.com",
    "firstName": "qwerasdf",
    "lastName": "adsfzxcv",
@@ -30,25 +37,32 @@
    "username": "refael2"
   },
   {
+   "email": "refael@up9.com",
+   "firstName": "qwerasdf",
+   "lastName": "adsfzxcv",
+   "password": "qwerasdfzcxv",
+   "username": "refael"
+  },
+  {
    "email": "asdf@as.com",
    "firstName": "refael",
    "lastName": "last",
    "password": "password",
-   "username": "refael"
+   "username": "refael3"
   },
   {
    "email": "qer@ua.com",
    "firstName": "asdf",
    "lastName": "zxcv",
    "password": "qwerasdfsdfgzxcvb",
-   "username": "refael3"
+   "username": "user4"
   },
   {
    "email": "qzvferg@asdf.cm",
    "firstName": "wertasdf",
    "lastName": "qwerdsfgh",
    "password": ";kjshvpiuqgh",
-   "username": "user4"
+   "username": "thigg"
   }
  ]
 }

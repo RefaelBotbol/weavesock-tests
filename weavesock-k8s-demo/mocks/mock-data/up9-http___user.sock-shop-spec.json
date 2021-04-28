@@ -83,7 +83,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1 requests",
+    "summary": "Seen 2 requests",
     "tags": [
      "addresses"
     ]
@@ -193,7 +193,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 6860 requests",
+    "summary": "Seen 6862 requests",
     "tags": [
      "addresses"
     ]
@@ -208,7 +208,8 @@
       "enum": [
        "57a98d98e4b00679b4a830b0",
        "57a98d98e4b00679b4a830b3",
-       "604126f1b33e3d000142c082"
+       "604126f1b33e3d000142c082",
+       "6089dd71c7749a000103f40b"
       ],
       "type": "string"
      },
@@ -286,7 +287,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1 requests",
+    "summary": "Seen 2 requests",
     "tags": [
      "cards"
     ]
@@ -386,7 +387,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 6933 requests",
+    "summary": "Seen 6935 requests",
     "tags": [
      "cards"
     ]
@@ -400,7 +401,8 @@
       "enum": [
        "57a98d98e4b00679b4a830b1",
        "57a98d98e4b00679b4a830b4",
-       "60412702b33e3d000142c083"
+       "60412702b33e3d000142c083",
+       "6089dd89c7749a000103f40c"
       ],
       "type": "string"
      },
@@ -532,7 +534,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 16885 requests",
+    "summary": "Seen 16904 requests",
     "tags": [
      "customers"
     ]
@@ -674,7 +676,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1714 requests",
+    "summary": "Seen 1720 requests",
     "tags": [
      "customers"
     ]
@@ -806,7 +808,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1699 requests",
+    "summary": "Seen 1705 requests",
     "tags": [
      "customers"
     ]
@@ -953,7 +955,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1982 requests"
+    "summary": "Seen 1983 requests"
    },
    "parameters": []
   },
@@ -1031,16 +1033,16 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 4 requests"
+    "summary": "Seen 6 requests"
    }
   }
  },
  "tags": [
   {
-   "name": "addresses"
+   "name": "customers"
   },
   {
-   "name": "customers"
+   "name": "addresses"
   },
   {
    "name": "cards"

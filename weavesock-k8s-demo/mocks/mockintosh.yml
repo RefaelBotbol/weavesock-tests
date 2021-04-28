@@ -510,7 +510,10 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_168.json'
+      body: |-
+        {
+         "status_code": 500
+        }
       useTemplating: false
   - path: /addresses
     response:
@@ -534,7 +537,7 @@ services:
         Content-Type: application/json
       body: |-
         {
-         "number": "1111"
+         "status_code": 500
         }
       useTemplating: false
   - path: /cards
@@ -698,6 +701,10 @@ services:
     response:
       headers:
         Content-Type: text/plain
+  - path: /cart
+    response:
+      status: 202
+    method: delete
 - name: http://orders.sock-shop
   port: 8004
   ssl: false
