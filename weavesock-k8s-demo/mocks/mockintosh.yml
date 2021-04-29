@@ -705,6 +705,12 @@ services:
     response:
       status: 202
     method: delete
+  - path: /wp-includes/wlwmanifest.xml
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_289.html'
+      useTemplating: false
 - name: http://orders.sock-shop
   port: 8004
   ssl: false

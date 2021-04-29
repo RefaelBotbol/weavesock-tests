@@ -1291,5 +1291,16 @@ public class TestsFrontEndSockShopTest
         assertStatusCode(response.code(), 200);
         assertCSSselect("div#top div.container div.offer a.btn.btn-success.btn-sm", "Offer of the day", response.body().string());
     }
+
+    @Test
+    public void testGetWpIncludesWlwmanifestXml289() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/wp-includes/wlwmanifest.xml (endp 289)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        final Response response = frontEndSockShop.get(request, "/wp-includes/wlwmanifest.xml");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
 }
 

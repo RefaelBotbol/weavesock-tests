@@ -1800,3 +1800,20 @@ it("test_152_get_topbar_html", () => {
     .then((data) => {
     });
 });
+
+it("test_289_get_wp_includes_wlwmanifest_xml", () => {
+    clearSession();
+
+    // GET http://front-end.sock-shop/wp-includes/wlwmanifest.xml (endp 289)
+    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+    return front_end_sock_shop.fetch("/wp-includes/wlwmanifest.xml")
+    .then((response) => {
+        expect(response.status).toEqual(200);
+        return response.text();
+    })
+    .then((text) => {
+        expect(CSSselect("div#hot div.box div.container div h2", text)).toContain("Hot this week");
+    })
+    .then((data) => {
+    });
+});

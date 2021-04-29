@@ -981,6 +981,14 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         resp.assert_status_code(200)
         resp.assert_cssselect('div#top div.container div.offer a.btn.btn-success.btn-sm', expected_value='Offer of the day')
 
+    @clear_session({'spanId': 289})
+    def test_289_get_wp_includes_wlwmanifest_xml(self):
+        # GET http://front-end.sock-shop/wp-includes/wlwmanifest.xml (endp 289)
+        front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
+        resp = front_end_sock_shop.get('/wp-includes/wlwmanifest.xml')
+        resp.assert_status_code(200)
+        resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
+
 
 @data_driven_tests
 class Tests_orders_sock_shop(unittest.TestCase):

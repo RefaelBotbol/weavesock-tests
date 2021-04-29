@@ -1389,6 +1389,23 @@
      "response-template"
     ]
    }
+  },
+  {
+   "id": "de3b9a16-6716-438e-b736-0b1d4c17521e",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/wp\\-includes/wlwmanifest\\.xml"
+   },
+   "response": {
+    "bodyFileName": "resp_289.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
   }
  ]
 }
