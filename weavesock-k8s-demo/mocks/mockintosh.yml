@@ -72,19 +72,8 @@ services:
       headers:
         Content-Type: application/json
       body: '[]'
-- name: http://catalogue-mockintosh-management.sock-shop
-  port: 8002
-  ssl: false
-  managementRoot: __admin
-  oas: '@mock-data/up9-http___catalogue-mockintosh-management.sock-shop-spec.json'
-  endpoints:
-  - path: /catalogue
-    response:
-      headers:
-        Content-Type: application/json
-      body: '@mock-data/resp_287.json'
 - name: http://catalogue.sock-shop
-  port: 8003
+  port: 8002
   ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___catalogue.sock-shop-spec.json'
@@ -174,7 +163,7 @@ services:
         }
       useTemplating: false
 - name: http://front-end.sock-shop
-  port: 8004
+  port: 8003
   ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___front-end.sock-shop-spec.json'
@@ -717,7 +706,7 @@ services:
       status: 202
     method: delete
 - name: http://orders.sock-shop
-  port: 8005
+  port: 8004
   ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___orders.sock-shop-spec.json'
@@ -763,7 +752,7 @@ services:
         Content-Type: application/json
       body: '@mock-data/resp_199.json'
 - name: http://payment.sock-shop
-  port: 8006
+  port: 8005
   ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___payment.sock-shop-spec.json'
@@ -791,7 +780,7 @@ services:
       useTemplating: false
     method: post
 - name: http://shipping.sock-shop
-  port: 8007
+  port: 8006
   ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___shipping.sock-shop-spec.json'
@@ -819,7 +808,7 @@ services:
         }
     method: post
 - name: http://user.sock-shop
-  port: 8008
+  port: 8007
   ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___user.sock-shop-spec.json'

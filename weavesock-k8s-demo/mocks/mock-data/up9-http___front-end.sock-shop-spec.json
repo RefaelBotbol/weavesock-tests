@@ -3294,19 +3294,19 @@
  },
  "tags": [
   {
-   "name": "catalogue"
+   "name": "orders"
   },
   {
    "name": "cart"
   },
   {
+   "name": "index.html"
+  },
+  {
    "name": "customers"
   },
   {
-   "name": "orders"
-  },
-  {
-   "name": "index.html"
+   "name": "catalogue"
   }
  ]
 }

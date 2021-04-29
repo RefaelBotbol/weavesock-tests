@@ -165,21 +165,6 @@ class Tests_carts_sock_shop(unittest.TestCase):
 
 
 @data_driven_tests
-class Tests_catalogue_mockintosh_management_sock_shop(unittest.TestCase):
-
-    @json_dataset('data/dataset_287.json')
-    @clear_session({'spanId': 287})
-    def test_287_get_catalogue(self, data_row):
-        size, = data_row
-
-        # GET http://catalogue-mockintosh-management.sock-shop/catalogue (endp 287)
-        catalogue_mockintosh_management_sock_shop = get_http_client('http://catalogue-mockintosh-management.sock-shop', authenticate)
-        qstr = '?' + urlencode([('size', size)])
-        resp = catalogue_mockintosh_management_sock_shop.get('/catalogue' + qstr)
-        resp.assert_status_code(200)
-
-
-@data_driven_tests
 class Tests_catalogue_sock_shop(unittest.TestCase):
 
     @json_dataset('data/dataset_137.json')

@@ -17,8 +17,6 @@ def authenticate(target_key: str, target: TargetService):
     # authenticate_oauth(target)
     if target.config_url == 'http://carts.sock-shop':
         pass
-    elif target.config_url == 'http://catalogue-mockintosh-management.sock-shop':
-        pass
     elif target.config_url == 'http://catalogue.sock-shop':
         pass
     elif target.config_url == 'http://front-end.sock-shop':
