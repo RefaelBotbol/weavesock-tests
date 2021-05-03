@@ -1391,13 +1391,64 @@
    }
   },
   {
-   "id": "de3b9a16-6716-438e-b736-0b1d4c17521e",
+   "id": "d320afa0-d8cf-4c47-9454-37386116c783",
    "request": {
     "method": "GET",
     "urlPathPattern": "/wp\\-includes/wlwmanifest\\.xml"
    },
    "response": {
     "bodyFileName": "resp_289.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "7fce6fd9-cc5a-44cd-8ab7-f591910e959e",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_298.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "01f00f3a-1a3d-4d3f-aa6a-985172616bf4",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_299.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "c5214ef4-1424-430f-bb88-af4af9142bcd",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_300.html",
     "headers": {
      "Content-Type": "text/html"
     },

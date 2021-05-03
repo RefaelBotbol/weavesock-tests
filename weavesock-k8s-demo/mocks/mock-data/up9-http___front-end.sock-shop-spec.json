@@ -454,7 +454,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1619064 requests"
+    "summary": "Seen 1619196 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -469,7 +469,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 108 requests"
+    "summary": "Seen 109 requests"
    },
    "parameters": []
   },
@@ -2154,7 +2154,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 355 requests",
+    "summary": "Seen 363 requests",
     "tags": [
      "index.html"
     ]
@@ -2172,7 +2172,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 2 requests",
+    "summary": "Seen 4 requests",
     "tags": [
      "index.html"
     ]
@@ -3217,7 +3217,7 @@
   },
   "/wp-includes/wlwmanifest.xml": {
    "get": {
-    "operationId": "de3b9a16-6716-438e-b736-0b1d4c17521e",
+    "operationId": "d320afa0-d8cf-4c47-9454-37386116c783",
     "parameters": [],
     "responses": {
      "200": {
@@ -3229,7 +3229,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1 requests"
+    "summary": "Seen 2 requests"
    },
    "parameters": []
   },
@@ -3269,7 +3269,8 @@
      "schema": {
       "enum": [
        "navbar.html",
-       "4c0xreqsl0tlzfw4r3p"
+       "4c0xreqsl0tlzfw4r3p",
+       "s3wqr68uzsnh6k7ahak"
       ],
       "type": "string"
      },
@@ -3291,7 +3292,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1 requests"
+    "summary": "Seen 2 requests"
    },
    "parameters": [
     {
@@ -3301,7 +3302,8 @@
      "schema": {
       "enum": [
        "navbar.html",
-       "4c0xreqsl0tlzfw4r3p"
+       "4c0xreqsl0tlzfw4r3p",
+       "s3wqr68uzsnh6k7ahak"
       ],
       "type": "string"
      },
@@ -3312,16 +3314,16 @@
  },
  "tags": [
   {
-   "name": "customers"
+   "name": "cart"
   },
   {
-   "name": "cart"
+   "name": "index.html"
   },
   {
    "name": "orders"
   },
   {
-   "name": "index.html"
+   "name": "customers"
   },
   {
    "name": "catalogue"
