@@ -1406,6 +1406,57 @@
      "response-template"
     ]
    }
+  },
+  {
+   "id": "047c283b-73fd-41d6-8a9d-047c72c46c28",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_303.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "2c204d3b-1f4c-444e-a870-ca57baa9bd57",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_304.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "b17689d3-9836-426f-8324-1a182128e23e",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_305.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
   }
  ]
 }

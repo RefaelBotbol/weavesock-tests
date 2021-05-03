@@ -83,6 +83,8 @@ public class TestsFrontEndSockShopTest
     public void testGet133(final JsonObject json) throws MalformedURLException, IOException
     {
         final String content = json.getString("content");
+        final String id = json.getString("id");
+        final String name = json.getString("name");
         final String s = json.getString("s");
         final String vars_0_ = json.getString("vars_0_");
 
@@ -96,6 +98,8 @@ public class TestsFrontEndSockShopTest
             put("data", "1");
             put("filter", "phpinfo");
             put("function", "call_user_func_array");
+            put("id", id);
+            put("name", name);
             put("s", s);
             put("vars[0]", vars_0_);
         }});
@@ -227,6 +231,48 @@ public class TestsFrontEndSockShopTest
         final HttpRequest request = new HttpRequest();
         request.setHeaders(new Hashtable<String, Object>() {{
             put("content-type", "application/xml");
+        }});
+        final Response response = frontEndSockShop.get(request, "/");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
+    @Test
+    public void testGet303() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/ (endp 303)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("content-type", "text/xml");
+        }});
+        final Response response = frontEndSockShop.get(request, "/");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
+    @Test
+    public void testGet304() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/ (endp 304)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("content-type", "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('X-Qualys-Struts'");
+        }});
+        final Response response = frontEndSockShop.get(request, "/");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
+    @Test
+    public void testGet305() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/ (endp 305)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("content-type", "%{(#nike='multipart/form-data').(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmdlinux='ifconfig').(#cmdwin='ipconfig').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe'");
         }});
         final Response response = frontEndSockShop.get(request, "/");
         assertStatusCode(response.code(), 200);
