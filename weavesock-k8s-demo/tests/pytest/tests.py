@@ -269,11 +269,11 @@ class Tests_front_end_sock_shop(unittest.TestCase):
     @json_dataset('data/dataset_133.json')
     @clear_session({'spanId': 133})
     def test_133_get_(self, data_row):
-        content, id_, name, s, vars_0_ = data_row
+        content, s, vars_0_ = data_row
 
         # GET http://front-end.sock-shop/ (endp 133)
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
-        qstr = '?' + urlencode([('XDEBUG_SESSION_START', 'phpstorm'), ('a', 'fetch'), ('content', content), ('data', '1'), ('filter', 'phpinfo'), ('function', 'call_user_func_array'), ('id', id_), ('name', name), ('s', s), ('vars[0]', vars_0_)])
+        qstr = '?' + urlencode([('XDEBUG_SESSION_START', 'phpstorm'), ('a', 'fetch'), ('content', content), ('data', '1'), ('filter', 'phpinfo'), ('function', 'call_user_func_array'), ('s', s), ('vars[0]', vars_0_)])
         resp = front_end_sock_shop.get('/' + qstr)
         resp.assert_status_code(200)
         resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
@@ -348,30 +348,6 @@ class Tests_front_end_sock_shop(unittest.TestCase):
     @clear_session({'spanId': 213})
     def test_213_get_(self):
         # GET http://front-end.sock-shop/ (endp 213)
-        front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
-        resp = front_end_sock_shop.get('/')
-        resp.assert_status_code(200)
-        resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
-
-    @clear_session({'spanId': 301})
-    def test_301_get_(self):
-        # GET http://front-end.sock-shop/ (endp 301)
-        front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
-        resp = front_end_sock_shop.get('/')
-        resp.assert_status_code(200)
-        resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
-
-    @clear_session({'spanId': 302})
-    def test_302_get_(self):
-        # GET http://front-end.sock-shop/ (endp 302)
-        front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
-        resp = front_end_sock_shop.get('/')
-        resp.assert_status_code(200)
-        resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
-
-    @clear_session({'spanId': 303})
-    def test_303_get_(self):
-        # GET http://front-end.sock-shop/ (endp 303)
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
         resp = front_end_sock_shop.get('/')
         resp.assert_status_code(200)

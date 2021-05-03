@@ -1406,57 +1406,6 @@
      "response-template"
     ]
    }
-  },
-  {
-   "id": "d1861a88-e93a-457e-a58a-c0b0874b808d",
-   "request": {
-    "method": "GET",
-    "urlPathPattern": "/"
-   },
-   "response": {
-    "bodyFileName": "resp_301.html",
-    "headers": {
-     "Content-Type": "text/html"
-    },
-    "status": 200,
-    "transformers": [
-     "response-template"
-    ]
-   }
-  },
-  {
-   "id": "d8513a80-1507-4034-bb34-b0f031f93100",
-   "request": {
-    "method": "GET",
-    "urlPathPattern": "/"
-   },
-   "response": {
-    "bodyFileName": "resp_302.html",
-    "headers": {
-     "Content-Type": "text/html"
-    },
-    "status": 200,
-    "transformers": [
-     "response-template"
-    ]
-   }
-  },
-  {
-   "id": "d1b9e135-ec6a-4d53-85ce-5659c46219b6",
-   "request": {
-    "method": "GET",
-    "urlPathPattern": "/"
-   },
-   "response": {
-    "bodyFileName": "resp_303.html",
-    "headers": {
-     "Content-Type": "text/html"
-    },
-    "status": 200,
-    "transformers": [
-     "response-template"
-    ]
-   }
   }
  ]
 }
