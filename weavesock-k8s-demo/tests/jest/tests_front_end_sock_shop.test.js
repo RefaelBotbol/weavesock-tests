@@ -58,13 +58,13 @@ it("test_067_head_", () => {
     });
 });
 
-describe.each(dataset("data/dataset_133.json"))("test_133_get_", (content, s, vars_0_) => {
+describe.each(dataset("data/dataset_133.json"))("test_133_get_", (content, id, name, s, vars_0_) => {
     it("test_133_get_", () => {
         clearSession();
 
         // GET http://front-end.sock-shop/ (endp 133)
         const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
-        return front_end_sock_shop.fetch("/" + urlencode([["XDEBUG_SESSION_START", "phpstorm"], ["a", "fetch"], ["content", content], ["data", "1"], ["filter", "phpinfo"], ["function", "call_user_func_array"], ["s", s], ["vars[0]", vars_0_]]))
+        return front_end_sock_shop.fetch("/" + urlencode([["XDEBUG_SESSION_START", "phpstorm"], ["a", "fetch"], ["content", content], ["data", "1"], ["filter", "phpinfo"], ["function", "call_user_func_array"], ["id", id], ["name", name], ["s", s], ["vars[0]", vars_0_]]))
         .then((response) => {
             expect(response.status).toEqual(200);
             return response.text();
@@ -265,10 +265,10 @@ it("test_213_get_", () => {
     });
 });
 
-it("test_298_get_", () => {
+it("test_301_get_", () => {
     clearSession();
 
-    // GET http://front-end.sock-shop/ (endp 298)
+    // GET http://front-end.sock-shop/ (endp 301)
     const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
     return front_end_sock_shop.fetch("/", {
         headers: {
@@ -286,10 +286,10 @@ it("test_298_get_", () => {
     });
 });
 
-it("test_299_get_", () => {
+it("test_302_get_", () => {
     clearSession();
 
-    // GET http://front-end.sock-shop/ (endp 299)
+    // GET http://front-end.sock-shop/ (endp 302)
     const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
     return front_end_sock_shop.fetch("/", {
         headers: {
@@ -307,10 +307,10 @@ it("test_299_get_", () => {
     });
 });
 
-it("test_300_get_", () => {
+it("test_303_get_", () => {
     clearSession();
 
-    // GET http://front-end.sock-shop/ (endp 300)
+    // GET http://front-end.sock-shop/ (endp 303)
     const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
     return front_end_sock_shop.fetch("/", {
         headers: {

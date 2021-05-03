@@ -83,6 +83,8 @@ public class TestsFrontEndSockShopTest
     public void testGet133(final JsonObject json) throws MalformedURLException, IOException
     {
         final String content = json.getString("content");
+        final String id = json.getString("id");
+        final String name = json.getString("name");
         final String s = json.getString("s");
         final String vars_0_ = json.getString("vars_0_");
 
@@ -96,6 +98,8 @@ public class TestsFrontEndSockShopTest
             put("data", "1");
             put("filter", "phpinfo");
             put("function", "call_user_func_array");
+            put("id", id);
+            put("name", name);
             put("s", s);
             put("vars[0]", vars_0_);
         }});
@@ -234,9 +238,9 @@ public class TestsFrontEndSockShopTest
     }
 
     @Test
-    public void testGet298() throws MalformedURLException, IOException
+    public void testGet301() throws MalformedURLException, IOException
     {
-        // GET http://front-end.sock-shop/ (endp 298)
+        // GET http://front-end.sock-shop/ (endp 301)
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
         final HttpRequest request = new HttpRequest();
         request.setHeaders(new Hashtable<String, Object>() {{
@@ -248,9 +252,9 @@ public class TestsFrontEndSockShopTest
     }
 
     @Test
-    public void testGet299() throws MalformedURLException, IOException
+    public void testGet302() throws MalformedURLException, IOException
     {
-        // GET http://front-end.sock-shop/ (endp 299)
+        // GET http://front-end.sock-shop/ (endp 302)
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
         final HttpRequest request = new HttpRequest();
         request.setHeaders(new Hashtable<String, Object>() {{
@@ -262,9 +266,9 @@ public class TestsFrontEndSockShopTest
     }
 
     @Test
-    public void testGet300() throws MalformedURLException, IOException
+    public void testGet303() throws MalformedURLException, IOException
     {
-        // GET http://front-end.sock-shop/ (endp 300)
+        // GET http://front-end.sock-shop/ (endp 303)
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
         final HttpRequest request = new HttpRequest();
         request.setHeaders(new Hashtable<String, Object>() {{
