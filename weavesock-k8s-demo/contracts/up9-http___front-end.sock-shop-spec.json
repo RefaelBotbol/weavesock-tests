@@ -476,7 +476,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1619217 requests"
+    "summary": "Seen 1619291 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -3339,16 +3339,16 @@
    "name": "catalogue"
   },
   {
-   "name": "cart"
+   "name": "index.html"
   },
   {
    "name": "customers"
   },
   {
-   "name": "index.html"
+   "name": "orders"
   },
   {
-   "name": "orders"
+   "name": "cart"
   }
  ]
 }
