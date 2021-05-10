@@ -83,6 +83,7 @@ public class TestsFrontEndSockShopTest
     public void testGet133(final JsonObject json) throws MalformedURLException, IOException
     {
         final String content = json.getString("content");
+        final String feed = json.getString("feed");
         final String id = json.getString("id");
         final String name = json.getString("name");
         final String s = json.getString("s");
@@ -94,12 +95,15 @@ public class TestsFrontEndSockShopTest
         request.setQueryString(new Hashtable<String, Object>() {{
             put("XDEBUG_SESSION_START", "phpstorm");
             put("a", "fetch");
+            put("action", "login");
             put("content", content);
             put("data", "1");
+            put("feed", feed);
             put("filter", "phpinfo");
             put("function", "call_user_func_array");
             put("id", id);
             put("name", name);
+            put("q[]", "x");
             put("s", s);
             put("vars[0]", vars_0_);
         }});

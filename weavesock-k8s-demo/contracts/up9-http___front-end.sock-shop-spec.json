@@ -276,6 +276,39 @@
        ],
        "type": "string"
       }
+     },
+     {
+      "in": "query",
+      "name": "action",
+      "required": false,
+      "schema": {
+       "enum": [
+        "login"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "feed",
+      "required": false,
+      "schema": {
+       "enum": [
+        "rss2"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "q[]",
+      "required": false,
+      "schema": {
+       "enum": [
+        "x"
+       ],
+       "type": "string"
+      }
      }
     ],
     "responses": {
@@ -476,7 +509,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1619291 requests"
+    "summary": "Seen 1619452 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -2176,7 +2209,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 364 requests",
+    "summary": "Seen 371 requests",
     "tags": [
      "index.html"
     ]
@@ -2194,7 +2227,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 4 requests",
+    "summary": "Seen 6 requests",
     "tags": [
      "index.html"
     ]
@@ -3251,7 +3284,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 2 requests"
+    "summary": "Seen 3 requests"
    },
    "parameters": []
   },
@@ -3292,7 +3325,8 @@
       "enum": [
        "navbar.html",
        "4c0xreqsl0tlzfw4r3p",
-       "s3wqr68uzsnh6k7ahak"
+       "s3wqr68uzsnh6k7ahak",
+       "v42tg6djhkmau0moxxj"
       ],
       "type": "string"
      },
@@ -3314,7 +3348,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 2 requests"
+    "summary": "Seen 3 requests"
    },
    "parameters": [
     {
@@ -3325,7 +3359,8 @@
       "enum": [
        "navbar.html",
        "4c0xreqsl0tlzfw4r3p",
-       "s3wqr68uzsnh6k7ahak"
+       "s3wqr68uzsnh6k7ahak",
+       "v42tg6djhkmau0moxxj"
       ],
       "type": "string"
      },
@@ -3336,19 +3371,19 @@
  },
  "tags": [
   {
-   "name": "catalogue"
-  },
-  {
    "name": "index.html"
   },
   {
-   "name": "customers"
+   "name": "catalogue"
   },
   {
    "name": "orders"
   },
   {
    "name": "cart"
+  },
+  {
+   "name": "customers"
   }
  ]
 }

@@ -1042,10 +1042,10 @@
    "name": "cards"
   },
   {
-   "name": "customers"
+   "name": "addresses"
   },
   {
-   "name": "addresses"
+   "name": "customers"
   }
  ]
 }
