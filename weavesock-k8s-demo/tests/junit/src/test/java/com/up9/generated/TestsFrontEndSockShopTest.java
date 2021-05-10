@@ -82,12 +82,15 @@ public class TestsFrontEndSockShopTest
     @JsonFileSource(resources = "/dataset_133.json")
     public void testGet133(final JsonObject json) throws MalformedURLException, IOException
     {
+        final String action = json.getString("action");
         final String content = json.getString("content");
         final String feed = json.getString("feed");
         final String id = json.getString("id");
+        final String invitaion_code = json.getString("invitaion_code");
         final String name = json.getString("name");
         final String s = json.getString("s");
         final String vars_0_ = json.getString("vars_0_");
+        final String weekstartday = json.getString("weekstartday");
 
         // GET http://front-end.sock-shop/ (endp 133)
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
@@ -95,17 +98,23 @@ public class TestsFrontEndSockShopTest
         request.setQueryString(new Hashtable<String, Object>() {{
             put("XDEBUG_SESSION_START", "phpstorm");
             put("a", "fetch");
-            put("action", "login");
+            put("action", action);
             put("content", content);
+            put("cpmvc_do_action", "mvparse");
             put("data", "1");
+            put("f", "edit");
             put("feed", feed);
             put("filter", "phpinfo");
             put("function", "call_user_func_array");
             put("id", id);
+            put("invitaion_code", invitaion_code);
             put("name", name);
+            put("page", "pie-register");
             put("q[]", "x");
             put("s", s);
+            put("show_dash_widget", "1");
             put("vars[0]", vars_0_);
+            put("weekstartday", weekstartday);
         }});
         final Response response = frontEndSockShop.get(request, "/");
         assertStatusCode(response.code(), 200);
