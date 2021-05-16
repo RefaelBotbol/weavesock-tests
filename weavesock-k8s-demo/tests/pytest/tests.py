@@ -385,6 +385,14 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         resp.assert_status_code(200)
         resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
 
+    @clear_session({'spanId': 307})
+    def test_307_get_(self):
+        # GET http://front-end.sock-shop/ (endp 307)
+        front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
+        resp = front_end_sock_shop.get('/')
+        resp.assert_status_code(200)
+        resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
+
     @json_dataset('data/dataset_55.json')
     @clear_session({'spanId': 55})
     def test_055_get_param(self, data_row):

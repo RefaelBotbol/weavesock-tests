@@ -2,7 +2,7 @@
  "parameters": [
   {
    "name": "action",
-   "uuid": "a07d9523-3129-4df0-b8ff-efc2a381888a"
+   "uuid": "71f82dc5-3d89-4ab5-8741-cfae24c6dbba"
   },
   {
    "name": "content",
@@ -10,7 +10,7 @@
   },
   {
    "name": "feed",
-   "uuid": "2c615aee-0548-4f0c-a185-c002ca3ba5d1"
+   "uuid": "3b0376ec-8852-4397-bc17-c189810d91c5"
   },
   {
    "name": "id",
@@ -18,7 +18,7 @@
   },
   {
    "name": "invitaion_code",
-   "uuid": "dceb2f7f-400e-4795-8d53-fa660e7eaf67"
+   "uuid": "ddeb31e4-8804-4202-a949-4ba074ef6eb7"
   },
   {
    "name": "name",
@@ -34,7 +34,7 @@
   },
   {
    "name": "weekstartday",
-   "uuid": "d4027733-acbe-4013-a685-aa0d5bea26a0"
+   "uuid": "bf40f670-1dc5-4220-9296-bcd387c7c407"
   }
  ],
  "rows": [
