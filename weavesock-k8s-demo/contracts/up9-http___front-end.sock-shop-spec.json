@@ -382,6 +382,28 @@
      },
      {
       "in": "query",
+      "name": "",
+      "required": false,
+      "schema": {
+       "enum": [
+        "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "\u0000",
+      "required": false,
+      "schema": {
+       "enum": [
+        ""
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
       "name": "/'",
       "required": false,
       "schema": {
@@ -449,11 +471,34 @@
      },
      {
       "in": "query",
+      "name": "mod",
+      "required": false,
+      "schema": {
+       "enum": [
+        "qualyscfyz",
+        "<script>alert(document.cookie)</script>"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
       "name": "mode",
       "required": false,
       "schema": {
        "enum": [
         "view"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "op",
+      "required": false,
+      "schema": {
+       "enum": [
+        "browse"
        ],
        "type": "string"
       }
@@ -668,7 +713,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1619694 requests"
+    "summary": "Seen 1619712 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -683,7 +728,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 112 requests"
+    "summary": "Seen 115 requests"
    },
    "parameters": []
   },
@@ -3532,19 +3577,19 @@
  },
  "tags": [
   {
-   "name": "catalogue"
+   "name": "index.html"
+  },
+  {
+   "name": "orders"
   },
   {
    "name": "cart"
   },
   {
-   "name": "index.html"
-  },
-  {
    "name": "customers"
   },
   {
-   "name": "orders"
+   "name": "catalogue"
   }
  ]
 }

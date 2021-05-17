@@ -90,8 +90,10 @@ public class TestsFrontEndSockShopTest
         final String feed = json.getString("feed");
         final String id = json.getString("id");
         final String invitaion_code = json.getString("invitaion_code");
+        final String mod = json.getString("mod");
         final String name = json.getString("name");
         final String page = json.getString("page");
+        final String param = json.getString("param");
         final String s = json.getString("s");
         final String vars_0_ = json.getString("vars_0_");
         final String weekstartday = json.getString("weekstartday");
@@ -100,6 +102,8 @@ public class TestsFrontEndSockShopTest
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
         final HttpRequest request = new HttpRequest();
         request.setQueryString(new Hashtable<String, Object>() {{
+            put("", param);
+            put("\u0000", "");
             put("/'", "");
             put("<script>alert(document.domain)</script>", "");
             put("OpenServer", "");
@@ -118,8 +122,10 @@ public class TestsFrontEndSockShopTest
             put("function", "call_user_func_array");
             put("id", id);
             put("invitaion_code", invitaion_code);
+            put("mod", mod);
             put("mode", "view");
             put("name", name);
+            put("op", "browse");
             put("page", page);
             put("parent", "0");
             put("q[]", "x");
