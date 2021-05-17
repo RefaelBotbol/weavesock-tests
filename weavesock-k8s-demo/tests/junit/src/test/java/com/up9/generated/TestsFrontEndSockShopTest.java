@@ -82,12 +82,16 @@ public class TestsFrontEndSockShopTest
     @JsonFileSource(resources = "/dataset_133.json")
     public void testGet133(final JsonObject json) throws MalformedURLException, IOException
     {
+        final String PHPSESSID = json.getString("PHPSESSID");
         final String action = json.getString("action");
+        final String album = json.getString("album");
+        final String category = json.getString("category");
         final String content = json.getString("content");
         final String feed = json.getString("feed");
         final String id = json.getString("id");
         final String invitaion_code = json.getString("invitaion_code");
         final String name = json.getString("name");
+        final String page = json.getString("page");
         final String s = json.getString("s");
         final String vars_0_ = json.getString("vars_0_");
         final String weekstartday = json.getString("weekstartday");
@@ -96,9 +100,15 @@ public class TestsFrontEndSockShopTest
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
         final HttpRequest request = new HttpRequest();
         request.setQueryString(new Hashtable<String, Object>() {{
+            put("/'", "");
+            put("<script>alert(document.domain)</script>", "");
+            put("OpenServer", "");
+            put("PHPSESSID", PHPSESSID);
             put("XDEBUG_SESSION_START", "phpstorm");
             put("a", "fetch");
             put("action", action);
+            put("album", album);
+            put("category", category);
             put("content", content);
             put("cpmvc_do_action", "mvparse");
             put("data", "1");
@@ -108,8 +118,10 @@ public class TestsFrontEndSockShopTest
             put("function", "call_user_func_array");
             put("id", id);
             put("invitaion_code", invitaion_code);
+            put("mode", "view");
             put("name", name);
-            put("page", "pie-register");
+            put("page", page);
+            put("parent", "0");
             put("q[]", "x");
             put("s", s);
             put("show_dash_widget", "1");

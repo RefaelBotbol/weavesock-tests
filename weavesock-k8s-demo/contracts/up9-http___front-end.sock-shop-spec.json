@@ -340,7 +340,9 @@
       "required": false,
       "schema": {
        "enum": [
-        "pie-register"
+        "'",
+        "pie-register",
+        "x"
        ],
        "type": "string"
       }
@@ -374,6 +376,95 @@
       "schema": {
        "enum": [
         "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "/'",
+      "required": false,
+      "schema": {
+       "enum": [
+        ""
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "<script>alert(document.domain)</script>",
+      "required": false,
+      "schema": {
+       "enum": [
+        ""
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "OpenServer",
+      "required": false,
+      "schema": {
+       "enum": [
+        ""
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "PHPSESSID",
+      "required": false,
+      "schema": {
+       "enum": [
+        "0123456789abcdef0123456789abcdef"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "album",
+      "required": false,
+      "schema": {
+       "enum": [
+        "`cat /etc/passwd`",
+        "`sleep 0`"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "category",
+      "required": false,
+      "schema": {
+       "enum": [
+        "xxxxxx"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "mode",
+      "required": false,
+      "schema": {
+       "enum": [
+        "view"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "parent",
+      "required": false,
+      "schema": {
+       "enum": [
+        "0"
        ],
        "type": "string"
       }
@@ -577,7 +668,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1619628 requests"
+    "summary": "Seen 1619694 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -2277,7 +2368,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 371 requests",
+    "summary": "Seen 378 requests",
     "tags": [
      "index.html"
     ]
@@ -2295,7 +2386,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 6 requests",
+    "summary": "Seen 8 requests",
     "tags": [
      "index.html"
     ]
@@ -3352,7 +3443,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 3 requests"
+    "summary": "Seen 4 requests"
    },
    "parameters": []
   },
@@ -3394,7 +3485,8 @@
        "navbar.html",
        "4c0xreqsl0tlzfw4r3p",
        "s3wqr68uzsnh6k7ahak",
-       "v42tg6djhkmau0moxxj"
+       "v42tg6djhkmau0moxxj",
+       "p4mztijtcozjf9enar0"
       ],
       "type": "string"
      },
@@ -3416,7 +3508,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 3 requests"
+    "summary": "Seen 4 requests"
    },
    "parameters": [
     {
@@ -3428,7 +3520,8 @@
        "navbar.html",
        "4c0xreqsl0tlzfw4r3p",
        "s3wqr68uzsnh6k7ahak",
-       "v42tg6djhkmau0moxxj"
+       "v42tg6djhkmau0moxxj",
+       "p4mztijtcozjf9enar0"
       ],
       "type": "string"
      },
@@ -3439,19 +3532,19 @@
  },
  "tags": [
   {
-   "name": "orders"
-  },
-  {
    "name": "catalogue"
-  },
-  {
-   "name": "index.html"
   },
   {
    "name": "cart"
   },
   {
+   "name": "index.html"
+  },
+  {
    "name": "customers"
+  },
+  {
+   "name": "orders"
   }
  ]
 }

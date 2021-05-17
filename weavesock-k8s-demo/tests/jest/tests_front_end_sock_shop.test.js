@@ -58,13 +58,13 @@ it("test_067_head_", () => {
     });
 });
 
-describe.each(dataset("data/dataset_133.json"))("test_133_get_", (action, content, feed, id, invitaion_code, name, s, vars_0_, weekstartday) => {
+describe.each(dataset("data/dataset_133.json"))("test_133_get_", (PHPSESSID, action, album, category, content, feed, id, invitaion_code, name, page, s, vars_0_, weekstartday) => {
     it("test_133_get_", () => {
         clearSession();
 
         // GET http://front-end.sock-shop/ (endp 133)
         const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
-        return front_end_sock_shop.fetch("/" + urlencode([["XDEBUG_SESSION_START", "phpstorm"], ["a", "fetch"], ["action", action], ["content", content], ["cpmvc_do_action", "mvparse"], ["data", "1"], ["f", "edit"], ["feed", feed], ["filter", "phpinfo"], ["function", "call_user_func_array"], ["id", id], ["invitaion_code", invitaion_code], ["name", name], ["page", "pie-register"], ["q[]", "x"], ["s", s], ["show_dash_widget", "1"], ["vars[0]", vars_0_], ["weekstartday", weekstartday]]))
+        return front_end_sock_shop.fetch("/" + urlencode([["/'", ""], ["<script>alert(document.domain)</script>", ""], ["OpenServer", ""], ["PHPSESSID", PHPSESSID], ["XDEBUG_SESSION_START", "phpstorm"], ["a", "fetch"], ["action", action], ["album", album], ["category", category], ["content", content], ["cpmvc_do_action", "mvparse"], ["data", "1"], ["f", "edit"], ["feed", feed], ["filter", "phpinfo"], ["function", "call_user_func_array"], ["id", id], ["invitaion_code", invitaion_code], ["mode", "view"], ["name", name], ["page", page], ["parent", "0"], ["q[]", "x"], ["s", s], ["show_dash_widget", "1"], ["vars[0]", vars_0_], ["weekstartday", weekstartday]]))
         .then((response) => {
             expect(response.status).toEqual(200);
             return response.text();

@@ -269,11 +269,11 @@ class Tests_front_end_sock_shop(unittest.TestCase):
     @json_dataset('data/dataset_133.json')
     @clear_session({'spanId': 133})
     def test_133_get_(self, data_row):
-        action, content, feed, id_, invitaion_code, name, s, vars_0_, weekstartday = data_row
+        PHPSESSID, action, album, category, content, feed, id_, invitaion_code, name, page, s, vars_0_, weekstartday = data_row
 
         # GET http://front-end.sock-shop/ (endp 133)
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
-        qstr = '?' + urlencode([('XDEBUG_SESSION_START', 'phpstorm'), ('a', 'fetch'), ('action', action), ('content', content), ('cpmvc_do_action', 'mvparse'), ('data', '1'), ('f', 'edit'), ('feed', feed), ('filter', 'phpinfo'), ('function', 'call_user_func_array'), ('id', id_), ('invitaion_code', invitaion_code), ('name', name), ('page', 'pie-register'), ('q[]', 'x'), ('s', s), ('show_dash_widget', '1'), ('vars[0]', vars_0_), ('weekstartday', weekstartday)])
+        qstr = '?' + urlencode([("/'", ''), ('<script>alert(document.domain)</script>', ''), ('OpenServer', ''), ('PHPSESSID', PHPSESSID), ('XDEBUG_SESSION_START', 'phpstorm'), ('a', 'fetch'), ('action', action), ('album', album), ('category', category), ('content', content), ('cpmvc_do_action', 'mvparse'), ('data', '1'), ('f', 'edit'), ('feed', feed), ('filter', 'phpinfo'), ('function', 'call_user_func_array'), ('id', id_), ('invitaion_code', invitaion_code), ('mode', 'view'), ('name', name), ('page', page), ('parent', '0'), ('q[]', 'x'), ('s', s), ('show_dash_widget', '1'), ('vars[0]', vars_0_), ('weekstartday', weekstartday)])
         resp = front_end_sock_shop.get('/' + qstr)
         resp.assert_status_code(200)
         resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
