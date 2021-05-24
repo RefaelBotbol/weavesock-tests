@@ -87,10 +87,12 @@ public class TestsFrontEndSockShopTest
         final String album = json.getString("album");
         final String category = json.getString("category");
         final String content = json.getString("content");
+        final String dispsize = json.getString("dispsize");
         final String feed = json.getString("feed");
         final String id = json.getString("id");
         final String invitaion_code = json.getString("invitaion_code");
         final String mod = json.getString("mod");
+        final String mode = json.getString("mode");
         final String name = json.getString("name");
         final String page = json.getString("page");
         final String param = json.getString("param");
@@ -104,6 +106,7 @@ public class TestsFrontEndSockShopTest
         request.setQueryString(new Hashtable<String, Object>() {{
             put("", param);
             put("\u0000", "");
+            put("\"><script>alert(document.domain)</script>", "");
             put("/'", "");
             put("<script>alert(document.domain)</script>", "");
             put("OpenServer", "");
@@ -113,9 +116,11 @@ public class TestsFrontEndSockShopTest
             put("action", action);
             put("album", album);
             put("category", category);
+            put("cmd", "show");
             put("content", content);
             put("cpmvc_do_action", "mvparse");
             put("data", "1");
+            put("dispsize", dispsize);
             put("f", "edit");
             put("feed", feed);
             put("filter", "phpinfo");
@@ -123,7 +128,7 @@ public class TestsFrontEndSockShopTest
             put("id", id);
             put("invitaion_code", invitaion_code);
             put("mod", mod);
-            put("mode", "view");
+            put("mode", mode);
             put("name", name);
             put("op", "browse");
             put("page", page);
@@ -131,6 +136,8 @@ public class TestsFrontEndSockShopTest
             put("q[]", "x");
             put("s", s);
             put("show_dash_widget", "1");
+            put("start", "0");
+            put("user", "");
             put("vars[0]", vars_0_);
             put("weekstartday", weekstartday);
         }});

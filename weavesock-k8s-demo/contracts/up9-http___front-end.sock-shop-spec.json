@@ -342,7 +342,8 @@
        "enum": [
         "'",
         "pie-register",
-        "x"
+        "x",
+        "../../../../../../../../../boot.ini"
        ],
        "type": "string"
       }
@@ -453,7 +454,8 @@
       "schema": {
        "enum": [
         "`cat /etc/passwd`",
-        "`sleep 0`"
+        "`sleep 0`",
+        "../../../../../../../../"
        ],
        "type": "string"
       }
@@ -487,6 +489,7 @@
       "required": false,
       "schema": {
        "enum": [
+        "album",
         "view"
        ],
        "type": "string"
@@ -510,6 +513,61 @@
       "schema": {
        "enum": [
         "0"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "\"><script>alert(document.domain)</script>",
+      "required": false,
+      "schema": {
+       "enum": [
+        ""
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "cmd",
+      "required": false,
+      "schema": {
+       "enum": [
+        "show"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "dispsize",
+      "required": false,
+      "schema": {
+       "enum": [
+        "640"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "start",
+      "required": false,
+      "schema": {
+       "enum": [
+        "0"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "user",
+      "required": false,
+      "schema": {
+       "enum": [
+        ""
        ],
        "type": "string"
       }
@@ -713,7 +771,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1619712 requests"
+    "summary": "Seen 1619986 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -728,7 +786,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 115 requests"
+    "summary": "Seen 118 requests"
    },
    "parameters": []
   },
@@ -2413,7 +2471,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 378 requests",
+    "summary": "Seen 385 requests",
     "tags": [
      "index.html"
     ]
@@ -2431,7 +2489,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 8 requests",
+    "summary": "Seen 10 requests",
     "tags": [
      "index.html"
     ]
@@ -3488,7 +3546,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 4 requests"
+    "summary": "Seen 6 requests"
    },
    "parameters": []
   },
@@ -3553,7 +3611,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 4 requests"
+    "summary": "Seen 5 requests"
    },
    "parameters": [
     {
@@ -3577,19 +3635,19 @@
  },
  "tags": [
   {
-   "name": "index.html"
-  },
-  {
    "name": "orders"
   },
   {
-   "name": "cart"
+   "name": "catalogue"
   },
   {
    "name": "customers"
   },
   {
-   "name": "catalogue"
+   "name": "index.html"
+  },
+  {
+   "name": "cart"
   }
  ]
 }
