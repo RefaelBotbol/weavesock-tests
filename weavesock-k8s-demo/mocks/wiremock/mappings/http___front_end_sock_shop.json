@@ -1510,13 +1510,30 @@
    }
   },
   {
-   "id": "74f6963c-4fc5-48b4-a756-63f9decad9bd",
+   "id": "d65876a9-4435-4267-8b42-2a1522a79c01",
    "request": {
     "method": "GET",
     "urlPathPattern": "/"
    },
    "response": {
     "bodyFileName": "resp_309.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "b2ba7ca7-f667-4bc3-952c-fb90facdd310",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_310.html",
     "headers": {
      "Content-Type": "text/html"
     },
