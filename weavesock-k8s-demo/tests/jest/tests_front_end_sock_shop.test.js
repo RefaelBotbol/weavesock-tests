@@ -433,6 +433,27 @@ it("test_310_get_", () => {
     });
 });
 
+it("test_311_get_", () => {
+    clearSession();
+
+    // GET http://front-end.sock-shop/ (endp 311)
+    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+    return front_end_sock_shop.fetch("/", {
+        headers: {
+            "content-type": "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('YUbHNQZB'"
+        }
+    })
+    .then((response) => {
+        expect(response.status).toEqual(200);
+        return response.text();
+    })
+    .then((text) => {
+        expect(CSSselect("div#hot div.box div.container div h2", text)).toContain("Hot this week");
+    })
+    .then((data) => {
+    });
+});
+
 describe.each(dataset("data/dataset_55.json"))("test_055_get_param", (param) => {
     it("test_055_get_param", () => {
         clearSession();
