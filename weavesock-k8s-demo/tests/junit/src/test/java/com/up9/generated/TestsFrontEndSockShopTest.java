@@ -120,6 +120,7 @@ public class TestsFrontEndSockShopTest
             put("content", content);
             put("cpmvc_do_action", "mvparse");
             put("data", "1");
+            put("debug", "1");
             put("dispsize", dispsize);
             put("f", "edit");
             put("feed", feed);
