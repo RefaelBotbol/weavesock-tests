@@ -777,6 +777,12 @@ services:
         Content-Type: text/html
       body: '@mock-data/resp_313.html'
       useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_314.html'
+      useTemplating: false
 - name: http://orders.sock-shop
   port: 8004
   ssl: false

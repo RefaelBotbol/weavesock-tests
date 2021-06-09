@@ -771,7 +771,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1620368 requests"
+    "summary": "Seen 1620633 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -786,7 +786,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 123 requests"
+    "summary": "Seen 128 requests"
    },
    "parameters": []
   },
@@ -2286,7 +2286,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 912 requests",
+    "summary": "Seen 913 requests",
     "tags": [
      "customers"
     ]
@@ -2419,7 +2419,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1552 requests"
+    "summary": "Seen 1555 requests"
    },
    "parameters": []
   },
@@ -2471,7 +2471,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 395 requests",
+    "summary": "Seen 403 requests",
     "tags": [
      "index.html"
     ]
@@ -2489,7 +2489,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 12 requests",
+    "summary": "Seen 14 requests",
     "tags": [
      "index.html"
     ]
@@ -2562,7 +2562,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 913 requests"
+    "summary": "Seen 914 requests"
    },
    "parameters": []
   },
@@ -2580,7 +2580,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 10 requests"
+    "summary": "Seen 11 requests"
    },
    "parameters": []
   },
@@ -3528,7 +3528,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1542 requests"
+    "summary": "Seen 1545 requests"
    },
    "parameters": []
   },
@@ -3546,7 +3546,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 6 requests"
+    "summary": "Seen 8 requests"
    },
    "parameters": []
   },
@@ -3576,7 +3576,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1542 requests"
+    "summary": "Seen 1545 requests"
    },
    "parameters": [
     {
@@ -3611,7 +3611,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 6 requests"
+    "summary": "Seen 7 requests"
    },
    "parameters": [
     {
@@ -3635,16 +3635,16 @@
  },
  "tags": [
   {
-   "name": "orders"
-  },
-  {
    "name": "cart"
   },
   {
-   "name": "index.html"
+   "name": "catalogue"
   },
   {
-   "name": "catalogue"
+   "name": "orders"
+  },
+  {
+   "name": "index.html"
   },
   {
    "name": "customers"
