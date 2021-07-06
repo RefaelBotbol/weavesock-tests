@@ -3635,6 +3635,9 @@
  },
  "tags": [
   {
+   "name": "index.html"
+  },
+  {
    "name": "cart"
   },
   {
@@ -3642,9 +3645,6 @@
   },
   {
    "name": "orders"
-  },
-  {
-   "name": "index.html"
   },
   {
    "name": "customers"

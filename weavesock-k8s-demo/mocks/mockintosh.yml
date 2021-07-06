@@ -13,7 +13,6 @@ management:
 services:
 - name: http://carts.sock-shop
   port: 8001
-  ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___carts.sock-shop-spec.json'
   endpoints:
@@ -74,7 +73,6 @@ services:
       body: '[]'
 - name: http://catalogue.sock-shop
   port: 8002
-  ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___catalogue.sock-shop-spec.json'
   endpoints:
@@ -82,12 +80,12 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_1.json'
+      body: '@mock-data/resp_catalogue_sock_shop_1.json'
   - path: /catalogue/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_2.json'
+      body: '@mock-data/resp_catalogue_sock_shop_2.json'
   - path: /catalogue/size
     response:
       headers:
@@ -124,7 +122,7 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_135.json'
+      body: '@mock-data/resp_catalogue_sock_shop_135.json'
   - path: /catalogue/size
     response:
       headers:
@@ -139,7 +137,7 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_137.json'
+      body: '@mock-data/resp_catalogue_sock_shop_137.json'
   - path: /tags
     response:
       headers:
@@ -164,7 +162,6 @@ services:
       useTemplating: false
 - name: http://front-end.sock-shop
   port: 8003
-  ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___front-end.sock-shop-spec.json'
   endpoints:
@@ -172,7 +169,7 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_11.html'
+      body: '@mock-data/resp_front_end_sock_shop_11.html'
       useTemplating: false
   - path: /basket.html
     response:
@@ -181,7 +178,7 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_14.html'
+      body: '@mock-data/resp_front_end_sock_shop_14.html'
       useTemplating: false
   - path: /cart
     response:
@@ -195,18 +192,18 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_17.json'
+      body: '@mock-data/resp_front_end_sock_shop_17.json'
   - path: /category.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_18.html'
+      body: '@mock-data/resp_front_end_sock_shop_18.html'
       useTemplating: false
   - path: /detail.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_19.html'
+      body: '@mock-data/resp_front_end_sock_shop_19.html'
       useTemplating: false
   - path: /login
     response:
@@ -219,20 +216,20 @@ services:
       status: 201
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_21.json'
+      body: '@mock-data/resp_front_end_sock_shop_21.json'
     method: post
   - path: /orders
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_22.html'
+      body: '@mock-data/resp_front_end_sock_shop_22.html'
       useTemplating: false
     method: post
   - path: /
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_28.json'
+      body: '@mock-data/resp_front_end_sock_shop_28.json'
   - path: /cart
     response:
       status: 202
@@ -241,7 +238,7 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_39.html'
+      body: '@mock-data/resp_front_end_sock_shop_39.html'
       useTemplating: false
     method: delete
   - path: /catalogue
@@ -249,7 +246,7 @@ services:
       status: 201
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_46.json'
+      body: '@mock-data/resp_front_end_sock_shop_46.json'
       useTemplating: false
   - path: /cart
     response:
@@ -260,54 +257,54 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_48.json'
+      body: '@mock-data/resp_front_end_sock_shop_48.json'
   - path: /customers/{{customerId}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_50.json'
+      body: '@mock-data/resp_front_end_sock_shop_50.json'
       useTemplating: false
   - path: /footer.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_54.html'
+      body: '@mock-data/resp_front_end_sock_shop_54.html'
       useTemplating: false
   - path: /{{param}}
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_55.html'
+      body: '@mock-data/resp_front_end_sock_shop_55.html'
       useTemplating: false
   - path: /topbar.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_56.html'
+      body: '@mock-data/resp_front_end_sock_shop_56.html'
       useTemplating: false
   - path: /index.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_61.html'
+      body: '@mock-data/resp_front_end_sock_shop_61.html'
       useTemplating: false
   - path: /cart
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_63.html'
+      body: '@mock-data/resp_front_end_sock_shop_63.html'
       useTemplating: false
   - path: /catalogue
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_65.html'
+      body: '@mock-data/resp_front_end_sock_shop_65.html'
       useTemplating: false
   - path: /por/login_psw.csp
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_66.html'
+      body: '@mock-data/resp_front_end_sock_shop_66.html'
       useTemplating: false
   - path: /
     response:
@@ -350,26 +347,26 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_77.html'
+      body: '@mock-data/resp_front_end_sock_shop_77.html'
       useTemplating: false
   - path: /customer-orders.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_78.html'
+      body: '@mock-data/resp_front_end_sock_shop_78.html'
       useTemplating: false
   - path: /orders
     response:
       status: 201
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_80.json'
+      body: '@mock-data/resp_front_end_sock_shop_80.json'
       useTemplating: false
   - path: /orders/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_82.json'
+      body: '@mock-data/resp_front_end_sock_shop_82.json'
       useTemplating: false
   - path: /tags
     response:
@@ -397,7 +394,7 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_95.html'
+      body: '@mock-data/resp_front_end_sock_shop_95.html'
       useTemplating: false
     method: post
   - path: /footer.html
@@ -409,14 +406,14 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_102.html'
+      body: '@mock-data/resp_front_end_sock_shop_102.html'
       useTemplating: false
     method: post
   - path: /c
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_103.html'
+      body: '@mock-data/resp_front_end_sock_shop_103.html'
       useTemplating: false
   - path: /catalogue
     response:
@@ -426,7 +423,7 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_123.html'
+      body: '@mock-data/resp_front_end_sock_shop_123.html'
       useTemplating: false
   - path: /Licenses/{{licenseId}}
     response:
@@ -436,7 +433,7 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_133.html'
+      body: '@mock-data/resp_front_end_sock_shop_133.html'
       useTemplating: false
   - path: /
     response:
@@ -452,18 +449,18 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_147.json'
+      body: '@mock-data/resp_front_end_sock_shop_147.json'
   - path: /customers/{{customerId}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_148.json'
+      body: '@mock-data/resp_front_end_sock_shop_148.json'
       useTemplating: false
   - path: /footer.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_149.html'
+      body: '@mock-data/resp_front_end_sock_shop_149.html'
       useTemplating: false
   - path: /login
     response:
@@ -475,37 +472,37 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_151.html'
+      body: '@mock-data/resp_front_end_sock_shop_151.html'
       useTemplating: false
   - path: /topbar.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_152.html'
+      body: '@mock-data/resp_front_end_sock_shop_152.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_154.html'
+      body: '@mock-data/resp_front_end_sock_shop_154.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_159.html'
+      body: '@mock-data/resp_front_end_sock_shop_159.html'
       useTemplating: false
   - path: /customers/wcbVLjJnpzpezACrWupvwuuQUEpXSBhZ
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_163.json'
+      body: '@mock-data/resp_front_end_sock_shop_163.json'
       useTemplating: false
   - path: /catalogue/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_166.json'
+      body: '@mock-data/resp_front_end_sock_shop_166.json'
   - path: /address
     response:
       headers:
@@ -529,7 +526,7 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_170.html'
+      body: '@mock-data/resp_front_end_sock_shop_170.html'
       useTemplating: false
   - path: /card
     response:
@@ -572,51 +569,51 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_179.html'
+      body: '@mock-data/resp_front_end_sock_shop_179.html'
       useTemplating: false
   - path: /customer-order.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_180.html'
+      body: '@mock-data/resp_front_end_sock_shop_180.html'
       useTemplating: false
   - path: /customer-orders.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_181.html'
+      body: '@mock-data/resp_front_end_sock_shop_181.html'
       useTemplating: false
   - path: /detail.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_183.html'
+      body: '@mock-data/resp_front_end_sock_shop_183.html'
       useTemplating: false
   - path: /index.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_184.html'
+      body: '@mock-data/resp_front_end_sock_shop_184.html'
       useTemplating: false
   - path: /orders
     response:
       status: 201
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_186.json'
+      body: '@mock-data/resp_front_end_sock_shop_186.json'
       useTemplating: false
   - path: /orders
     response:
       status: 201
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_187.json'
+      body: '@mock-data/resp_front_end_sock_shop_187.json'
     method: post
   - path: /orders/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_188.json'
+      body: '@mock-data/resp_front_end_sock_shop_188.json'
       useTemplating: false
   - path: /register
     response:
@@ -654,37 +651,37 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_201.html'
+      body: '@mock-data/resp_front_end_sock_shop_201.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_203.html'
+      body: '@mock-data/resp_front_end_sock_shop_203.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_204.html'
+      body: '@mock-data/resp_front_end_sock_shop_204.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_205.html'
+      body: '@mock-data/resp_front_end_sock_shop_205.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_206.html'
+      body: '@mock-data/resp_front_end_sock_shop_206.html'
       useTemplating: false
   - path: /{{param}}/../index.html
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_208.html'
+      body: '@mock-data/resp_front_end_sock_shop_208.html'
       useTemplating: false
   - path: /index.html
     response:
@@ -695,7 +692,7 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_213.html'
+      body: '@mock-data/resp_front_end_sock_shop_213.html'
       useTemplating: false
   - path: /metrics
     response:
@@ -709,83 +706,82 @@ services:
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_289.html'
+      body: '@mock-data/resp_front_end_sock_shop_289.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_303.html'
+      body: '@mock-data/resp_front_end_sock_shop_303.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_304.html'
+      body: '@mock-data/resp_front_end_sock_shop_304.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_305.html'
+      body: '@mock-data/resp_front_end_sock_shop_305.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_306.html'
+      body: '@mock-data/resp_front_end_sock_shop_306.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_307.html'
+      body: '@mock-data/resp_front_end_sock_shop_307.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_308.html'
+      body: '@mock-data/resp_front_end_sock_shop_308.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_309.html'
+      body: '@mock-data/resp_front_end_sock_shop_309.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_310.html'
+      body: '@mock-data/resp_front_end_sock_shop_310.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_311.html'
+      body: '@mock-data/resp_front_end_sock_shop_311.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_312.html'
+      body: '@mock-data/resp_front_end_sock_shop_312.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_313.html'
+      body: '@mock-data/resp_front_end_sock_shop_313.html'
       useTemplating: false
   - path: /
     response:
       headers:
         Content-Type: text/html
-      body: '@mock-data/resp_314.html'
+      body: '@mock-data/resp_front_end_sock_shop_314.html'
       useTemplating: false
 - name: http://orders.sock-shop
   port: 8004
-  ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___orders.sock-shop-spec.json'
   endpoints:
@@ -794,13 +790,13 @@ services:
       status: 201
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_10.json'
+      body: '@mock-data/resp_orders_sock_shop_10.json'
     method: post
   - path: /orders/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_92.json'
+      body: '@mock-data/resp_orders_sock_shop_92.json'
       useTemplating: false
   - path: /orders/search/customerId
     response:
@@ -810,28 +806,27 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_94.json'
+      body: '@mock-data/resp_orders_sock_shop_94.json'
       useTemplating: false
   - path: /orders
     response:
       status: 201
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_155.json'
+      body: '@mock-data/resp_orders_sock_shop_155.json'
     method: post
   - path: /orders/search/customerId
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_156.json'
+      body: '@mock-data/resp_orders_sock_shop_156.json'
   - path: /orders/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_199.json'
+      body: '@mock-data/resp_orders_sock_shop_199.json'
 - name: http://payment.sock-shop
   port: 8005
-  ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___payment.sock-shop-spec.json'
   endpoints:
@@ -859,7 +854,6 @@ services:
     method: post
 - name: http://shipping.sock-shop
   port: 8006
-  ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___shipping.sock-shop-spec.json'
   endpoints:
@@ -887,7 +881,6 @@ services:
     method: post
 - name: http://user.sock-shop
   port: 8007
-  ssl: false
   managementRoot: __admin
   oas: '@mock-data/up9-http___user.sock-shop-spec.json'
   endpoints:
@@ -895,71 +888,71 @@ services:
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_3.json'
+      body: '@mock-data/resp_user_sock_shop_3.json'
       useTemplating: false
   - path: /customers/{{customerId}}/addresses
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_4.json'
+      body: '@mock-data/resp_user_sock_shop_4.json'
       useTemplating: false
   - path: /customers/{{customerId}}/cards
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_5.json'
+      body: '@mock-data/resp_user_sock_shop_5.json'
       useTemplating: false
   - path: /login
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_6.json'
+      body: '@mock-data/resp_user_sock_shop_6.json'
       useTemplating: false
   - path: /addresses/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_23.json'
+      body: '@mock-data/resp_user_sock_shop_23.json'
       useTemplating: false
   - path: /cards/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_24.json'
+      body: '@mock-data/resp_user_sock_shop_24.json'
       useTemplating: false
   - path: /customers/{{customerId}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_127.json'
+      body: '@mock-data/resp_user_sock_shop_127.json'
   - path: /customers/{{customerId}}/addresses
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_128.json'
+      body: '@mock-data/resp_user_sock_shop_128.json'
       useTemplating: false
   - path: /customers/{{customerId}}/cards
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_129.json'
+      body: '@mock-data/resp_user_sock_shop_129.json'
       useTemplating: false
   - path: /login
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_130.json'
+      body: '@mock-data/resp_user_sock_shop_130.json'
       useTemplating: false
   - path: /addresses/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_131.json'
+      body: '@mock-data/resp_user_sock_shop_131.json'
   - path: /cards/{{id}}
     response:
       headers:
         Content-Type: application/json
-      body: '@mock-data/resp_132.json'
+      body: '@mock-data/resp_user_sock_shop_132.json'
   - path: /addresses
     response:
       headers:

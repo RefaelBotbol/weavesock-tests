@@ -1,5 +1,5 @@
 {
- "id": "{{request.path.[2]}}",
+ "id": "{{request.path.2}}",
  "name": "Colourful",
  "description": "proident occaecat irure et excepteur labore minim nisi amet irure",
  "imageUrl": [
