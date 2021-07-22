@@ -3641,13 +3641,13 @@
    "name": "cart"
   },
   {
-   "name": "catalogue"
-  },
-  {
    "name": "orders"
   },
   {
    "name": "customers"
+  },
+  {
+   "name": "catalogue"
   }
  ]
 }
