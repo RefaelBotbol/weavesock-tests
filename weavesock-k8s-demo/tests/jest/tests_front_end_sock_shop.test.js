@@ -517,6 +517,27 @@ it("test_314_get_", () => {
     });
 });
 
+it("test_316_get_", () => {
+    clearSession();
+
+    // GET http://front-end.sock-shop/ (endp 316)
+    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+    return front_end_sock_shop.fetch("/", {
+        headers: {
+            "content-type": "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('gKkUkcdw'"
+        }
+    })
+    .then((response) => {
+        expect(response.status).toEqual(200);
+        return response.text();
+    })
+    .then((text) => {
+        expect(CSSselect("div#hot div.box div.container div h2", text)).toContain("Hot this week");
+    })
+    .then((data) => {
+    });
+});
+
 describe.each(dataset("data/dataset_55.json"))("test_055_get_param", (param) => {
     it("test_055_get_param", () => {
         clearSession();
@@ -562,13 +583,13 @@ describe.each(dataset("data/dataset_151.json"))("test_151_get_param", (param) =>
     });
 });
 
-describe.each(dataset("data/dataset_208.json"))("test_208_get_param____index_html", (param) => {
-    it("test_208_get_param____index_html", () => {
+describe.each(dataset("data/dataset_208.json"))("test_208_get_param1_param2_index_html", (param, param1) => {
+    it("test_208_get_param1_param2_index_html", () => {
         clearSession();
 
-        // GET http://front-end.sock-shop/{param}/../index.html (endp 208)
+        // GET http://front-end.sock-shop/{param1}/{param2}/index.html (endp 208)
         const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
-        return front_end_sock_shop.fetch("/" + param + "/../index.html")
+        return front_end_sock_shop.fetch("/" + param + "/" + param1 + "/index.html")
         .then((response) => {
             expect(response.status).toEqual(200);
             return response.text();

@@ -1312,7 +1312,7 @@
    "id": "4072771a-e563-4e00-b82a-55a787935241",
    "request": {
     "method": "GET",
-    "urlPathPattern": "/[^/]+/\\.\\./index\\.html"
+    "urlPathPattern": "/[^/]+/[^/]+/index\\.html"
    },
    "response": {
     "bodyFileName": "resp_208.html",
@@ -1595,13 +1595,30 @@
    }
   },
   {
-   "id": "a7739776-a0dc-4477-8f38-ccf05539adc9",
+   "id": "21e16e1e-9600-40c9-954f-01116a350cfc",
    "request": {
     "method": "GET",
     "urlPathPattern": "/"
    },
    "response": {
     "bodyFileName": "resp_314.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "37498af3-fd0d-4523-bc12-e212311680d0",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_316.html",
     "headers": {
      "Content-Type": "text/html"
     },

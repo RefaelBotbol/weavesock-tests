@@ -63,6 +63,13 @@
    "lastName": "qwerdsfgh",
    "password": ";kjshvpiuqgh",
    "username": "thigg"
+  },
+  {
+   "email": "aaaa@gmail.co",
+   "firstName": "aaaa",
+   "lastName": "aaaa",
+   "password": "",
+   "username": "aaaa"
   }
  ]
 }

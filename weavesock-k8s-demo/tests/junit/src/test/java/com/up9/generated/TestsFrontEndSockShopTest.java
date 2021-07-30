@@ -444,6 +444,20 @@ public class TestsFrontEndSockShopTest
         assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
     }
 
+    @Test
+    public void testGet316() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/ (endp 316)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("content-type", "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('gKkUkcdw'");
+        }});
+        final Response response = frontEndSockShop.get(request, "/");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
     @ParameterizedTest
     @JsonFileSource(resources = "/dataset_55.json")
     public void testGetParam055(final JsonObject json) throws MalformedURLException, IOException
@@ -479,14 +493,15 @@ public class TestsFrontEndSockShopTest
 
     @ParameterizedTest
     @JsonFileSource(resources = "/dataset_208.json")
-    public void testGetParamIndexHtml208(final JsonObject json) throws MalformedURLException, IOException
+    public void testGetParam1Param2IndexHtml208(final JsonObject json) throws MalformedURLException, IOException
     {
         final String param = json.getString("param");
+        final String param1 = json.getString("param1");
 
-        // GET http://front-end.sock-shop/{param}/../index.html (endp 208)
+        // GET http://front-end.sock-shop/{param1}/{param2}/index.html (endp 208)
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
         final HttpRequest request = new HttpRequest();
-        final Response response = frontEndSockShop.get(request, "/" + param + "/../index.html");
+        final Response response = frontEndSockShop.get(request, "/" + param + "/" + param1 + "/index.html");
         assertStatusCode(response.code(), 200);
         assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
     }
