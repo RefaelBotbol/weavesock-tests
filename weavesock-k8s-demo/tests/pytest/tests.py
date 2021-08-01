@@ -104,6 +104,7 @@ class Tests_carts_sock_shop(unittest.TestCase):
         carts_sock_shop = get_http_client('http://carts.sock-shop', authenticate)
         resp = carts_sock_shop.get(f'/carts/{customerId}/items', headers={'accept': 'application/json'})
         resp.assert_status_code(200)
+        resp.assert_jsonpath('$[*].id')
         itemId = jsonpath('$[*].itemId', resp)
         unitPrice = jsonpath('$[*].unitPrice', resp)
 
@@ -1000,7 +1001,7 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
         resp = front_end_sock_shop.post('/orders', headers={'x-requested-with': 'XMLHttpRequest'})
         resp.assert_status_code(201)
-        resp.assert_jsonpath('$.address.city', expected_value='elsewhere')
+        resp.assert_jsonpath('$.card.ccv')
 
     @clear_session({'spanId': 82})
     def test_082_get_orders_id(self):
@@ -1189,7 +1190,7 @@ class Tests_orders_sock_shop(unittest.TestCase):
     @json_dataset('data/dataset_156.json')
     @clear_session({'spanId': 156})
     def test_156_get_orders_search_customerId(self, data_row):
-        address, card, customer, items, items1 = data_row
+        address, card, card1, customer, items, items1 = data_row
 
         # POST http://orders.sock-shop/orders (endp 10)
         orders_sock_shop = get_http_client('http://orders.sock-shop', authenticate)
@@ -1217,12 +1218,6 @@ class Tests_orders_sock_shop(unittest.TestCase):
         resp.assert_jsonpath('$._embedded.address[*]._links.self.href')
         address1 = jsonpath('$._embedded.address[*]._links.address.href', resp)
 
-        # GET http://user.sock-shop/customers/{customerId}/cards (endp 129)
-        resp = user_sock_shop.get(f'/customers/{customerId}/cards')
-        resp.assert_status_code(200)
-        resp.assert_jsonpath('$._embedded.card[*]._links.card.href')
-        card1 = jsonpath('$._embedded.card[*]._links.card.href', resp)
-
         # POST http://orders.sock-shop/orders (endp 155)
         with open('data/payload_for_endp_155.json', 'r') as json_payload_file:
             json_payload = json.load(json_payload_file)
@@ -1232,6 +1227,7 @@ class Tests_orders_sock_shop(unittest.TestCase):
         apply_into_json(json_payload, '$.items', items1)
         resp = orders_sock_shop.post('/orders', json=json_payload, headers={'accept': 'application/json'})
         resp.assert_status_code(201)
+        resp.assert_jsonpath('$.card.ccv')
         custId = jsonpath('$.customerId', resp)
 
         # GET http://orders.sock-shop/orders/search/customerId (endp 156)
@@ -1337,6 +1333,7 @@ class Tests_payment_sock_shop(unittest.TestCase):
         # GET http://user.sock-shop/addresses/{id} (endp 131)
         resp = user_sock_shop.get(f'/addresses/{id1}', headers={'accept': 'application/hal+json'})
         resp.assert_status_code(200)
+        resp.assert_jsonpath('$._links.self.href')
         country = jsonpath('$.country', resp)
         postcode = jsonpath('$.postcode', resp)
         street = jsonpath('$.street', resp)
@@ -1344,6 +1341,7 @@ class Tests_payment_sock_shop(unittest.TestCase):
         # GET http://user.sock-shop/cards/{id} (endp 132)
         resp = user_sock_shop.get(f'/cards/{id_}', headers={'accept': 'application/hal+json'})
         resp.assert_status_code(200)
+        resp.assert_jsonpath('$._links.card.href')
         ccv = jsonpath('$.ccv', resp)
         expires = jsonpath('$.expires', resp)
 
@@ -1365,6 +1363,7 @@ class Tests_payment_sock_shop(unittest.TestCase):
         apply_into_json(json_payload, '$.customer.username', username)
         resp = payment_sock_shop.post('/paymentAuth', json=json_payload, headers={'accept': 'application/json'})
         resp.assert_status_code(200)
+        resp.assert_jsonpath('$.message')
 
 
 @data_driven_tests
@@ -1404,6 +1403,7 @@ class Tests_shipping_sock_shop(unittest.TestCase):
         apply_into_json(json_payload, '$.name', name)
         resp = shipping_sock_shop.post('/shipping', json=json_payload, headers={'accept': 'application/json'})
         resp.assert_status_code(201)
+        resp.assert_jsonpath('$.id')
 
 
 @data_driven_tests
@@ -1489,6 +1489,30 @@ class Tests_user_sock_shop(unittest.TestCase):
         user_sock_shop = get_http_client('http://user.sock-shop', authenticate)
         resp = user_sock_shop.get(f'/customers/{customerId}/cards')
         resp.assert_status_code(200)
+
+    @json_dataset('data/dataset_129.json')
+    @clear_session({'spanId': 129})
+    def test_129_get_customers_customerId_cards(self, data_row):
+        address, card, customer, items = data_row
+
+        # POST http://orders.sock-shop/orders (endp 10)
+        orders_sock_shop = get_http_client('http://orders.sock-shop', authenticate)
+        with open('data/payload_for_endp_10.json', 'r') as json_payload_file:
+            json_payload = json.load(json_payload_file)
+        apply_into_json(json_payload, '$.address', address)
+        apply_into_json(json_payload, '$.card', card)
+        apply_into_json(json_payload, '$.customer', customer)
+        apply_into_json(json_payload, '$.items', items)
+        resp = orders_sock_shop.post('/orders', json=json_payload, headers={'accept': 'application/json'})
+        resp.assert_status_code(201)
+        resp.assert_jsonpath('$.address.city', expected_value='Glasgow')
+        customerId = jsonpath('$.customerId', resp)
+
+        # GET http://user.sock-shop/customers/{customerId}/cards (endp 129)
+        user_sock_shop = get_http_client('http://user.sock-shop', authenticate)
+        resp = user_sock_shop.get(f'/customers/{customerId}/cards')
+        resp.assert_status_code(200)
+        resp.assert_jsonpath('$._embedded.card[*]._links.card.href')
 
     # authentication-related test
     @clear_session({'spanId': 6})

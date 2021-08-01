@@ -69,6 +69,7 @@ public class TestsShippingSockShopTest
         }});
         final Response response = shippingSockShop.post(request, "/shipping");
         assertStatusCode(response.code(), 201);
+        assertJSONPath("$.id", response.body().string());
     }
 }
 

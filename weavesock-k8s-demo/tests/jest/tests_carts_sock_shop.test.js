@@ -229,6 +229,10 @@ describe.each(dataset("data/dataset_140.json"))("test_140_post_carts_customerId_
                 return JSON.parse(text);
             })
             .then((data) => {
+                expect(JSONPath({
+                    path: "$[*].id",
+                    json: data
+                })).not.toBeNull();
                 const itemId = JSONPath({
                     path: "$[*].itemId",
                     json: data

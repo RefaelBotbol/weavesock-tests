@@ -1843,9 +1843,9 @@ it("test_187_post_orders", () => {
     })
     .then((data) => {
         expect(JSONPath({
-            path: "$.address.city",
+            path: "$.card.ccv",
             json: data
-        })).toContain("elsewhere");
+        })).not.toBeNull();
     });
 });
 

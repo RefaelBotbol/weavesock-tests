@@ -174,6 +174,7 @@ public class TestsPaymentSockShopTest
         }});
         final Response response4 = userSockShop.get(request4, "/addresses/" + id1);
         assertStatusCode(response4.code(), 200);
+        assertJSONPath("$._links.self.href", response4.body().string());
         final String country = JSONPath("$.country", response4.body().string());
         final String postcode = JSONPath("$.postcode", response4.body().string());
         final String street = JSONPath("$.street", response4.body().string());
@@ -185,6 +186,7 @@ public class TestsPaymentSockShopTest
         }});
         final Response response5 = userSockShop.get(request5, "/cards/" + id);
         assertStatusCode(response5.code(), 200);
+        assertJSONPath("$._links.card.href", response5.body().string());
         final String ccv = JSONPath("$.ccv", response5.body().string());
         final String expires = JSONPath("$.expires", response5.body().string());
 
@@ -211,6 +213,7 @@ public class TestsPaymentSockShopTest
         }});
         final Response response6 = paymentSockShop.post(request6, "/paymentAuth");
         assertStatusCode(response6.code(), 200);
+        assertJSONPath("$.message", response6.body().string());
     }
 }
 

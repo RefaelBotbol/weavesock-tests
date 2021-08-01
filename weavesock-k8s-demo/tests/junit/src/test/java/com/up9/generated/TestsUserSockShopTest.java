@@ -144,6 +144,41 @@ public class TestsUserSockShopTest
         assertStatusCode(response2.code(), 200);
     }
 
+    @ParameterizedTest
+    @JsonFileSource(resources = "/dataset_129.json")
+    public void testGetCustomersCustomeridCards129(final JsonObject json) throws MalformedURLException, IOException
+    {
+        final String address = json.getString("address");
+        final String card = json.getString("card");
+        final String customer = json.getString("customer");
+        final String items = json.getString("items");
+
+        // POST http://orders.sock-shop/orders (endp 10)
+        final HttpTarget ordersSockShop = getHttpClient("http://orders.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("accept", "application/json");
+            put("content-type", "application/json");
+        }});
+        request.setJsonBody("payload_for_endp_10.json", new Hashtable<String, Object>() {{
+            put("$.address", address);
+            put("$.card", card);
+            put("$.customer", customer);
+            put("$.items", items);
+        }});
+        final Response response = ordersSockShop.post(request, "/orders");
+        assertStatusCode(response.code(), 201);
+        assertJSONPath("$.address.city", "Glasgow", response.body().string());
+        final String customerId = JSONPath("$.customerId", response.body().string());
+
+        // GET http://user.sock-shop/customers/{customerId}/cards (endp 129)
+        final HttpTarget userSockShop = getHttpClient("http://user.sock-shop", new Authentication());
+        final HttpRequest request2 = new HttpRequest();
+        final Response response2 = userSockShop.get(request2, "/customers/" + customerId + "/cards");
+        assertStatusCode(response2.code(), 200);
+        assertJSONPath("$._embedded.card[*]._links.card.href", response2.body().string());
+    }
+
     /**
      * authentication-related test
      */

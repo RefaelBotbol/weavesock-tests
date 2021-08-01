@@ -193,7 +193,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 6862 requests",
+    "summary": "Seen 6893 requests",
     "tags": [
      "addresses"
     ]
@@ -387,7 +387,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 6935 requests",
+    "summary": "Seen 6966 requests",
     "tags": [
      "cards"
     ]
@@ -534,7 +534,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 16912 requests",
+    "summary": "Seen 16972 requests",
     "tags": [
      "customers"
     ]
@@ -676,7 +676,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1725 requests",
+    "summary": "Seen 1753 requests",
     "tags": [
      "customers"
     ]
@@ -808,7 +808,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1710 requests",
+    "summary": "Seen 1738 requests",
     "tags": [
      "customers"
     ]
@@ -955,7 +955,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1992 requests"
+    "summary": "Seen 2021 requests"
    },
    "parameters": []
   },
@@ -1039,13 +1039,13 @@
  },
  "tags": [
   {
-   "name": "addresses"
-  },
-  {
    "name": "cards"
   },
   {
    "name": "customers"
+  },
+  {
+   "name": "addresses"
   }
  ]
 }

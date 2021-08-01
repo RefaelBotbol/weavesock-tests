@@ -258,6 +258,10 @@ describe.each(dataset("data/dataset_143.json"))("test_143_post_paymentAuth", (ad
                         return JSON.parse(text);
                     })
                     .then((data) => {
+                        expect(JSONPath({
+                            path: "$._links.self.href",
+                            json: data
+                        })).not.toBeNull();
                         const country = JSONPath({
                             path: "$.country",
                             json: data
@@ -285,6 +289,10 @@ describe.each(dataset("data/dataset_143.json"))("test_143_post_paymentAuth", (ad
                             return JSON.parse(text);
                         })
                         .then((data) => {
+                            expect(JSONPath({
+                                path: "$._links.card.href",
+                                json: data
+                            })).not.toBeNull();
                             const ccv = JSONPath({
                                 path: "$.ccv",
                                 json: data
@@ -322,8 +330,13 @@ describe.each(dataset("data/dataset_143.json"))("test_143_post_paymentAuth", (ad
                                 return response.text();
                             })
                             .then((text) => {
+                                return JSON.parse(text);
                             })
                             .then((data) => {
+                                expect(JSONPath({
+                                    path: "$.message",
+                                    json: data
+                                })).not.toBeNull();
                             });
                         });
                     });

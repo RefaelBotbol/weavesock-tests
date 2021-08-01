@@ -76,8 +76,13 @@ describe.each(dataset("data/dataset_144.json"))("test_144_post_shipping", (name)
             return response.text();
         })
         .then((text) => {
+            return JSON.parse(text);
         })
         .then((data) => {
+            expect(JSONPath({
+                path: "$.id",
+                json: data
+            })).not.toBeNull();
         });
     });
 });

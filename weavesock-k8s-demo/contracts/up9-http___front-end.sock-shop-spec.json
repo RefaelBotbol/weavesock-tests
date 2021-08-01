@@ -771,7 +771,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1621105 requests"
+    "summary": "Seen 1621195 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -1035,7 +1035,7 @@
       "description": "Created"
      }
     },
-    "summary": "Seen 128 requests"
+    "summary": "Seen 207 requests"
    },
    "parameters": []
   },
@@ -1209,7 +1209,7 @@
       "description": "Accepted"
      }
     },
-    "summary": "Seen 189 requests",
+    "summary": "Seen 279 requests",
     "tags": [
      "cart"
     ]
@@ -1318,7 +1318,7 @@
       "description": "Accepted"
      }
     },
-    "summary": "Seen 187 requests",
+    "summary": "Seen 270 requests",
     "tags": [
      "cart"
     ]
@@ -1772,7 +1772,7 @@
       "description": "Created"
      }
     },
-    "summary": "Seen 2578 requests",
+    "summary": "Seen 2676 requests",
     "tags": [
      "catalogue"
     ]
@@ -1986,7 +1986,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 106 requests"
+    "summary": "Seen 195 requests"
    },
    "parameters": []
   },
@@ -2352,7 +2352,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 229 requests"
+    "summary": "Seen 318 requests"
    },
    "parameters": []
   },
@@ -2566,7 +2566,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 919 requests"
+    "summary": "Seen 1009 requests"
    },
    "parameters": []
   },
@@ -3052,7 +3052,7 @@
       "description": "Created"
      }
     },
-    "summary": "Seen 53 requests",
+    "summary": "Seen 132 requests",
     "tags": [
      "orders"
     ]
@@ -3651,16 +3651,16 @@
  },
  "tags": [
   {
-   "name": "customers"
-  },
-  {
    "name": "cart"
   },
   {
-   "name": "orders"
+   "name": "catalogue"
   },
   {
-   "name": "catalogue"
+   "name": "customers"
+  },
+  {
+   "name": "orders"
   }
  ]
 }

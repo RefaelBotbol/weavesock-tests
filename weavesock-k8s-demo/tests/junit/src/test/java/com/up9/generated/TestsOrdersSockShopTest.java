@@ -151,6 +151,7 @@ public class TestsOrdersSockShopTest
     {
         final String address = json.getString("address");
         final String card = json.getString("card");
+        final String card1 = json.getString("card1");
         final String customer = json.getString("customer");
         final String items = json.getString("items");
         final String items1 = json.getString("items1");
@@ -191,37 +192,31 @@ public class TestsOrdersSockShopTest
         assertJSONPath("$._embedded.address[*]._links.self.href", response3.body().string());
         final String address1 = JSONPath("$._embedded.address[*]._links.address.href", response3.body().string());
 
-        // GET http://user.sock-shop/customers/{customerId}/cards (endp 129)
-        final HttpRequest request4 = new HttpRequest();
-        final Response response4 = userSockShop.get(request4, "/customers/" + customerId + "/cards");
-        assertStatusCode(response4.code(), 200);
-        assertJSONPath("$._embedded.card[*]._links.card.href", response4.body().string());
-        final String card1 = JSONPath("$._embedded.card[*]._links.card.href", response4.body().string());
-
         // POST http://orders.sock-shop/orders (endp 155)
-        final HttpRequest request5 = new HttpRequest();
-        request5.setHeaders(new Hashtable<String, Object>() {{
+        final HttpRequest request4 = new HttpRequest();
+        request4.setHeaders(new Hashtable<String, Object>() {{
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request5.setJsonBody("payload_for_endp_155.json", new Hashtable<String, Object>() {{
+        request4.setJsonBody("payload_for_endp_155.json", new Hashtable<String, Object>() {{
             put("$.address", address1);
             put("$.card", card1);
             put("$.customer", customer1);
             put("$.items", items1);
         }});
-        final Response response5 = ordersSockShop.post(request5, "/orders");
-        assertStatusCode(response5.code(), 201);
-        final String custId = JSONPath("$.customerId", response5.body().string());
+        final Response response4 = ordersSockShop.post(request4, "/orders");
+        assertStatusCode(response4.code(), 201);
+        assertJSONPath("$.card.ccv", response4.body().string());
+        final String custId = JSONPath("$.customerId", response4.body().string());
 
         // GET http://orders.sock-shop/orders/search/customerId (endp 156)
-        final HttpRequest request6 = new HttpRequest();
-        request6.setQueryString(new Hashtable<String, Object>() {{
+        final HttpRequest request5 = new HttpRequest();
+        request5.setQueryString(new Hashtable<String, Object>() {{
             put("custId", custId);
             put("sort", "date");
         }});
-        final Response response6 = ordersSockShop.get(request6, "/orders/search/customerId");
-        assertStatusCode(response6.code(), 200);
+        final Response response5 = ordersSockShop.get(request5, "/orders/search/customerId");
+        assertStatusCode(response5.code(), 200);
     }
 }
 

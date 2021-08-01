@@ -168,6 +168,7 @@ public class TestsCartsSockShopTest
         }});
         final Response response2 = cartsSockShop.get(request2, "/carts/" + customerId + "/items");
         assertStatusCode(response2.code(), 200);
+        assertJSONPath("$[*].id", response2.body().string());
         final String itemId = JSONPath("$[*].itemId", response2.body().string());
         final String unitPrice = JSONPath("$[*].unitPrice", response2.body().string());
 

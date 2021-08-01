@@ -201,7 +201,7 @@ describe.each(dataset("data/dataset_93.json"))("test_093_get_orders_search_custo
     });
 });
 
-describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_customerId", (address, card, customer, items, items1) => {
+describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_customerId", (address, card, card1, customer, items, items1) => {
     it("test_156_get_orders_search_customerId", () => {
         clearSession();
 
@@ -280,10 +280,22 @@ describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_cust
                         json: data
                     })[0];
 
-                    // GET http://user.sock-shop/customers/{customerId}/cards (endp 129)
-                    return user_sock_shop.fetch("/customers/" + customerId + "/cards")
+                    // POST http://orders.sock-shop/orders (endp 155)
+                    return orders_sock_shop.fetch("/orders", {
+                        method: "POST",
+                        headers: {
+                            "accept": "application/json",
+                            "content-type": "application/json"
+                        },
+                        body: JSONBuild("data/payload_for_endp_155.json", {
+                            "$.address": address1,
+                            "$.card": card1,
+                            "$.customer": customer1,
+                            "$.items": items1
+                        })
+                    })
                     .then((response) => {
-                        expect(response.status).toEqual(200);
+                        expect(response.status).toEqual(201);
                         return response.text();
                     })
                     .then((text) => {
@@ -291,51 +303,23 @@ describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_cust
                     })
                     .then((data) => {
                         expect(JSONPath({
-                            path: "$._embedded.card[*]._links.card.href",
+                            path: "$.card.ccv",
                             json: data
                         })).not.toBeNull();
-                        const card1 = JSONPath({
-                            path: "$._embedded.card[*]._links.card.href",
+                        const custId = JSONPath({
+                            path: "$.customerId",
                             json: data
                         })[0];
 
-                        // POST http://orders.sock-shop/orders (endp 155)
-                        return orders_sock_shop.fetch("/orders", {
-                            method: "POST",
-                            headers: {
-                                "accept": "application/json",
-                                "content-type": "application/json"
-                            },
-                            body: JSONBuild("data/payload_for_endp_155.json", {
-                                "$.address": address1,
-                                "$.card": card1,
-                                "$.customer": customer1,
-                                "$.items": items1
-                            })
-                        })
+                        // GET http://orders.sock-shop/orders/search/customerId (endp 156)
+                        return orders_sock_shop.fetch("/orders/search/customerId" + urlencode([["custId", custId], ["sort", "date"]]))
                         .then((response) => {
-                            expect(response.status).toEqual(201);
+                            expect(response.status).toEqual(200);
                             return response.text();
                         })
                         .then((text) => {
-                            return JSON.parse(text);
                         })
                         .then((data) => {
-                            const custId = JSONPath({
-                                path: "$.customerId",
-                                json: data
-                            })[0];
-
-                            // GET http://orders.sock-shop/orders/search/customerId (endp 156)
-                            return orders_sock_shop.fetch("/orders/search/customerId" + urlencode([["custId", custId], ["sort", "date"]]))
-                            .then((response) => {
-                                expect(response.status).toEqual(200);
-                                return response.text();
-                            })
-                            .then((text) => {
-                            })
-                            .then((data) => {
-                            });
                         });
                     });
                 });

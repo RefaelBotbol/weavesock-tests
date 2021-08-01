@@ -1364,7 +1364,7 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.post(request, "/orders");
         assertStatusCode(response.code(), 201);
-        assertJSONPath("$.address.city", "elsewhere", response.body().string());
+        assertJSONPath("$.card.ccv", response.body().string());
     }
 
     @Test
