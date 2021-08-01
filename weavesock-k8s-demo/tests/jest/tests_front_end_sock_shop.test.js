@@ -1182,6 +1182,10 @@ describe.each(dataset("data/dataset_48.json"))("test_048_get_catalogue_id", (pag
             return JSON.parse(text);
         })
         .then((data) => {
+            expect(JSONPath({
+                path: "$[*].tag[*]",
+                json: data
+            })).not.toBeNull();
             const id = JSONPath({
                 path: "$[*].id",
                 json: data
@@ -1224,6 +1228,10 @@ describe.each(dataset("data/dataset_166.json"))("test_166_get_catalogue_id", (pa
             return JSON.parse(text);
         })
         .then((data) => {
+            expect(JSONPath({
+                path: "$[*].tag[*]",
+                json: data
+            })).not.toBeNull();
             const id = JSONPath({
                 path: "$[*].id",
                 json: data
@@ -1541,6 +1549,10 @@ describe.each(dataset("data/dataset_183.json"))("test_183_get_detail_html", (pag
             return JSON.parse(text);
         })
         .then((data) => {
+            expect(JSONPath({
+                path: "$[*].tag[*]",
+                json: data
+            })).not.toBeNull();
             const id = JSONPath({
                 path: "$[*].id",
                 json: data

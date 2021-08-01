@@ -164,6 +164,7 @@ public class TestsPaymentSockShopTest
         }});
         final Response response3 = userSockShop.get(request3, "/customers/" + customerId);
         assertStatusCode(response3.code(), 200);
+        assertJSONPath("$._links.self.href", response3.body().string());
         final String firstName = JSONPath("$.firstName", response3.body().string());
 
         // GET http://user.sock-shop/addresses/{id} (endp 131)

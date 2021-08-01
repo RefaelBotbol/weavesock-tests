@@ -37,6 +37,7 @@ public class TestsCatalogueSockShopTest
         }});
         final Response response = catalogueSockShop.get(request, "/catalogue");
         assertStatusCode(response.code(), 200);
+        assertJSONPath("$[*].tag[*]", response.body().string());
     }
 
     @ParameterizedTest
@@ -89,6 +90,7 @@ public class TestsCatalogueSockShopTest
         final HttpRequest request2 = new HttpRequest();
         final Response response2 = catalogueSockShop.get(request2, "/catalogue/" + id);
         assertStatusCode(response2.code(), 200);
+        assertJSONPath("$.tag[*]", response2.body().string());
     }
 
     @Test

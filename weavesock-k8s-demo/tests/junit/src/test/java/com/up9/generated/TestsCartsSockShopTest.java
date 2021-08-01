@@ -183,6 +183,7 @@ public class TestsCartsSockShopTest
         }});
         final Response response3 = cartsSockShop.post(request3, "/carts/" + customerId + "/items");
         assertStatusCode(response3.code(), 201);
+        assertJSONPath("$.id", response3.body().string());
     }
 
     @ParameterizedTest

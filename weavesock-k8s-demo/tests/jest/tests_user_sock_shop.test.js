@@ -199,8 +199,13 @@ it("test_130_get_login", () => {
         return response.text();
     })
     .then((text) => {
+        return JSON.parse(text);
     })
     .then((data) => {
+        expect(JSONPath({
+            path: "$.user._links.self.href",
+            json: data
+        })).not.toBeNull();
     });
 });
 

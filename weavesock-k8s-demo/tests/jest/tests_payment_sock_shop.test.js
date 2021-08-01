@@ -235,6 +235,10 @@ describe.each(dataset("data/dataset_143.json"))("test_143_post_paymentAuth", (ad
                     return JSON.parse(text);
                 })
                 .then((data) => {
+                    expect(JSONPath({
+                        path: "$._links.self.href",
+                        json: data
+                    })).not.toBeNull();
                     const firstName = JSONPath({
                         path: "$.firstName",
                         json: data

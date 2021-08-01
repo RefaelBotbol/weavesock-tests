@@ -252,6 +252,10 @@ describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_cust
                 return JSON.parse(text);
             })
             .then((data) => {
+                expect(JSONPath({
+                    path: "$._links.self.href",
+                    json: data
+                })).not.toBeNull();
                 const customer1 = JSONPath({
                     path: "$._links.self.href",
                     json: data
@@ -267,6 +271,10 @@ describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_cust
                     return JSON.parse(text);
                 })
                 .then((data) => {
+                    expect(JSONPath({
+                        path: "$._embedded.address[*]._links.self.href",
+                        json: data
+                    })).not.toBeNull();
                     const address1 = JSONPath({
                         path: "$._embedded.address[*]._links.address.href",
                         json: data
@@ -282,6 +290,10 @@ describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_cust
                         return JSON.parse(text);
                     })
                     .then((data) => {
+                        expect(JSONPath({
+                            path: "$._embedded.card[*]._links.card.href",
+                            json: data
+                        })).not.toBeNull();
                         const card1 = JSONPath({
                             path: "$._embedded.card[*]._links.card.href",
                             json: data

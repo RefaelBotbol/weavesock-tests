@@ -255,8 +255,13 @@ describe.each(dataset("data/dataset_140.json"))("test_140_post_carts_customerId_
                     return response.text();
                 })
                 .then((text) => {
+                    return JSON.parse(text);
                 })
                 .then((data) => {
+                    expect(JSONPath({
+                        path: "$.id",
+                        json: data
+                    })).not.toBeNull();
                 });
             });
         });

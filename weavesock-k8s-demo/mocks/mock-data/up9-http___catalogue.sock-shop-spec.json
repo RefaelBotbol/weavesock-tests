@@ -151,7 +151,14 @@
            "items": {
             "properties": {
              "count": {
-              "type": "integer"
+              "oneOf": [
+               {
+                "type": "integer"
+               },
+               {
+                "type": "string"
+               }
+              ]
              },
              "description": {
               "type": "string"
@@ -199,7 +206,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 14037 requests",
+    "summary": "Seen 14045 requests",
     "tags": [
      "catalogue"
     ]
@@ -285,7 +292,14 @@
         "schema": {
          "properties": {
           "count": {
-           "type": "integer"
+           "oneOf": [
+            {
+             "type": "integer"
+            },
+            {
+             "type": "string"
+            }
+           ]
           },
           "description": {
            "type": "string"
@@ -328,7 +342,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 15943 requests",
+    "summary": "Seen 15949 requests",
     "tags": [
      "catalogue"
     ]

@@ -181,18 +181,21 @@ public class TestsOrdersSockShopTest
         }});
         final Response response2 = userSockShop.get(request2, "/customers/" + customerId);
         assertStatusCode(response2.code(), 200);
+        assertJSONPath("$._links.self.href", response2.body().string());
         final String customer1 = JSONPath("$._links.self.href", response2.body().string());
 
         // GET http://user.sock-shop/customers/{customerId}/addresses (endp 128)
         final HttpRequest request3 = new HttpRequest();
         final Response response3 = userSockShop.get(request3, "/customers/" + customerId + "/addresses");
         assertStatusCode(response3.code(), 200);
+        assertJSONPath("$._embedded.address[*]._links.self.href", response3.body().string());
         final String address1 = JSONPath("$._embedded.address[*]._links.address.href", response3.body().string());
 
         // GET http://user.sock-shop/customers/{customerId}/cards (endp 129)
         final HttpRequest request4 = new HttpRequest();
         final Response response4 = userSockShop.get(request4, "/customers/" + customerId + "/cards");
         assertStatusCode(response4.code(), 200);
+        assertJSONPath("$._embedded.card[*]._links.card.href", response4.body().string());
         final String card1 = JSONPath("$._embedded.card[*]._links.card.href", response4.body().string());
 
         // POST http://orders.sock-shop/orders (endp 155)

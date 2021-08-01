@@ -534,7 +534,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 16907 requests",
+    "summary": "Seen 16912 requests",
     "tags": [
      "customers"
     ]
@@ -676,7 +676,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1720 requests",
+    "summary": "Seen 1725 requests",
     "tags": [
      "customers"
     ]
@@ -808,7 +808,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1705 requests",
+    "summary": "Seen 1710 requests",
     "tags": [
      "customers"
     ]
@@ -955,7 +955,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1986 requests"
+    "summary": "Seen 1992 requests"
    },
    "parameters": []
   },
@@ -1039,13 +1039,13 @@
  },
  "tags": [
   {
-   "name": "customers"
-  },
-  {
    "name": "addresses"
   },
   {
    "name": "cards"
+  },
+  {
+   "name": "customers"
   }
  ]
 }

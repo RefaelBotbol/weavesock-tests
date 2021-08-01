@@ -168,6 +168,7 @@ public class TestsUserSockShopTest
         final HttpRequest request = new HttpRequest();
         final Response response = userSockShop.get(request, "/login");
         assertStatusCode(response.code(), 200);
+        assertJSONPath("$.user._links.self.href", response.body().string());
     }
 
     /**

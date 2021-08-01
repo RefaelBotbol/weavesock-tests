@@ -13,8 +13,13 @@ describe.each(dataset("data/dataset_137.json"))("test_137_get_catalogue", (page,
             return response.text();
         })
         .then((text) => {
+            return JSON.parse(text);
         })
         .then((data) => {
+            expect(JSONPath({
+                path: "$[*].tag[*]",
+                json: data
+            })).not.toBeNull();
         });
     });
 });
@@ -80,8 +85,13 @@ describe.each(dataset("data/dataset_135.json"))("test_135_get_catalogue_id", (si
                 return response.text();
             })
             .then((text) => {
+                return JSON.parse(text);
             })
             .then((data) => {
+                expect(JSONPath({
+                    path: "$.tag[*]",
+                    json: data
+                })).not.toBeNull();
             });
         });
     });

@@ -904,6 +904,7 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.get(request, "/catalogue");
         assertStatusCode(response.code(), 200);
+        assertJSONPath("$[*].tag[*]", response.body().string());
         final String id = JSONPath("$[*].id", response.body().string());
 
         // GET http://front-end.sock-shop/catalogue/{id} (endp 48)
@@ -937,6 +938,7 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.get(request, "/catalogue");
         assertStatusCode(response.code(), 200);
+        assertJSONPath("$[*].tag[*]", response.body().string());
         final String id = JSONPath("$[*].id", response.body().string());
 
         // GET http://front-end.sock-shop/catalogue/{id} (endp 166)
@@ -1162,6 +1164,7 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.get(request, "/catalogue");
         assertStatusCode(response.code(), 200);
+        assertJSONPath("$[*].tag[*]", response.body().string());
         final String id = JSONPath("$[*].id", response.body().string());
 
         // GET http://front-end.sock-shop/detail.html (endp 183)
