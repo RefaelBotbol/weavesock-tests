@@ -3651,9 +3651,6 @@
  },
  "tags": [
   {
-   "name": "cart"
-  },
-  {
    "name": "catalogue"
   },
   {
@@ -3661,6 +3658,9 @@
   },
   {
    "name": "orders"
+  },
+  {
+   "name": "cart"
   }
  ]
 }
