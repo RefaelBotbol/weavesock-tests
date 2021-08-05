@@ -771,7 +771,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1621195 requests"
+    "summary": "Seen 1621360 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -786,7 +786,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 136 requests"
+    "summary": "Seen 137 requests"
    },
    "parameters": []
   },
@@ -3550,7 +3550,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 11 requests"
+    "summary": "Seen 13 requests"
    },
    "parameters": []
   },
@@ -3651,16 +3651,16 @@
  },
  "tags": [
   {
-   "name": "catalogue"
-  },
-  {
    "name": "orders"
   },
   {
-   "name": "cart"
+   "name": "customers"
   },
   {
-   "name": "customers"
+   "name": "catalogue"
+  },
+  {
+   "name": "cart"
   }
  ]
 }

