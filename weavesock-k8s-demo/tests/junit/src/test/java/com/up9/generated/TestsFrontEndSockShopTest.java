@@ -803,6 +803,7 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.get(request, "/cart");
         assertStatusCode(response.code(), 200);
+        assertJSONPath("$[*].id", response.body().string());
         final String id = JSONPath("$[*].itemId", response.body().string());
 
         // POST http://front-end.sock-shop/cart (endp 174)
@@ -1532,7 +1533,7 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.get(request, "/topbar.html");
         assertStatusCode(response.code(), 200);
-        assertCSSselect("div#top div.container div.offer a.btn.btn-success.btn-sm", "Offer of the day", response.body().string());
+        assertCSSselect("div#top div.container div.offer a.btn.btn-success", "Offer of the day", response.body().string());
     }
 
     @Test

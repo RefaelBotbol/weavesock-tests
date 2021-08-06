@@ -1049,6 +1049,10 @@ it("test_174_post_cart", () => {
         return JSON.parse(text);
     })
     .then((data) => {
+        expect(JSONPath({
+            path: "$[*].id",
+            json: data
+        })).not.toBeNull();
         const id = JSONPath({
             path: "$[*].itemId",
             json: data
@@ -2101,7 +2105,7 @@ it("test_152_get_topbar_html", () => {
         return response.text();
     })
     .then((text) => {
-        expect(CSSselect("div#top div.container div.offer a.btn.btn-success.btn-sm", text)).toContain("Offer of the day");
+        expect(CSSselect("div#top div.container div.offer a.btn.btn-success", text)).toContain("Offer of the day");
     })
     .then((data) => {
     });

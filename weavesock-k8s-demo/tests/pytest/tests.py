@@ -672,6 +672,7 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
         resp = front_end_sock_shop.get('/cart', headers={'x-requested-with': 'XMLHttpRequest'})
         resp.assert_status_code(200)
+        resp.assert_jsonpath('$[*].id')
         id_ = jsonpath('$[*].itemId', resp)
 
         # POST http://front-end.sock-shop/cart (endp 174)
@@ -1098,7 +1099,7 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
         resp = front_end_sock_shop.get('/topbar.html', headers={'x-requested-with': 'XMLHttpRequest'})
         resp.assert_status_code(200)
-        resp.assert_cssselect('div#top div.container div.offer a.btn.btn-success.btn-sm', expected_value='Offer of the day')
+        resp.assert_cssselect('div#top div.container div.offer a.btn.btn-success', expected_value='Offer of the day')
 
     @clear_session({'spanId': 289})
     def test_289_get_wp_includes_wlwmanifest_xml(self):
