@@ -1,7 +1,7 @@
 const authenticate = require("./authentication");
 const {JSONBuild, JSONPath, clearSession, dataset, getHttpClient} = require("./up9lib");
 
-describe.each(dataset("data/dataset_27.json"))("test_027_post_paymentAuth", (address, amount, card, city, customer, id, items, lastName, longNum, number, username) => {
+describe.each(dataset("data/27/dataset_27.json"))("test_027_post_paymentAuth", (address, amount, card, city, customer, id, items, lastName, longNum, number, username) => {
     it("test_027_post_paymentAuth", () => {
         clearSession();
 
@@ -13,7 +13,7 @@ describe.each(dataset("data/dataset_27.json"))("test_027_post_paymentAuth", (add
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/27/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -131,7 +131,7 @@ describe.each(dataset("data/dataset_27.json"))("test_027_post_paymentAuth", (add
                                 "accept": "application/json",
                                 "content-type": "application/json"
                             },
-                            body: JSONBuild("data/payload_for_endp_27.json", {
+                            body: JSONBuild("data/27/payload_for_endp_27.json", {
                                 "$.address.city": city,
                                 "$.address.country": country,
                                 "$.address.number": number,
@@ -161,7 +161,7 @@ describe.each(dataset("data/dataset_27.json"))("test_027_post_paymentAuth", (add
     });
 });
 
-describe.each(dataset("data/dataset_143.json"))("test_143_post_paymentAuth", (address, amount, card, city, customer, id, items, lastName, longNum, number, username) => {
+describe.each(dataset("data/143/dataset_143.json"))("test_143_post_paymentAuth", (address, amount, card, city, customer, id, items, lastName, longNum, number, username) => {
     it("test_143_post_paymentAuth", () => {
         clearSession();
 
@@ -173,7 +173,7 @@ describe.each(dataset("data/dataset_143.json"))("test_143_post_paymentAuth", (ad
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/143/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -310,7 +310,7 @@ describe.each(dataset("data/dataset_143.json"))("test_143_post_paymentAuth", (ad
                                     "accept": "application/json",
                                     "content-type": "application/json"
                                 },
-                                body: JSONBuild("data/payload_for_endp_143.json", {
+                                body: JSONBuild("data/143/payload_for_endp_143.json", {
                                     "$.address.city": city,
                                     "$.address.country": country,
                                     "$.address.number": number,

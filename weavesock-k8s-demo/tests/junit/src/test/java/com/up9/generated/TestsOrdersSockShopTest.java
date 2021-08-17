@@ -19,7 +19,7 @@ import static com.up9.up9lib.Common.*;
 public class TestsOrdersSockShopTest
 {
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_92.json")
+    @JsonFileSource(resources = "/92/dataset_92.json")
     public void testGetOrdersId092(final JsonObject json) throws MalformedURLException, IOException
     {
         final String address = json.getString("address");
@@ -34,7 +34,7 @@ public class TestsOrdersSockShopTest
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request.setJsonBody("payload_for_endp_10.json", new Hashtable<String, Object>() {{
+        request.setJsonBody("10/payload_for_endp_10.json", new Hashtable<String, Object>() {{
             put("$.address", address);
             put("$.card", card);
             put("$.customer", customer);
@@ -64,7 +64,7 @@ public class TestsOrdersSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_199.json")
+    @JsonFileSource(resources = "/199/dataset_199.json")
     public void testGetOrdersId199(final JsonObject json) throws MalformedURLException, IOException
     {
         final String address = json.getString("address");
@@ -79,7 +79,7 @@ public class TestsOrdersSockShopTest
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request.setJsonBody("payload_for_endp_10.json", new Hashtable<String, Object>() {{
+        request.setJsonBody("10/payload_for_endp_10.json", new Hashtable<String, Object>() {{
             put("$.address", address);
             put("$.card", card);
             put("$.customer", customer);
@@ -109,7 +109,7 @@ public class TestsOrdersSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_93.json")
+    @JsonFileSource(resources = "/93/dataset_93.json")
     public void testGetOrdersSearchCustomerid093(final JsonObject json) throws MalformedURLException, IOException
     {
         final String address = json.getString("address");
@@ -124,7 +124,7 @@ public class TestsOrdersSockShopTest
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request.setJsonBody("payload_for_endp_10.json", new Hashtable<String, Object>() {{
+        request.setJsonBody("10/payload_for_endp_10.json", new Hashtable<String, Object>() {{
             put("$.address", address);
             put("$.card", card);
             put("$.customer", customer);
@@ -146,7 +146,7 @@ public class TestsOrdersSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_156.json")
+    @JsonFileSource(resources = "/156/dataset_156.json")
     public void testGetOrdersSearchCustomerid156(final JsonObject json) throws MalformedURLException, IOException
     {
         final String address = json.getString("address");
@@ -163,7 +163,7 @@ public class TestsOrdersSockShopTest
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request.setJsonBody("payload_for_endp_10.json", new Hashtable<String, Object>() {{
+        request.setJsonBody("10/payload_for_endp_10.json", new Hashtable<String, Object>() {{
             put("$.address", address);
             put("$.card", card);
             put("$.customer", customer);
@@ -198,7 +198,7 @@ public class TestsOrdersSockShopTest
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request4.setJsonBody("payload_for_endp_155.json", new Hashtable<String, Object>() {{
+        request4.setJsonBody("155/payload_for_endp_155.json", new Hashtable<String, Object>() {{
             put("$.address", address1);
             put("$.card", card1);
             put("$.customer", customer1);

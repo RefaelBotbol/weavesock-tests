@@ -1,7 +1,7 @@
 {
  "info": {
-  "title": "http://payment.sock-shop",
-  "version": "0.0"
+  "title": "http://payment.sock-shop - refael weavesock-k8s-demo all",
+  "version": "0.0.200"
  },
  "openapi": "3.0.2",
  "paths": {

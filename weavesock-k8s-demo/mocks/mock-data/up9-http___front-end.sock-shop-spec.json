@@ -1,7 +1,7 @@
 {
  "info": {
-  "title": "http://front-end.sock-shop",
-  "version": "0.0"
+  "title": "http://front-end.sock-shop - refael weavesock-k8s-demo all",
+  "version": "0.0.200"
  },
  "openapi": "3.0.2",
  "paths": {
@@ -771,7 +771,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1621383 requests"
+    "summary": "Seen 1621914 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -786,7 +786,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 139 requests"
+    "summary": "Seen 144 requests"
    },
    "parameters": []
   },
@@ -1268,7 +1268,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 2734 requests",
+    "summary": "Seen 2735 requests",
     "tags": [
      "cart"
     ]
@@ -1772,7 +1772,7 @@
       "description": "Created"
      }
     },
-    "summary": "Seen 2677 requests",
+    "summary": "Seen 2678 requests",
     "tags": [
      "catalogue"
     ]
@@ -2429,7 +2429,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1556 requests"
+    "summary": "Seen 1557 requests"
    },
    "parameters": []
   },
@@ -3532,7 +3532,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1546 requests"
+    "summary": "Seen 1547 requests"
    },
    "parameters": []
   },
@@ -3627,7 +3627,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1546 requests"
+    "summary": "Seen 1547 requests"
    },
    "parameters": [
     {
@@ -3651,16 +3651,16 @@
  },
  "tags": [
   {
-   "name": "cart"
+   "name": "catalogue"
+  },
+  {
+   "name": "orders"
   },
   {
    "name": "customers"
   },
   {
-   "name": "catalogue"
-  },
-  {
-   "name": "orders"
+   "name": "cart"
   }
  ]
 }

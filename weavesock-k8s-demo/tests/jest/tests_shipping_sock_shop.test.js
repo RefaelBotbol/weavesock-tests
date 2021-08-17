@@ -1,7 +1,7 @@
 const authenticate = require("./authentication");
 const {JSONBuild, JSONPath, clearSession, dataset, getHttpClient, uuidv4} = require("./up9lib");
 
-describe.each(dataset("data/dataset_25.json"))("test_025_post_shipping", (id) => {
+describe.each(dataset("data/25/dataset_25.json"))("test_025_post_shipping", (id) => {
     it("test_025_post_shipping", () => {
         clearSession();
 
@@ -37,7 +37,7 @@ describe.each(dataset("data/dataset_25.json"))("test_025_post_shipping", (id) =>
                     "accept": "application/json",
                     "content-type": "application/json"
                 },
-                body: JSONBuild("data/payload_for_endp_25.json", {
+                body: JSONBuild("data/25/payload_for_endp_25.json", {
                     "$.id": String(uuidv4()),
                     "$.name": name
                 })
@@ -54,7 +54,7 @@ describe.each(dataset("data/dataset_25.json"))("test_025_post_shipping", (id) =>
     });
 });
 
-describe.each(dataset("data/dataset_144.json"))("test_144_post_shipping", (name) => {
+describe.each(dataset("data/144/dataset_144.json"))("test_144_post_shipping", (name) => {
     it("test_144_post_shipping", () => {
         clearSession();
 
@@ -66,7 +66,7 @@ describe.each(dataset("data/dataset_144.json"))("test_144_post_shipping", (name)
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_144.json", {
+            body: JSONBuild("data/144/payload_for_endp_144.json", {
                 "$.id": String(uuidv4()),
                 "$.name": name
             })

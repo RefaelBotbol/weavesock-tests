@@ -7,8 +7,8 @@ Install the dependencies with: `pip install requests ddt grpc`
 
 Running the tests:
 
-`pytest tests.py`
+`pytest .`
 
 Running a single test:
 
-`pytest tests.py::TestClassName::test_method_name`
+`pytest test_filename.py::TestClassName::test_method_name`

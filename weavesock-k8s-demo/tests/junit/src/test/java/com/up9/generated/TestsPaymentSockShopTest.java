@@ -19,7 +19,7 @@ import static com.up9.up9lib.Common.*;
 public class TestsPaymentSockShopTest
 {
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_27.json")
+    @JsonFileSource(resources = "/27/dataset_27.json")
     public void testPostPaymentauth027(final JsonObject json) throws MalformedURLException, IOException
     {
         final String address = json.getString("address");
@@ -41,7 +41,7 @@ public class TestsPaymentSockShopTest
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request.setJsonBody("payload_for_endp_10.json", new Hashtable<String, Object>() {{
+        request.setJsonBody("10/payload_for_endp_10.json", new Hashtable<String, Object>() {{
             put("$.address", address);
             put("$.card", card);
             put("$.customer", customer);
@@ -94,7 +94,7 @@ public class TestsPaymentSockShopTest
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request5.setJsonBody("payload_for_endp_27.json", new Hashtable<String, Object>() {{
+        request5.setJsonBody("27/payload_for_endp_27.json", new Hashtable<String, Object>() {{
             put("$.address.city", city);
             put("$.address.country", country);
             put("$.address.number", number);
@@ -113,7 +113,7 @@ public class TestsPaymentSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_143.json")
+    @JsonFileSource(resources = "/143/dataset_143.json")
     public void testPostPaymentauth143(final JsonObject json) throws MalformedURLException, IOException
     {
         final String address = json.getString("address");
@@ -135,7 +135,7 @@ public class TestsPaymentSockShopTest
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request.setJsonBody("payload_for_endp_10.json", new Hashtable<String, Object>() {{
+        request.setJsonBody("10/payload_for_endp_10.json", new Hashtable<String, Object>() {{
             put("$.address", address);
             put("$.card", card);
             put("$.customer", customer);
@@ -197,7 +197,7 @@ public class TestsPaymentSockShopTest
             put("accept", "application/json");
             put("content-type", "application/json");
         }});
-        request6.setJsonBody("payload_for_endp_143.json", new Hashtable<String, Object>() {{
+        request6.setJsonBody("143/payload_for_endp_143.json", new Hashtable<String, Object>() {{
             put("$.address.city", city);
             put("$.address.country", country);
             put("$.address.number", number);

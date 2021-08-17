@@ -1644,6 +1644,23 @@
      "response-template"
     ]
    }
+  },
+  {
+   "id": "f9f900cf-cd14-49d2-aae8-37826af7e90f",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/"
+   },
+   "response": {
+    "bodyFileName": "resp_319.html",
+    "headers": {
+     "Content-Type": "text/html"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
   }
  ]
 }

@@ -1,5 +1,0 @@
-[
-  {
-    "content": "<php>die(@md5(HelloThinkCMF))</php>"
-  }
-]

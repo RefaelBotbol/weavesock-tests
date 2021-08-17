@@ -20,7 +20,7 @@ import static com.up9.up9lib.Common.*;
 public class TestsFrontEndSockShopTest
 {
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_11.json")
+    @JsonFileSource(resources = "/11/dataset_11.json")
     public void testGet011(final JsonObject json) throws MalformedURLException, IOException
     {
         final String _meta_http_equiv = json.getString("_meta_http_equiv");
@@ -79,7 +79,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_133.json")
+    @JsonFileSource(resources = "/133/dataset_133.json")
     public void testGet133(final JsonObject json) throws MalformedURLException, IOException
     {
         final String PHPSESSID = json.getString("PHPSESSID");
@@ -158,7 +158,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_154.json")
+    @JsonFileSource(resources = "/154/dataset_154.json")
     public void testGet154(final JsonObject json) throws MalformedURLException, IOException
     {
         final String content = json.getString("content");
@@ -472,8 +472,22 @@ public class TestsFrontEndSockShopTest
         assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
     }
 
+    @Test
+    public void testGet319() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/ (endp 319)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("content-type", "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('MfsmP8Jd'");
+        }});
+        final Response response = frontEndSockShop.get(request, "/");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_55.json")
+    @JsonFileSource(resources = "/55/dataset_55.json")
     public void testGetParam055(final JsonObject json) throws MalformedURLException, IOException
     {
         final String param = json.getString("param");
@@ -490,7 +504,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_151.json")
+    @JsonFileSource(resources = "/151/dataset_151.json")
     public void testGetParam151(final JsonObject json) throws MalformedURLException, IOException
     {
         final String param = json.getString("param");
@@ -506,7 +520,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_208.json")
+    @JsonFileSource(resources = "/208/dataset_208.json")
     public void testGetParam1Param2IndexHtml208(final JsonObject json) throws MalformedURLException, IOException
     {
         final String param = json.getString("param");
@@ -521,7 +535,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_126.json")
+    @JsonFileSource(resources = "/126/dataset_126.json")
     public void testPostLicensesLicenseid126(final JsonObject json) throws MalformedURLException, IOException
     {
         final String licenseId = json.getString("licenseId");
@@ -578,7 +592,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_169.json")
+    @JsonFileSource(resources = "/169/dataset_169.json")
     public void testPostAddresses169(final JsonObject json) throws MalformedURLException, IOException
     {
         final String number = json.getString("number");
@@ -591,7 +605,7 @@ public class TestsFrontEndSockShopTest
             put("content-type", "application/json");
             put("x-requested-with", "XMLHttpRequest");
         }});
-        request.setJsonBody("payload_for_endp_169.json", new Hashtable<String, Object>() {{
+        request.setJsonBody("169/payload_for_endp_169.json", new Hashtable<String, Object>() {{
             put("$.number", number);
             put("$.postcode", postcode);
         }});
@@ -669,7 +683,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_172.json")
+    @JsonFileSource(resources = "/172/dataset_172.json")
     public void testPostCards172(final JsonObject json) throws MalformedURLException, IOException
     {
         final String ccv = json.getString("ccv");
@@ -683,7 +697,7 @@ public class TestsFrontEndSockShopTest
             put("content-type", "application/json");
             put("x-requested-with", "XMLHttpRequest");
         }});
-        request.setJsonBody("payload_for_endp_172.json", new Hashtable<String, Object>() {{
+        request.setJsonBody("172/payload_for_endp_172.json", new Hashtable<String, Object>() {{
             put("$.ccv", ccv);
             put("$.expires", expires);
             put("$.longNum", longNum);
@@ -712,7 +726,7 @@ public class TestsFrontEndSockShopTest
             put("content-type", "application/json");
             put("x-requested-with", "XMLHttpRequest");
         }});
-        request2.setJsonBody("payload_for_endp_16.json", new Hashtable<String, Object>() {{
+        request2.setJsonBody("16/payload_for_endp_16.json", new Hashtable<String, Object>() {{
             put("$.id", id);
         }});
         final Response response2 = frontEndSockShop.post(request2, "/cart");
@@ -720,7 +734,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_33.json")
+    @JsonFileSource(resources = "/33/dataset_33.json")
     public void testPostCart033(final JsonObject json) throws MalformedURLException, IOException
     {
         final String size = json.getString("size");
@@ -747,7 +761,7 @@ public class TestsFrontEndSockShopTest
         request2.setHeaders(new Hashtable<String, Object>() {{
             put("content-type", "application/json");
         }});
-        request2.setJsonBody("payload_for_endp_33.json", new Hashtable<String, Object>() {{
+        request2.setJsonBody("33/payload_for_endp_33.json", new Hashtable<String, Object>() {{
             put("$.id", id);
         }});
         final Response response2 = frontEndSockShop.post(request2, "/cart");
@@ -812,7 +826,7 @@ public class TestsFrontEndSockShopTest
             put("content-type", "application/json");
             put("x-requested-with", "XMLHttpRequest");
         }});
-        request2.setJsonBody("payload_for_endp_174.json", new Hashtable<String, Object>() {{
+        request2.setJsonBody("174/payload_for_endp_174.json", new Hashtable<String, Object>() {{
             put("$.id", id);
         }});
         final Response response2 = frontEndSockShop.post(request2, "/cart");
@@ -858,7 +872,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_65.json")
+    @JsonFileSource(resources = "/65/dataset_65.json")
     public void testGetCatalogue065(final JsonObject json) throws MalformedURLException, IOException
     {
         final String size = json.getString("size");
@@ -877,7 +891,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_121.json")
+    @JsonFileSource(resources = "/121/dataset_121.json")
     public void testGetCatalogue121(final JsonObject json) throws MalformedURLException, IOException
     {
         final String size = json.getString("size");
@@ -898,7 +912,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_48.json")
+    @JsonFileSource(resources = "/48/dataset_48.json")
     public void testGetCatalogueId048(final JsonObject json) throws MalformedURLException, IOException
     {
         final String page = json.getString("page");
@@ -932,7 +946,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_166.json")
+    @JsonFileSource(resources = "/166/dataset_166.json")
     public void testGetCatalogueId166(final JsonObject json) throws MalformedURLException, IOException
     {
         final String page = json.getString("page");
@@ -1007,7 +1021,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_18.json")
+    @JsonFileSource(resources = "/18/dataset_18.json")
     public void testGetCategoryHtml018(final JsonObject json) throws MalformedURLException, IOException
     {
         final String tags = json.getString("tags");
@@ -1038,7 +1052,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_77.json")
+    @JsonFileSource(resources = "/77/dataset_77.json")
     public void testGetCustomerOrderHtml077(final JsonObject json) throws MalformedURLException, IOException
     {
         final String order = json.getString("order");
@@ -1055,7 +1069,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_180.json")
+    @JsonFileSource(resources = "/180/dataset_180.json")
     public void testGetCustomerOrderHtml180(final JsonObject json) throws MalformedURLException, IOException
     {
         final String order = json.getString("order");
@@ -1158,7 +1172,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_183.json")
+    @JsonFileSource(resources = "/183/dataset_183.json")
     public void testGetDetailHtml183(final JsonObject json) throws MalformedURLException, IOException
     {
         final String page = json.getString("page");
@@ -1234,7 +1248,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_61.json")
+    @JsonFileSource(resources = "/61/dataset_61.json")
     public void testGetIndexHtml061(final JsonObject json) throws MalformedURLException, IOException
     {
         final String urlmaskfilter = json.getString("urlmaskfilter");
@@ -1251,7 +1265,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_184.json")
+    @JsonFileSource(resources = "/184/dataset_184.json")
     public void testGetIndexHtml184(final JsonObject json) throws MalformedURLException, IOException
     {
         final String findcli = json.getString("findcli");
@@ -1279,7 +1293,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_95.json")
+    @JsonFileSource(resources = "/95/dataset_95.json")
     public void testPostLibPhpunitPhpunitSrcUtilPhpEvalStdinPhp095(final JsonObject json) throws MalformedURLException, IOException
     {
         final String __ = json.getString("__");
@@ -1431,7 +1445,7 @@ public class TestsFrontEndSockShopTest
     }
 
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_102.json")
+    @JsonFileSource(resources = "/102/dataset_102.json")
     public void testPostPlusQiangPhp102(final JsonObject json) throws MalformedURLException, IOException
     {
         final String blbl = json.getString("blbl");
@@ -1468,7 +1482,7 @@ public class TestsFrontEndSockShopTest
      * authentication-related test
      */
     @ParameterizedTest
-    @JsonFileSource(resources = "/dataset_189.json")
+    @JsonFileSource(resources = "/189/dataset_189.json")
     public void testPostRegister189(final JsonObject json) throws MalformedURLException, IOException
     {
         final String email = json.getString("email");
@@ -1484,7 +1498,7 @@ public class TestsFrontEndSockShopTest
             put("content-type", "application/json");
             put("x-requested-with", "XMLHttpRequest");
         }});
-        request.setJsonBody("payload_for_endp_189.json", new Hashtable<String, Object>() {{
+        request.setJsonBody("189/payload_for_endp_189.json", new Hashtable<String, Object>() {{
             put("$.email", email);
             put("$.firstName", firstName);
             put("$.lastName", lastName);

@@ -127,7 +127,7 @@ class Target {
         if (baseAddrOverride != null) {
             this.baseAddr = baseAddrOverride;
         } else {
-            this.baseAddr = JSON.parse(readFileSync('data/target_services.json'))[key]
+            this.baseAddr = JSON.parse(readFileSync('target_services.json'))[key]
         }
 
         if (authCallback != null) {

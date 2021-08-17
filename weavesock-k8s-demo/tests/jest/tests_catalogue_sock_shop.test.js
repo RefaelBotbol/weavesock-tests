@@ -1,7 +1,7 @@
 const authenticate = require("./authentication");
 const {JSONPath, clearSession, dataset, getHttpClient, urlencode} = require("./up9lib");
 
-describe.each(dataset("data/dataset_137.json"))("test_137_get_catalogue", (page, size, tags) => {
+describe.each(dataset("data/137/dataset_137.json"))("test_137_get_catalogue", (page, size, tags) => {
     it("test_137_get_catalogue", () => {
         clearSession();
 
@@ -24,7 +24,7 @@ describe.each(dataset("data/dataset_137.json"))("test_137_get_catalogue", (page,
     });
 });
 
-describe.each(dataset("data/dataset_2.json"))("test_002_get_catalogue_id", (size, tags) => {
+describe.each(dataset("data/2/dataset_2.json"))("test_002_get_catalogue_id", (size, tags) => {
     it("test_002_get_catalogue_id", () => {
         clearSession();
 
@@ -58,7 +58,7 @@ describe.each(dataset("data/dataset_2.json"))("test_002_get_catalogue_id", (size
     });
 });
 
-describe.each(dataset("data/dataset_135.json"))("test_135_get_catalogue_id", (size, tags) => {
+describe.each(dataset("data/135/dataset_135.json"))("test_135_get_catalogue_id", (size, tags) => {
     it("test_135_get_catalogue_id", () => {
         clearSession();
 

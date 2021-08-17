@@ -1,0 +1,13 @@
+{
+ "parameters": [
+  {
+   "name": "blbl",
+   "uuid": "47390cc3-fe76-4eb4-bfd8-1d921c892d20"
+  }
+ ],
+ "rows": [
+  {
+   "blbl": "die(@md5(S3pt3mb3r))"
+  }
+ ]
+}

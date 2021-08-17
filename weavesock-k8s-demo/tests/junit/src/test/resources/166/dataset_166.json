@@ -1,0 +1,38 @@
+{
+ "parameters": [
+  {
+   "name": "page",
+   "uuid": "44a2f1bb-818b-4b1f-bbac-4186485ca959"
+  },
+  {
+   "name": "size",
+   "uuid": "dc0f543a-5420-45a0-baee-df2591d170ca"
+  },
+  {
+   "name": "tags",
+   "uuid": "cbd42839-5b5d-4531-b345-94934aec5e90"
+  }
+ ],
+ "rows": [
+  {
+   "page": "1",
+   "size": "5",
+   "tags": "sport"
+  },
+  {
+   "page": "2",
+   "size": "3",
+   "tags": "brown"
+  },
+  {
+   "page": "2",
+   "size": "3",
+   "tags": ""
+  },
+  {
+   "page": "2",
+   "size": "6",
+   "tags": "blue"
+  }
+ ]
+}

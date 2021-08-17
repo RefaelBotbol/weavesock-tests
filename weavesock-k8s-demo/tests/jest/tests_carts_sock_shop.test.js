@@ -1,7 +1,7 @@
 const authenticate = require("./authentication");
 const {JSONBuild, JSONPath, clearSession, dataset, getHttpClient, urlencode} = require("./up9lib");
 
-describe.each(dataset("data/dataset_139.json"))("test_139_delete_carts_customerId", (address, card, customer, items) => {
+describe.each(dataset("data/139/dataset_139.json"))("test_139_delete_carts_customerId", (address, card, customer, items) => {
     it("test_139_delete_carts_customerId", () => {
         clearSession();
 
@@ -13,7 +13,7 @@ describe.each(dataset("data/dataset_139.json"))("test_139_delete_carts_customerI
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/139/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -54,7 +54,7 @@ describe.each(dataset("data/dataset_139.json"))("test_139_delete_carts_customerI
     });
 });
 
-describe.each(dataset("data/dataset_8.json"))("test_008_post_carts_customerId_items", (address, card, customer, items) => {
+describe.each(dataset("data/8/dataset_8.json"))("test_008_post_carts_customerId_items", (address, card, customer, items) => {
     it("test_008_post_carts_customerId_items", () => {
         clearSession();
 
@@ -66,7 +66,7 @@ describe.each(dataset("data/dataset_8.json"))("test_008_post_carts_customerId_it
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/8/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -106,7 +106,7 @@ describe.each(dataset("data/dataset_8.json"))("test_008_post_carts_customerId_it
                     "accept": "application/json",
                     "content-type": "application/json"
                 },
-                body: JSONBuild("data/payload_for_endp_8.json", {
+                body: JSONBuild("data/8/payload_for_endp_8.json", {
                     "$.itemId": itemId,
                     "$.unitPrice": unitPrice
                 })
@@ -123,7 +123,7 @@ describe.each(dataset("data/dataset_8.json"))("test_008_post_carts_customerId_it
     });
 });
 
-describe.each(dataset("data/dataset_26.json"))("test_026_get_carts_customerId_items", (address, card, customer, items) => {
+describe.each(dataset("data/26/dataset_26.json"))("test_026_get_carts_customerId_items", (address, card, customer, items) => {
     it("test_026_get_carts_customerId_items", () => {
         clearSession();
 
@@ -135,7 +135,7 @@ describe.each(dataset("data/dataset_26.json"))("test_026_get_carts_customerId_it
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/26/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -178,7 +178,7 @@ describe.each(dataset("data/dataset_26.json"))("test_026_get_carts_customerId_it
     });
 });
 
-describe.each(dataset("data/dataset_140.json"))("test_140_post_carts_customerId_items", (address, card, customer, items) => {
+describe.each(dataset("data/140/dataset_140.json"))("test_140_post_carts_customerId_items", (address, card, customer, items) => {
     it("test_140_post_carts_customerId_items", () => {
         clearSession();
 
@@ -190,7 +190,7 @@ describe.each(dataset("data/dataset_140.json"))("test_140_post_carts_customerId_
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/140/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -249,7 +249,7 @@ describe.each(dataset("data/dataset_140.json"))("test_140_post_carts_customerId_
                         "accept": "application/json",
                         "content-type": "application/json"
                     },
-                    body: JSONBuild("data/payload_for_endp_140.json", {
+                    body: JSONBuild("data/140/payload_for_endp_140.json", {
                         "$.itemId": itemId,
                         "$.unitPrice": unitPrice
                     })
@@ -272,7 +272,7 @@ describe.each(dataset("data/dataset_140.json"))("test_140_post_carts_customerId_
     });
 });
 
-describe.each(dataset("data/dataset_9.json"))("test_009_get_carts_customerId_merge", (address, card, customer, items, sessionId) => {
+describe.each(dataset("data/9/dataset_9.json"))("test_009_get_carts_customerId_merge", (address, card, customer, items, sessionId) => {
     it("test_009_get_carts_customerId_merge", () => {
         clearSession();
 
@@ -284,7 +284,7 @@ describe.each(dataset("data/dataset_9.json"))("test_009_get_carts_customerId_mer
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/9/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -323,7 +323,7 @@ describe.each(dataset("data/dataset_9.json"))("test_009_get_carts_customerId_mer
     });
 });
 
-describe.each(dataset("data/dataset_141.json"))("test_141_get_carts_customerId_merge", (address, card, customer, items, sessionId) => {
+describe.each(dataset("data/141/dataset_141.json"))("test_141_get_carts_customerId_merge", (address, card, customer, items, sessionId) => {
     it("test_141_get_carts_customerId_merge", () => {
         clearSession();
 
@@ -335,7 +335,7 @@ describe.each(dataset("data/dataset_141.json"))("test_141_get_carts_customerId_m
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/141/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,

@@ -1,7 +1,7 @@
 const authenticate = require("./authentication");
 const {JSONBuild, JSONPath, clearSession, dataset, getHttpClient, urlPart, urlencode} = require("./up9lib");
 
-describe.each(dataset("data/dataset_92.json"))("test_092_get_orders_id", (address, card, customer, items) => {
+describe.each(dataset("data/92/dataset_92.json"))("test_092_get_orders_id", (address, card, customer, items) => {
     it("test_092_get_orders_id", () => {
         clearSession();
 
@@ -13,7 +13,7 @@ describe.each(dataset("data/dataset_92.json"))("test_092_get_orders_id", (addres
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/92/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -76,7 +76,7 @@ describe.each(dataset("data/dataset_92.json"))("test_092_get_orders_id", (addres
     });
 });
 
-describe.each(dataset("data/dataset_199.json"))("test_199_get_orders_id", (address, card, customer, items) => {
+describe.each(dataset("data/199/dataset_199.json"))("test_199_get_orders_id", (address, card, customer, items) => {
     it("test_199_get_orders_id", () => {
         clearSession();
 
@@ -88,7 +88,7 @@ describe.each(dataset("data/dataset_199.json"))("test_199_get_orders_id", (addre
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/199/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -151,7 +151,7 @@ describe.each(dataset("data/dataset_199.json"))("test_199_get_orders_id", (addre
     });
 });
 
-describe.each(dataset("data/dataset_93.json"))("test_093_get_orders_search_customerId", (address, card, customer, items) => {
+describe.each(dataset("data/93/dataset_93.json"))("test_093_get_orders_search_customerId", (address, card, customer, items) => {
     it("test_093_get_orders_search_customerId", () => {
         clearSession();
 
@@ -163,7 +163,7 @@ describe.each(dataset("data/dataset_93.json"))("test_093_get_orders_search_custo
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/93/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -201,7 +201,7 @@ describe.each(dataset("data/dataset_93.json"))("test_093_get_orders_search_custo
     });
 });
 
-describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_customerId", (address, card, card1, customer, items, items1) => {
+describe.each(dataset("data/156/dataset_156.json"))("test_156_get_orders_search_customerId", (address, card, card1, customer, items, items1) => {
     it("test_156_get_orders_search_customerId", () => {
         clearSession();
 
@@ -213,7 +213,7 @@ describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_cust
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/156/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -287,7 +287,7 @@ describe.each(dataset("data/dataset_156.json"))("test_156_get_orders_search_cust
                             "accept": "application/json",
                             "content-type": "application/json"
                         },
-                        body: JSONBuild("data/payload_for_endp_155.json", {
+                        body: JSONBuild("data/156/payload_for_endp_155.json", {
                             "$.address": address1,
                             "$.card": card1,
                             "$.customer": customer1,

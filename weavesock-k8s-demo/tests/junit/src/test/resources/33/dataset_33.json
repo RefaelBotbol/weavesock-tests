@@ -1,0 +1,30 @@
+{
+ "parameters": [
+  {
+   "name": "size",
+   "uuid": "f63b38a5-0273-4d41-a7e4-7151940d7c6d"
+  },
+  {
+   "name": "tags",
+   "uuid": "4e7bd6c4-cac9-44eb-a2fe-34811528837c"
+  }
+ ],
+ "rows": [
+  {
+   "size": "5",
+   "tags": ""
+  },
+  {
+   "size": "5",
+   "tags": "formal"
+  },
+  {
+   "size": "6",
+   "tags": "brown"
+  },
+  {
+   "size": "3",
+   "tags": "sport"
+  }
+ ]
+}

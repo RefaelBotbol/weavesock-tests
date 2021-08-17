@@ -1,7 +1,7 @@
 const authenticate = require("./authentication");
 const {JSONBuild, JSONPath, clearSession, dataset, getHttpClient} = require("./up9lib");
 
-describe.each(dataset("data/dataset_191.json"))("test_191_post_addresses", (city, country, number, postcode, street, userID) => {
+describe.each(dataset("data/191/dataset_191.json"))("test_191_post_addresses", (city, country, number, postcode, street, userID) => {
     it("test_191_post_addresses", () => {
         clearSession();
 
@@ -13,7 +13,7 @@ describe.each(dataset("data/dataset_191.json"))("test_191_post_addresses", (city
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_191.json", {
+            body: JSONBuild("data/191/payload_for_endp_191.json", {
                 "$.city": city,
                 "$.country": country,
                 "$.number": number,
@@ -33,7 +33,7 @@ describe.each(dataset("data/dataset_191.json"))("test_191_post_addresses", (city
     });
 });
 
-describe.each(dataset("data/dataset_192.json"))("test_192_post_cards", (ccv, expires, longNum, userID) => {
+describe.each(dataset("data/192/dataset_192.json"))("test_192_post_cards", (ccv, expires, longNum, userID) => {
     it("test_192_post_cards", () => {
         clearSession();
 
@@ -45,7 +45,7 @@ describe.each(dataset("data/dataset_192.json"))("test_192_post_cards", (ccv, exp
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_192.json", {
+            body: JSONBuild("data/192/payload_for_endp_192.json", {
                 "$.ccv": ccv,
                 "$.expires": expires,
                 "$.longNum": longNum,
@@ -63,7 +63,7 @@ describe.each(dataset("data/dataset_192.json"))("test_192_post_cards", (ccv, exp
     });
 });
 
-describe.each(dataset("data/dataset_4.json"))("test_004_get_customers_customerId_addresses", (address, card, customer, items) => {
+describe.each(dataset("data/4/dataset_4.json"))("test_004_get_customers_customerId_addresses", (address, card, customer, items) => {
     it("test_004_get_customers_customerId_addresses", () => {
         clearSession();
 
@@ -75,7 +75,7 @@ describe.each(dataset("data/dataset_4.json"))("test_004_get_customers_customerId
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/4/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -119,7 +119,7 @@ describe.each(dataset("data/dataset_4.json"))("test_004_get_customers_customerId
     });
 });
 
-describe.each(dataset("data/dataset_5.json"))("test_005_get_customers_customerId_cards", (address, card, customer, items) => {
+describe.each(dataset("data/5/dataset_5.json"))("test_005_get_customers_customerId_cards", (address, card, customer, items) => {
     it("test_005_get_customers_customerId_cards", () => {
         clearSession();
 
@@ -131,7 +131,7 @@ describe.each(dataset("data/dataset_5.json"))("test_005_get_customers_customerId
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/5/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -170,7 +170,7 @@ describe.each(dataset("data/dataset_5.json"))("test_005_get_customers_customerId
     });
 });
 
-describe.each(dataset("data/dataset_129.json"))("test_129_get_customers_customerId_cards", (address, card, customer, items) => {
+describe.each(dataset("data/129/dataset_129.json"))("test_129_get_customers_customerId_cards", (address, card, customer, items) => {
     it("test_129_get_customers_customerId_cards", () => {
         clearSession();
 
@@ -182,7 +182,7 @@ describe.each(dataset("data/dataset_129.json"))("test_129_get_customers_customer
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_10.json", {
+            body: JSONBuild("data/129/payload_for_endp_10.json", {
                 "$.address": address,
                 "$.card": card,
                 "$.customer": customer,
@@ -266,7 +266,7 @@ it("test_130_get_login", () => {
 });
 
 // authentication-related test
-describe.each(dataset("data/dataset_197.json"))("test_197_post_register", (email, firstName, lastName, password, username) => {
+describe.each(dataset("data/197/dataset_197.json"))("test_197_post_register", (email, firstName, lastName, password, username) => {
     it("test_197_post_register", () => {
         clearSession();
 
@@ -278,7 +278,7 @@ describe.each(dataset("data/dataset_197.json"))("test_197_post_register", (email
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body: JSONBuild("data/payload_for_endp_197.json", {
+            body: JSONBuild("data/197/payload_for_endp_197.json", {
                 "$.email": email,
                 "$.firstName": firstName,
                 "$.lastName": lastName,

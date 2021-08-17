@@ -1,7 +1,7 @@
 {
  "info": {
-  "title": "http://orders.sock-shop",
-  "version": "0.0"
+  "title": "http://orders.sock-shop - refael weavesock-k8s-demo all",
+  "version": "0.0.200"
  },
  "openapi": "3.0.2",
  "paths": {
@@ -282,7 +282,10 @@
      "200": {
       "content": {
        "application/hal+json": {
-        "example": ""
+        "schema": {
+         "required": [],
+         "type": "object"
+        }
        },
        "application/json": {
         "example": {
