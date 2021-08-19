@@ -517,6 +517,7 @@ public class TestsFrontEndSockShopTest
         }});
         final Response response = frontEndSockShop.get(request, "/" + param);
         assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
     }
 
     @ParameterizedTest

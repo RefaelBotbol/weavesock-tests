@@ -619,6 +619,7 @@ describe.each(dataset("data/151/dataset_151.json"))("test_151_get_param", (param
             return response.text();
         })
         .then((text) => {
+            expect(CSSselect("div#hot div.box div.container div h2", text)).toContain("Hot this week");
         })
         .then((data) => {
         });

@@ -260,6 +260,7 @@ class Tests_front_end_sock_shop(unittest.TestCase):
         front_end_sock_shop = get_http_client('http://front-end.sock-shop', authenticate)
         resp = front_end_sock_shop.get(f'/{param}', headers={'x-requested-with': 'XMLHttpRequest'})
         resp.assert_status_code(200)
+        resp.assert_cssselect('div#hot div.box div.container div h2', expected_value='Hot this week')
 
     @json_dataset('data/208/dataset_208.json')
     @clear_session({'spanId': 208})
