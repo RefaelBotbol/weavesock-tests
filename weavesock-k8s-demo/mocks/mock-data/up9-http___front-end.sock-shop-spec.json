@@ -1,7 +1,7 @@
 {
  "info": {
   "title": "http://front-end.sock-shop - refael weavesock-k8s-demo all",
-  "version": "0.0.201"
+  "version": "0.0.202"
  },
  "openapi": "3.0.2",
  "paths": {
@@ -771,7 +771,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1621999 requests"
+    "summary": "Seen 1622078 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -786,7 +786,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 144 requests"
+    "summary": "Seen 145 requests"
    },
    "parameters": []
   },
@@ -3550,7 +3550,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 13 requests"
+    "summary": "Seen 14 requests"
    },
    "parameters": []
   },
@@ -3651,16 +3651,16 @@
  },
  "tags": [
   {
-   "name": "catalogue"
-  },
-  {
-   "name": "customers"
-  },
-  {
    "name": "orders"
   },
   {
+   "name": "catalogue"
+  },
+  {
    "name": "cart"
+  },
+  {
+   "name": "customers"
   }
  ]
 }
