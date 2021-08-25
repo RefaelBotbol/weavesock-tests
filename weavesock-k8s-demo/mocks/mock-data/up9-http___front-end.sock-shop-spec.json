@@ -1,7 +1,7 @@
 {
  "info": {
   "title": "http://front-end.sock-shop - refael weavesock-k8s-demo all",
-  "version": "0.0.202"
+  "version": "0.0.204"
  },
  "openapi": "3.0.2",
  "paths": {
@@ -571,6 +571,41 @@
        ],
        "type": "string"
       }
+     },
+     {
+      "in": "header",
+      "name": "x-datadog-parent-id",
+      "required": false,
+      "schema": {
+       "enum": [
+        "2322981984032979414",
+        "5546474261994059416"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "header",
+      "name": "x-datadog-sampling-priority",
+      "required": false,
+      "schema": {
+       "enum": [
+        "0"
+       ],
+       "type": "string"
+      }
+     },
+     {
+      "in": "header",
+      "name": "x-datadog-trace-id",
+      "required": false,
+      "schema": {
+       "enum": [
+        "5111118895474064356",
+        "3413734976020355918"
+       ],
+       "type": "string"
+      }
      }
     ],
     "responses": {
@@ -771,7 +806,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 1622078 requests"
+    "summary": "Seen 1622240 requests"
    },
    "head": {
     "operationId": "2c63f690-a7d8-4dd9-9a0b-458671cd3ec5",
@@ -786,7 +821,7 @@
       "description": "OK"
      }
     },
-    "summary": "Seen 145 requests"
+    "summary": "Seen 146 requests"
    },
    "parameters": []
   },
@@ -3651,16 +3686,16 @@
  },
  "tags": [
   {
-   "name": "orders"
-  },
-  {
-   "name": "catalogue"
-  },
-  {
    "name": "cart"
   },
   {
    "name": "customers"
+  },
+  {
+   "name": "orders"
+  },
+  {
+   "name": "catalogue"
   }
  ]
 }

@@ -99,6 +99,8 @@ public class TestsFrontEndSockShopTest
         final String s = json.getString("s");
         final String vars_0_ = json.getString("vars_0_");
         final String weekstartday = json.getString("weekstartday");
+        final String x_datadog_parent_id = json.getString("x_datadog_parent_id");
+        final String x_datadog_trace_id = json.getString("x_datadog_trace_id");
 
         // GET http://front-end.sock-shop/ (endp 133)
         final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
@@ -141,6 +143,11 @@ public class TestsFrontEndSockShopTest
             put("user", "");
             put("vars[0]", vars_0_);
             put("weekstartday", weekstartday);
+        }});
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("x-datadog-parent-id", x_datadog_parent_id);
+            put("x-datadog-sampling-priority", "0");
+            put("x-datadog-trace-id", x_datadog_trace_id);
         }});
         final Response response = frontEndSockShop.get(request, "/");
         assertStatusCode(response.code(), 200);
@@ -494,6 +501,20 @@ public class TestsFrontEndSockShopTest
         final HttpRequest request = new HttpRequest();
         request.setHeaders(new Hashtable<String, Object>() {{
             put("content-type", "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('IFhZwEHV'");
+        }});
+        final Response response = frontEndSockShop.get(request, "/");
+        assertStatusCode(response.code(), 200);
+        assertCSSselect("div#hot div.box div.container div h2", "Hot this week", response.body().string());
+    }
+
+    @Test
+    public void testGet321() throws MalformedURLException, IOException
+    {
+        // GET http://front-end.sock-shop/ (endp 321)
+        final HttpTarget frontEndSockShop = getHttpClient("http://front-end.sock-shop", new Authentication());
+        final HttpRequest request = new HttpRequest();
+        request.setHeaders(new Hashtable<String, Object>() {{
+            put("content-type", "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('g4w5ory9'");
         }});
         final Response response = frontEndSockShop.get(request, "/");
         assertStatusCode(response.code(), 200);

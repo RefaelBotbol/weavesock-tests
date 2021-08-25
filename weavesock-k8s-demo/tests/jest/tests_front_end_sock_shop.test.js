@@ -58,13 +58,19 @@ it("test_067_head_", () => {
     });
 });
 
-describe.each(dataset("data/133/dataset_133.json"))("test_133_get_", (PHPSESSID, action, album, category, content, dispsize, feed, id, invitaion_code, mod, mode, name, page, param, s, vars_0_, weekstartday) => {
+describe.each(dataset("data/133/dataset_133.json"))("test_133_get_", (PHPSESSID, action, album, category, content, dispsize, feed, id, invitaion_code, mod, mode, name, page, param, s, vars_0_, weekstartday, x_datadog_parent_id, x_datadog_trace_id) => {
     it("test_133_get_", () => {
         clearSession();
 
         // GET http://front-end.sock-shop/ (endp 133)
         const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
-        return front_end_sock_shop.fetch("/" + urlencode([["", param], ["\u0000", ""], ["\"><script>alert(document.domain)</script>", ""], ["/'", ""], ["<script>alert(document.domain)</script>", ""], ["OpenServer", ""], ["PHPSESSID", PHPSESSID], ["XDEBUG_SESSION_START", "phpstorm"], ["a", "fetch"], ["action", action], ["album", album], ["category", category], ["cmd", "show"], ["content", content], ["cpmvc_do_action", "mvparse"], ["data", "1"], ["debug", "1"], ["dispsize", dispsize], ["f", "edit"], ["feed", feed], ["filter", "phpinfo"], ["function", "call_user_func_array"], ["id", id], ["invitaion_code", invitaion_code], ["mod", mod], ["mode", mode], ["name", name], ["op", "browse"], ["page", page], ["parent", "0"], ["q[]", "x"], ["s", s], ["show_dash_widget", "1"], ["start", "0"], ["user", ""], ["vars[0]", vars_0_], ["weekstartday", weekstartday]]))
+        return front_end_sock_shop.fetch("/" + urlencode([["", param], ["\u0000", ""], ["\"><script>alert(document.domain)</script>", ""], ["/'", ""], ["<script>alert(document.domain)</script>", ""], ["OpenServer", ""], ["PHPSESSID", PHPSESSID], ["XDEBUG_SESSION_START", "phpstorm"], ["a", "fetch"], ["action", action], ["album", album], ["category", category], ["cmd", "show"], ["content", content], ["cpmvc_do_action", "mvparse"], ["data", "1"], ["debug", "1"], ["dispsize", dispsize], ["f", "edit"], ["feed", feed], ["filter", "phpinfo"], ["function", "call_user_func_array"], ["id", id], ["invitaion_code", invitaion_code], ["mod", mod], ["mode", mode], ["name", name], ["op", "browse"], ["page", page], ["parent", "0"], ["q[]", "x"], ["s", s], ["show_dash_widget", "1"], ["start", "0"], ["user", ""], ["vars[0]", vars_0_], ["weekstartday", weekstartday]]), {
+            headers: {
+                "x-datadog-parent-id": x_datadog_parent_id,
+                "x-datadog-sampling-priority": "0",
+                "x-datadog-trace-id": x_datadog_trace_id
+            }
+        })
         .then((response) => {
             expect(response.status).toEqual(200);
             return response.text();
@@ -588,6 +594,27 @@ it("test_320_get_", () => {
     return front_end_sock_shop.fetch("/", {
         headers: {
             "content-type": "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('IFhZwEHV'"
+        }
+    })
+    .then((response) => {
+        expect(response.status).toEqual(200);
+        return response.text();
+    })
+    .then((text) => {
+        expect(CSSselect("div#hot div.box div.container div h2", text)).toContain("Hot this week");
+    })
+    .then((data) => {
+    });
+});
+
+it("test_321_get_", () => {
+    clearSession();
+
+    // GET http://front-end.sock-shop/ (endp 321)
+    const front_end_sock_shop = getHttpClient("http://front-end.sock-shop", authenticate);
+    return front_end_sock_shop.fetch("/", {
+        headers: {
+            "content-type": "%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('g4w5ory9'"
         }
     })
     .then((response) => {

